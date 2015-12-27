@@ -5,25 +5,28 @@
  
 .. _adriver:
  
-Интеграция с AdRiver
+Integrtion with AdRiver
 ==================================
 
-Интеграция с AdRiver с модифицированным кодом
+Integrtion with AdRiver (modificated code)
 ----------------------------------
-Для  такого рода интеграции, необходимо произвести следующие действия:
+You need to make this steps:
 
 Step0
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Создать кампанию  (или апп с необходимым доменом, будь то реальный домен или домен-идентификатор  аппа)
+Create a campaign (or an app with the necessary domain, real or a domain identifier)
  
 .. image:: images/adriver/adriver1_step0.png
 
 Step1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Создайте  страницу, доступную по адресу с тем же доменом, где вы хотите показывать  кнопку.
-Добавьте  на страницу showinparent_concat.js ( Общее описание работы кнопки )
+Create a page available at the address on the same domain where the button is to be displayed.
+
+On the page, add showinparent_concat.js 
+
 ``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
-Например:
+
+For example:
  
 .. code-block:: html
 
@@ -41,34 +44,40 @@ Step1
  
 Step2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Создать AjaxJS (Generic AjaxJS) баннер
+Create an AjaxJS (Generic AjaxJS) banner
 
 .. image:: images/adriver/adriver2_step1.png
 
 Step3
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Загрузить код баннера (нажав на ссылку "Загрузить баннер")
+Upload a code for the banner (click on “Upload banner”)
 
 .. image:: images/adriver/adriver2_step3.png
 
-Пример кода для generic ajax баннера https://www.dropbox.com/s/vo4deq8g9e9yynp/generic_ajaxjs.zip?dl=0
+Code example for "generic ajax" banner
+
+https://www.dropbox.com/s/vo4deq8g9e9yynp/generic_ajaxjs.zip?dl=0
 
 .. image:: images/adriver/adriver2_step3_1.png
 
 Step 4
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-В нем необходимо изменить в index.html путь до showinparent.html (создан на шаге 1)
+Change the path from index.html to showinparent.html (example in the archive) (created in Step1)
+
 ``<iframe style="border: 0px; width: 0px; height: 0px; display: none;" src="http://example.com/showinparent.html?domain=nessasary_example_app_domain.test"></iframe>``
-Url ``//example.com/showinparent.html?domain=nessasary_example_app_domain.test`` добавлен для примера, необходимо использовать свой путь (до страницы созданной на шаге 1)
- Также значение GET параметра domain (для примера указано) ``nessasary_example_app_domain.test`` нужно заменить на домен  (идентификатор) необходимый, используемый в нужном аппе в admin.probtn.com
+
+Url ``//example.com/showinparent.html?domain=nessasary_example_app_domain.test`` is an example, use your own path (до страницы созданной на шаге 1)
+
+Also value of GET param domain (for example) ``nessasary_example_app_domain.test`` should be replaced on nessesary  (id), used in nessesary app in admin.probtn.com
  
-Указание кампании (опционально)
+Set campaign (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Также возможно указать идентификатор кампании, по которому кнопка будет показывать только креативы только указанной кампании для аппа.
 Для этого необходимо
  
-Создать объявление с кодом
+Create ad with code
+
 ``<iframe style="border: 0px; width: 0px; height: 0px; display: none;"  src="//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&SelectAdSet=565e021f99c27511100000d0"></iframe>``
 
 Url //example.com/example_iframe_page.html добавлен для примера, необходимо использовать свой путь (до страницы созданной на шаге 1)
@@ -80,7 +89,7 @@ Url //example.com/example_iframe_page.html добавлен для пример�
 .. image:: images/adriver/adriver2_step3_2.png
 
 
-Интеграция с AdRiver (баннер javascript/JavaScript)
+Integrtion with AdRiver (javascript/JavaScript banner)
 ----------------------------------
 
 Для  такого рода интеграции, необходимо произвести следующие действия:

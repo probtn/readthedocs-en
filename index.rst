@@ -10,7 +10,7 @@ Profit Button
 
 .. toctree::
    :maxdepth: 2
-   :caption: Содержание
+   :caption: Table of content
    :name: mastertoc
    
    description

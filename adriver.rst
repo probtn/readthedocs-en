@@ -68,7 +68,7 @@ Change the path from index.html to showinparent.html (example in the archive) (c
 
 Url ``//example.com/showinparent.html?domain=nessasary_example_app_domain.test`` is an example, use your own path (to the page created on step 1)
 
-Also value of GET param domain (for example) ``nessasary_example_app_domain.test`` should be replaced on nessesary  (id), used in nessesary app in admin.probtn.com
+Change the value of the GET param of the domain (cited as an example) from ``nessasary_example_app_domain.test`` to the necessary domain (identifier) used in the appropriate app at ``admin.probtn.com``
  
 Set campaign (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -94,7 +94,7 @@ Campaign ID could be found  at url, if you open campaign page at admin.probtn.co
 Integrtion with AdRiver (javascript/JavaScript banner)
 ----------------------------------
 
-To use this type of integration, proceed throw this steps:
+For this integration type follow these steps:
 
 Step0
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

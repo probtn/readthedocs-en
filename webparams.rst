@@ -110,97 +110,119 @@ By default: false
 
 FullscreenClickLink
 ----------------------------------
-(Для режима ButtonType=='fullscreen')
+(For the mode when ButtonType=='fullscreen')
+Click on fullscreen will open link.
 
 HideWithoutInteractionTime
-По умолчанию 0 (не скрывать)
-Время, спустя которое кнопка скрывается, если не было с ней взаимодействия
+----------------------------------
+By default: 0  (not hide).
+Period of time before the button hides when no interaction is in place.
 
 cssEaseDuration
 ----------------------------------
-Длительность анимации (в мс) для jquery.pep - по умолчанию 300
+Animation duration (in ms) for jquery.pep
+By default: 300
 
 ChangeScrollButtonAtFullSiteHeight
 ----------------------------------
-Меняется ли изображение кнопки в scroll режиме на основе высоты сайта (true), или размера window (false)
+Change the button view in the scroll mode based on the page height (true) or the window size (false)
 
 ControlInIframeFromParent
 ----------------------------------
-Управляется ли кнопка из родителя - по умолчанию false
+Is button control from the parent.
+By default: false
 
 isAddUtmSource
 ----------------------------------
-Добавлять ли к ContentURL параметр utm_source. По умолчанию false
+Add the utm_source parameter to ContentURL.
+By default: false
 
 UtmSourceUseOnlyDomain
 ----------------------------------
-По умолчанию false.
-Использовать ли по умолчанию в utm_source. В случае false - используется полный url, в случае true - использует только домен.
+By default false.
+ 
+Use utm_source by default. If set to false, the full URL is used, if set to true, only the domain is used.
 
 UtmCampaign
 ----------------------------------
-Значение параметра utm_campaign, если пустая строка, то не указывается. По умолчанию ""
+Value of the  utm_campaign parameter. Not set if the field is left blank,
+By default ""
 
 UtmSource
 ----------------------------------
-Значение параметра utm_source, если пустая строка, то используется текущий url страницы (или домен, в зависимости от параметра UtmSourceUseOnlyDomain). По умолчанию ""
+Value of the utm_source parameter,  if the field is left blank, the current page URL (or domain, defined by the UtmSourceUseOnlyDomain attribute) is used.
+By default ""
 
 IframeScale
 ----------------------------------
-Параметр для применения к iframe для transform: scale(value)
-По умолчанию 1. 
-В случае если указан iframeScaleMinWidth !=0 рассчитывается исходя из данного параметра.
+parameter applied to the iframe for transform: scale(value)
+ 
+By default: 1.
+
+If iframeScaleMinWidth !=0, calculations are made based on this parameter
 
 ButtonInitDelay
 ----------------------------------
-Задержка перед показом кнопки (в мс), по умолчанию 0
+Delay before the button display (in ms)
+By default: 0
 
 VideoClickURL
 ----------------------------------
-Ссылка, по которой переходит пользователь по нажатию на видео. (В случае если VideoClickURL =='' , то для этого подставляется строка из VideoPoster. Когда параметр пуст, ссылку на видео не добавляем)
+Link that a user opens by a click on the video. (If VideoClickURL =='', a line from VideoPoster is pasted. If the parameter is left blank, no need to add a link to the video.
 
 ButtonOnClick 
 ----------------------------------
-событие по нажатию на кнопку (добавляется в onclick, необходимо для запуска видео под мобильными браузерами)
-По умолчанию:
-function start1() { var video = $("#video").get(0); video.play(); }; start1(); setTimeout(start1 , 1500);
+Event called by a click on the button (added in an onclick, necessary to play a video in mobile browsers)
+ 
+By default:
+
+```function start1() { var video = $("#video").get(0); video.play(); }; start1(); setTimeout(start1 , 1500);```
 
 ButtonType 
 ----------------------------------
-тип кнопки
-По умолчанию button - поведение кнопки по умолчанию. 
-Текущие варианты ButtonType
-* button - кнопка с iframe в fancybox
-* menu - floating menu режим
-* smartbanner - показ смартбаннера
-* fullscreen - автозапуск содержимого после инициализации скрипта
-* button_and_active_zones - кнопка с использованием активных зон
-* button_and_scroll_zones - кнопка со сменой изображений с различными изображениями в разных зонах экрана (по высоте)
-* fullscreen_fancybox - автозапуск содержимого в fancybox после инициализации скрипта
-может быть на video протестировать тогда второй формат?
-Да, тоже подумал про это - сейчас изменения в ButtonType и еще один параметр - что ButonType будет отвечать за тип работы кнопки (просто кнопка или фуллскрин), и параметр про содержимое fancbox\модального окна
+Button type
+ 
+By default 
+button - button behaviour by default
+ 
+Current options for ButtonType
+* •	button - button with an iframe in fancybox
+* menu - floating menu mode
+* smartbanner - smartbanner display
+* fullscreen -  autoplay of the content after script initialization
+* button_and_active_zones - button and active zones
+* button_and_scroll_zones - button and changing images or different images in different screen zones (by height)
+* fullscreen_fancybox - autoplay of the content in fanncybox after script initialization
+
 
 ButtonContentType
 ----------------------------------
-Тип содержимого кнопки
-По умолчанию
-* iframe - показ страницы в iframe
-Текущие варианты ButtonContentType
-* iframe - страница в iframe
-* video - показ видео
-* anchor - переход на указанный якорь на странице (варианты ContentURL - полная ссылка или якорь на странице, к примеру #someAnchor - переход к якорю или ссылке происходит в той же вкладке
+Type of the button content
+ 
+By default: 
+* iframe - page display in the iframe
+ 
+Current options for ButtonContentType
+
+* iframe - page display in the iframe
+* video - video play
+* anchor - transition to an indicated anchor on the page (ContentURL is a full link or an anchor on the page, e.g., in #someAnchor), the transition to an anchor or a link happens in the same tab\window.
 
 VideoSize
 ----------------------------------
-Размер видео (необходим для корректного перерасчета размера видео, в связи с тем что некоторые мобильные браузеры по некоторой причине не сохраняют пропорции видео)
-Сам параметр - объект, который состоит из X и Y параметров (ширина и высота соответственно).
-Пример (оно же значение по умолчанию):
-VideoSize: { X: 1920, Y: 1080 }
+Video size (necessary to adjust the size of the video for mobile browsers that for some reason do not keep video porportions)
+ 
+The parameter itself is an object that consists of X and Y attributes (width and height)
+
+Example (value by default):
+
+``VideoSize: { X: 1920, Y: 1080 }````
 
 VideoPoster
 ----------------------------------
-Постер для видео
-Представляет собой url (до картинки).
+Poster for the video.
+Value is URL (to the image).
+
 
 TrackingLink
 ----------------------------------

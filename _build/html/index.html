@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="Profit Button en 1 documentation" href="#"/>
-        <link rel="next" title="Integrtion with AdRiver" href="adriver.html"/> 
+        <link rel="next" title="General description of the button" href="description.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -82,11 +82,12 @@
             
                 <p class="caption"><span class="caption-text">Table of content</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Integrtion with AdRiver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">AdFox integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html">Params description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webparams.html#id16">Неиспользуемые параметры</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webparams.html#id18">Параметры по умолчания для кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html#not-used-params">Not used params</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
 </ul>
 
             
@@ -136,6 +137,12 @@
 <div class="toctree-wrapper compound" id="mastertoc">
 <p class="caption"><span class="caption-text">Table of content</span><a class="headerlink" href="#mastertoc" title="Permalink to this toctree">¶</a></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="description.html#recieving-button-settings">Recieving button settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="description.html#id1">Интеграция со сторонними сервисами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="description.html#description-of-the-used-options">Description of the used options</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Integrtion with AdRiver</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="adriver.html#integrtion-with-adriver-modificated-code">Integrtion with AdRiver (modificated code)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adriver.html#integrtion-with-adriver-javascript-javascript-banner">Integrtion with AdRiver (javascript/JavaScript banner)</a></li>
@@ -160,6 +167,7 @@
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#clickonclosebutton">ClickOnCloseButton</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#alwaysshowclosebutton">AlwaysShowCloseButton</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#fullscreenclicklink">FullscreenClickLink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webparams.html#hidewithoutinteractiontime">HideWithoutInteractionTime</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#csseaseduration">cssEaseDuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#changescrollbuttonatfullsiteheight">ChangeScrollButtonAtFullSiteHeight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#controliniframefromparent">ControlInIframeFromParent</a></li>
@@ -234,11 +242,11 @@
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#smartbanner">smartbanner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#mainbuttonclickable">MainButtonClickable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#menu">Menu параметры</a></li>
-<li class="toctree-l2"><a class="reference internal" href="webparams.html#scroll">Scroll параметры</a></li>
-<li class="toctree-l2"><a class="reference internal" href="webparams.html#activezones">ActiveZones параметры</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webparams.html#scroll-params">Scroll params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webparams.html#activezones-params">ActiveZones params</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="webparams.html#id16">Неиспользуемые параметры</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html#not-used-params">Not used params</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#contentwebviewinsets">ContentWebViewInsets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#baseinsets">BaseInsets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#buttonopenimage">ButtonOpenImage</a></li>
@@ -269,10 +277,10 @@
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#hintarrowimageb">HintArrowImageB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#hintarrowimagel">HintArrowImageL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webparams.html#hintarrowimager">HintArrowImageR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="webparams.html#id17">Остальные параметры</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webparams.html#id15">Остальные параметры</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="webparams.html#id18">Параметры по умолчания для кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
 </ul>
 </div>
 </div>
@@ -284,7 +292,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="adriver.html" class="btn btn-neutral float-right" title="Integrtion with AdRiver" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="description.html" class="btn btn-neutral float-right" title="General description of the button" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

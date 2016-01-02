@@ -82,6 +82,7 @@
             
                 <p class="caption"><span class="caption-text">Table of content</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Integrtion with AdRiver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">AdFox integration</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Params description</a><ul>
@@ -99,6 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#clickonclosebutton">ClickOnCloseButton</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#alwaysshowclosebutton">AlwaysShowCloseButton</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fullscreenclicklink">FullscreenClickLink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hidewithoutinteractiontime">HideWithoutInteractionTime</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#csseaseduration">cssEaseDuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#changescrollbuttonatfullsiteheight">ChangeScrollButtonAtFullSiteHeight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#controliniframefromparent">ControlInIframeFromParent</a></li>
@@ -187,7 +189,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#menuheight">MenuHeight</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#scroll">Scroll параметры</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#scroll-params">Scroll params</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#scrollzones">ScrollZones</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#zoneheight">ZoneHeight</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">ButtonImage</a></li>
@@ -201,17 +203,17 @@
 <li class="toctree-l3"><a class="reference internal" href="#id9">ButtonDragOpacity</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#activezones">ActiveZones параметры</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id10">ActiveZones</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">Name</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">ButtonImageType</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">ButtonIframeInitialSize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#activezones-params">ActiveZones params</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#activezones">ActiveZones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">ButtonImageType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">ButtonIframeInitialSize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#position">Position</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#activeimage">ActiveImage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#inactiveimage">InactiveImage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id14">ActionURL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">ActionURL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#visibleonlyinteraction">VisibleOnlyInteraction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id15">ClickCounterLink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">ClickCounterLink</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#activesize">ActiveSize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#inactivesize">InactiveSize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#inactiveopacity">InactiveOpacity</a></li>
@@ -220,7 +222,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#id16">Неиспользуемые параметры</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="#not-used-params">Not used params</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#contentwebviewinsets">ContentWebViewInsets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#baseinsets">BaseInsets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#buttonopenimage">ButtonOpenImage</a></li>
@@ -251,10 +253,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#hintarrowimageb">HintArrowImageB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hintarrowimagel">HintArrowImageL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hintarrowimager">HintArrowImageR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id17">Остальные параметры</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">Остальные параметры</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#id18">Параметры по умолчания для кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#button-default-params">Button default params</a></li>
 </ul>
 
             
@@ -307,58 +309,76 @@
 <h2>MenuTemplateVariant<a class="headerlink" href="#menutemplatevariant" title="Permalink to this headline">¶</a></h2>
 <p>This param is used to select nessesary variant of menu apperiance
 (used then ButtonType==menu)</p>
-<p>Possible options:
-* list - default template, list
-* radialcorner - partical radial menu (button is in the corner, and menu items aore located in one between 0 and 90 degrees)</p>
+<p>Possible options:</p>
+<ul class="simple">
+<li>list - default template, list</li>
+<li>radialcorner - partical radial menu (button is in the corner, and menu items aore located in one between 0 and 90 degrees)</li>
+</ul>
 </div>
 <div class="section" id="videotype">
 <h2>VideoType<a class="headerlink" href="#videotype" title="Permalink to this headline">¶</a></h2>
 <p>Video type used in button</p>
-<p>Options:
-* mp4 - by default
-* youtube - video from youtube</p>
+<p>Options:</p>
+<ul class="simple">
+<li>mp4 - by default</li>
+<li>youtube - video from youtube</li>
+</ul>
 </div>
 <div class="section" id="debug">
 <h2>Debug<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h2>
 <p>The debug mode of the button displays the version of the button enabled by an open fancybox.</p>
-<p>By default:
-* false</p>
+<p>By default:</p>
+<ul class="simple">
+<li>false</li>
+</ul>
 </div>
 <div class="section" id="usegeolocation">
 <h2>UseGeoLocation<a class="headerlink" href="#usegeolocation" title="Permalink to this headline">¶</a></h2>
 <p>Use or not the data on the geographical position of a user</p>
-<p>By default:
-* false</p>
+<p>By default:</p>
+<ul class="simple">
+<li>false</li>
+</ul>
 </div>
 <div class="section" id="waitforgeolocation">
 <h2>WaitForGeoLocation<a class="headerlink" href="#waitforgeolocation" title="Permalink to this headline">¶</a></h2>
 <p>With geolocation on, wait for the positioning data to be received (and user&#8217;s permission in case of the first use) before the display of the button.</p>
-<p>By default:
-* false</p>
+<p>By default:</p>
+<ul class="simple">
+<li>false</li>
+</ul>
 </div>
 <div class="section" id="loadjquerypepjs">
 <h2>loadJqueryPepJS<a class="headerlink" href="#loadjquerypepjs" title="Permalink to this headline">¶</a></h2>
 <p>Download jquery.pep.js if the script does not find the appropriate library function</p>
-<p>By default:
-* true</p>
+<p>By default:</p>
+<ul class="simple">
+<li>true</li>
+</ul>
 </div>
 <div class="section" id="loadfancyboxjs">
 <h2>loadFancyboxJS<a class="headerlink" href="#loadfancyboxjs" title="Permalink to this headline">¶</a></h2>
 <p>Download fancybox if the script does not find the appropriate library function</p>
-<p>By default:
-* true</p>
+<p>By default:</p>
+<ul class="simple">
+<li>true</li>
+</ul>
 </div>
 <div class="section" id="disablebuttonmove">
 <h2>DisableButtonMove<a class="headerlink" href="#disablebuttonmove" title="Permalink to this headline">¶</a></h2>
 <p>Disable button move</p>
-<p>By default:
-* false</p>
+<p>By default:</p>
+<ul class="simple">
+<li>false</li>
+</ul>
 </div>
 <div class="section" id="waitforiframebuttonloaded">
 <h2>waitForIframeButtonLoaded<a class="headerlink" href="#waitforiframebuttonloaded" title="Permalink to this headline">¶</a></h2>
 <p>Wait for the content of the button iframe to be uploaded.</p>
-<p>By default:
-* true</p>
+<p>By default:</p>
+<ul class="simple">
+<li>true</li>
+</ul>
 </div>
 <div class="section" id="buttoniframeinitialsize">
 <h2>ButtonIframeInitialSize<a class="headerlink" href="#buttoniframeinitialsize" title="Permalink to this headline">¶</a></h2>
@@ -370,9 +390,11 @@ here W and H stand for width and height in px respectively.</p>
 <div class="section" id="buttonimagetype">
 <h2>ButtonImageType<a class="headerlink" href="#buttonimagetype" title="Permalink to this headline">¶</a></h2>
 <p>Type of the button content. By default: image</p>
-<p>Options:
-* image
-* iframe</p>
+<p>Options:</p>
+<ul class="simple">
+<li>image</li>
+<li>iframe</li>
+</ul>
 </div>
 <div class="section" id="clickonclosebutton">
 <h2>ClickOnCloseButton<a class="headerlink" href="#clickonclosebutton" title="Permalink to this headline">¶</a></h2>
@@ -386,397 +408,424 @@ By default: false</p>
 </div>
 <div class="section" id="fullscreenclicklink">
 <h2>FullscreenClickLink<a class="headerlink" href="#fullscreenclicklink" title="Permalink to this headline">¶</a></h2>
-<p>(Для режима ButtonType==&#8217;fullscreen&#8217;)</p>
-<p>HideWithoutInteractionTime
-По умолчанию 0 (не скрывать)
-Время, спустя которое кнопка скрывается, если не было с ней взаимодействия</p>
+<p>(For the mode when ButtonType==&#8217;fullscreen&#8217;)
+Click on fullscreen will open link.</p>
+</div>
+<div class="section" id="hidewithoutinteractiontime">
+<h2>HideWithoutInteractionTime<a class="headerlink" href="#hidewithoutinteractiontime" title="Permalink to this headline">¶</a></h2>
+<p>By default: 0  (not hide).
+Period of time before the button hides when no interaction is in place.</p>
 </div>
 <div class="section" id="csseaseduration">
 <h2>cssEaseDuration<a class="headerlink" href="#csseaseduration" title="Permalink to this headline">¶</a></h2>
-<p>Длительность анимации (в мс) для jquery.pep - по умолчанию 300</p>
+<p>Animation duration (in ms) for jquery.pep
+By default: 300</p>
 </div>
 <div class="section" id="changescrollbuttonatfullsiteheight">
 <h2>ChangeScrollButtonAtFullSiteHeight<a class="headerlink" href="#changescrollbuttonatfullsiteheight" title="Permalink to this headline">¶</a></h2>
-<p>Меняется ли изображение кнопки в scroll режиме на основе высоты сайта (true), или размера window (false)</p>
+<p>Change the button view in the scroll mode based on the page height (true) or the window size (false)</p>
 </div>
 <div class="section" id="controliniframefromparent">
 <h2>ControlInIframeFromParent<a class="headerlink" href="#controliniframefromparent" title="Permalink to this headline">¶</a></h2>
-<p>Управляется ли кнопка из родителя - по умолчанию false</p>
+<p>Is button control from the parent.
+By default: false</p>
 </div>
 <div class="section" id="isaddutmsource">
 <h2>isAddUtmSource<a class="headerlink" href="#isaddutmsource" title="Permalink to this headline">¶</a></h2>
-<p>Добавлять ли к ContentURL параметр utm_source. По умолчанию false</p>
+<p>Add the utm_source parameter to ContentURL.
+By default: false</p>
 </div>
 <div class="section" id="utmsourceuseonlydomain">
 <h2>UtmSourceUseOnlyDomain<a class="headerlink" href="#utmsourceuseonlydomain" title="Permalink to this headline">¶</a></h2>
-<p>По умолчанию false.
-Использовать ли по умолчанию в utm_source. В случае false - используется полный url, в случае true - использует только домен.</p>
+<p>By default false.</p>
+<p>Use utm_source by default. If set to false, the full URL is used, if set to true, only the domain is used.</p>
 </div>
 <div class="section" id="utmcampaign">
 <h2>UtmCampaign<a class="headerlink" href="#utmcampaign" title="Permalink to this headline">¶</a></h2>
-<p>Значение параметра utm_campaign, если пустая строка, то не указывается. По умолчанию &#8220;&#8221;</p>
+<p>Value of the  utm_campaign parameter. Not set if the field is left blank,
+By default &#8220;&#8221;</p>
 </div>
 <div class="section" id="utmsource">
 <h2>UtmSource<a class="headerlink" href="#utmsource" title="Permalink to this headline">¶</a></h2>
-<p>Значение параметра utm_source, если пустая строка, то используется текущий url страницы (или домен, в зависимости от параметра UtmSourceUseOnlyDomain). По умолчанию &#8220;&#8221;</p>
+<p>Value of the utm_source parameter,  if the field is left blank, the current page URL (or domain, defined by the UtmSourceUseOnlyDomain attribute) is used.
+By default &#8220;&#8221;</p>
 </div>
 <div class="section" id="iframescale">
 <h2>IframeScale<a class="headerlink" href="#iframescale" title="Permalink to this headline">¶</a></h2>
-<p>Параметр для применения к iframe для transform: scale(value)
-По умолчанию 1.
-В случае если указан iframeScaleMinWidth !=0 рассчитывается исходя из данного параметра.</p>
+<p>parameter applied to the iframe for transform: scale(value)</p>
+<p>By default: 1.</p>
+<p>If iframeScaleMinWidth !=0, calculations are made based on this parameter</p>
 </div>
 <div class="section" id="buttoninitdelay">
 <h2>ButtonInitDelay<a class="headerlink" href="#buttoninitdelay" title="Permalink to this headline">¶</a></h2>
-<p>Задержка перед показом кнопки (в мс), по умолчанию 0</p>
+<p>Delay before the button display (in ms)
+By default: 0</p>
 </div>
 <div class="section" id="videoclickurl">
 <h2>VideoClickURL<a class="headerlink" href="#videoclickurl" title="Permalink to this headline">¶</a></h2>
-<p>Ссылка, по которой переходит пользователь по нажатию на видео. (В случае если VideoClickURL ==&#8217;&#8217; , то для этого подставляется строка из VideoPoster. Когда параметр пуст, ссылку на видео не добавляем)</p>
+<p>Link that a user opens by a click on the video. (If VideoClickURL ==&#8217;&#8216;, a line from VideoPoster is pasted. If the parameter is left blank, no need to add a link to the video.</p>
 </div>
 <div class="section" id="buttononclick">
 <h2>ButtonOnClick<a class="headerlink" href="#buttononclick" title="Permalink to this headline">¶</a></h2>
-<p>событие по нажатию на кнопку (добавляется в onclick, необходимо для запуска видео под мобильными браузерами)
-По умолчанию:
-function start1() { var video = $(&#8220;#video&#8221;).get(0); video.play(); }; start1(); setTimeout(start1 , 1500);</p>
+<p>Event called by a click on the button (added in an onclick, necessary to play a video in mobile browsers)</p>
+<p>By default:</p>
+<p><code class="docutils literal"><span class="pre">function</span> <span class="pre">start1()</span> <span class="pre">{</span> <span class="pre">var</span> <span class="pre">video</span> <span class="pre">=</span> <span class="pre">$(&quot;#video&quot;).get(0);</span> <span class="pre">video.play();</span> <span class="pre">};</span> <span class="pre">start1();</span> <span class="pre">setTimeout(start1</span> <span class="pre">,</span> <span class="pre">1500);</span></code></p>
 </div>
 <div class="section" id="buttontype">
 <h2>ButtonType<a class="headerlink" href="#buttontype" title="Permalink to this headline">¶</a></h2>
-<p>тип кнопки
-По умолчанию button - поведение кнопки по умолчанию.
-Текущие варианты ButtonType
-* button - кнопка с iframe в fancybox
-* menu - floating menu режим
-* smartbanner - показ смартбаннера
-* fullscreen - автозапуск содержимого после инициализации скрипта
-* button_and_active_zones - кнопка с использованием активных зон
-* button_and_scroll_zones - кнопка со сменой изображений с различными изображениями в разных зонах экрана (по высоте)
-* fullscreen_fancybox - автозапуск содержимого в fancybox после инициализации скрипта
-может быть на video протестировать тогда второй формат?
-Да, тоже подумал про это - сейчас изменения в ButtonType и еще один параметр - что ButonType будет отвечать за тип работы кнопки (просто кнопка или фуллскрин), и параметр про содержимое fancboxмодального окна</p>
+<p>Button type</p>
+<p>By default
+button - button behaviour by default</p>
+<p>Current options for ButtonType</p>
+<ul class="simple">
+<li>button - button with an iframe in fancybox</li>
+<li>menu - floating menu mode</li>
+<li>smartbanner - smartbanner display</li>
+<li>fullscreen -  autoplay of the content after script initialization</li>
+<li>button_and_active_zones - button and active zones</li>
+<li>button_and_scroll_zones - button and changing images or different images in different screen zones (by height)</li>
+<li>fullscreen_fancybox - autoplay of the content in fanncybox after script initialization</li>
+</ul>
 </div>
 <div class="section" id="buttoncontenttype">
 <h2>ButtonContentType<a class="headerlink" href="#buttoncontenttype" title="Permalink to this headline">¶</a></h2>
-<p>Тип содержимого кнопки
-По умолчанию
-* iframe - показ страницы в iframe
-Текущие варианты ButtonContentType
-* iframe - страница в iframe
-* video - показ видео
-* anchor - переход на указанный якорь на странице (варианты ContentURL - полная ссылка или якорь на странице, к примеру #someAnchor - переход к якорю или ссылке происходит в той же вкладке</p>
+<p>Type of the button content</p>
+<p>By default:
+* iframe - page display in the iframe</p>
+<p>Current options for ButtonContentType</p>
+<ul class="simple">
+<li>iframe - page display in the iframe</li>
+<li>video - video play</li>
+<li>anchor - transition to an indicated anchor on the page (ContentURL is a full link or an anchor on the page, e.g., in #someAnchor), the transition to an anchor or a link happens in the same tabwindow.</li>
+</ul>
 </div>
 <div class="section" id="videosize">
 <h2>VideoSize<a class="headerlink" href="#videosize" title="Permalink to this headline">¶</a></h2>
-<p>Размер видео (необходим для корректного перерасчета размера видео, в связи с тем что некоторые мобильные браузеры по некоторой причине не сохраняют пропорции видео)
-Сам параметр - объект, который состоит из X и Y параметров (ширина и высота соответственно).
-Пример (оно же значение по умолчанию):
-VideoSize: { X: 1920, Y: 1080 }</p>
+<p>Video size (necessary to adjust the size of the video for mobile browsers that for some reason do not keep video porportions)</p>
+<p>The parameter itself is an object that consists of X and Y attributes (width and height)</p>
+<p>Example (value by default):</p>
+<p><code class="docutils literal"><span class="pre">VideoSize:</span> <span class="pre">{</span> <span class="pre">X:</span> <span class="pre">1920,</span> <span class="pre">Y:</span> <span class="pre">1080</span> <span class="pre">}</span></code></p>
 </div>
 <div class="section" id="videoposter">
 <h2>VideoPoster<a class="headerlink" href="#videoposter" title="Permalink to this headline">¶</a></h2>
-<p>Постер для видео
-Представляет собой url (до картинки).</p>
+<p>Poster for the video.
+Value is URL (to the image).</p>
 </div>
 <div class="section" id="trackinglink">
 <h2>TrackingLink<a class="headerlink" href="#trackinglink" title="Permalink to this headline">¶</a></h2>
-<p>Ссылка на изображение, которое будет применено как bacground для wrapper&#8217;а кнопки. Введен в связи с необходимостью предоставить возможность указывать свое изображение-&#8220;пиксель&#8221; для сбора статистики о пользователе.</p>
+<p>Link to the image to be used as background for the button wrapper. Introduced in order to set one&#8217;s image (pixel) to collect statistical data about a user.</p>
 </div>
 <div class="section" id="minimizewrappertime">
 <h2>MinimizeWrapperTime<a class="headerlink" href="#minimizewrappertime" title="Permalink to this headline">¶</a></h2>
-<p>Время (в мс), спустя которое уменьшается размер wrapper&#8217;а кнопки. Применен в связи с проблемами некорректной анимации в ряде случаев на мобильных устройствах</p>
+<p>Period of time before the size of the button wrapper gets smaller. Introduced to fix the bugs in animation that sometimes appear on mobile devices.</p>
 </div>
 <div class="section" id="openexternal">
 <h2>OpenExternal<a class="headerlink" href="#openexternal" title="Permalink to this headline">¶</a></h2>
-<p>Параметр, отвечающий за то, как именно должна открываться ссылка (соответственно для ButtonType = button )
-false - содержимое открывается в fancybox
-true - контент открывается в новой вкладке (применяется в случае, если сайт не может быть показан в iframe по тем или иным причинам)</p>
+<p>Параметр, отвечающий за то, как именно должна открываться ссылка (соответственно для <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code> )
+Parameter that defines how link would be opened (for <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code> )</p>
+<ul class="simple">
+<li>false - содержимое открывается в fancybox</li>
+<li>true - контент открывается в новой вкладке (применяется в случае, если сайт не может быть показан в iframe по тем или иным причинам)</li>
+</ul>
 </div>
 <div class="section" id="campaignid">
 <h2>CampaignID<a class="headerlink" href="#campaignid" title="Permalink to this headline">¶</a></h2>
-<p>Идентификатор кампании</p>
+<p>Campaign identifier</p>
 </div>
 <div class="section" id="neverclose">
 <h2>NeverClose<a class="headerlink" href="#neverclose" title="Permalink to this headline">¶</a></h2>
-<p>При true убирает область закрытия для кнопки
-Применимо при ButtonType = button</p>
+<p>If set to true, removes the closing area for the button</p>
+<p>Aplied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="domain">
 <h2>domain<a class="headerlink" href="#domain" title="Permalink to this headline">¶</a></h2>
-<p>Домен, для которого запрашиваются настройки для кнопки. Если не указан, то домен будет получен автоматически и будет соответствовать тому, на котором в настоящий момент собственно и запущена кнопка.
-В случае, если домен указан, то актуальный домен не будет использоваться и будут получены настройки для указанного домена.</p>
+<p>Domain that requests button settings. If left blank, the domain is received automatically and corresponds to the domain where the button is activated.</p>
+<p>If a certain domain is indicated, the actual domain is not used and the settings for the indicated domain are received.</p>
 </div>
 <div class="section" id="fancyboxjspath">
 <h2>fancyboxJsPath<a class="headerlink" href="#fancyboxjspath" title="Permalink to this headline">¶</a></h2>
-<p>Url до расположения fancybox js библиотеки.</p>
+<p>URL to the location of the fancybox library.</p>
 </div>
 <div class="section" id="fancyboxcsspath">
 <h2>fancyboxCssPath<a class="headerlink" href="#fancyboxcsspath" title="Permalink to this headline">¶</a></h2>
-<p>Url до расположения fancybox css</p>
+<p>URL to the location of fancybox css.</p>
 </div>
 <div class="section" id="jquerypeppath">
 <h2>jqueryPepPath<a class="headerlink" href="#jquerypeppath" title="Permalink to this headline">¶</a></h2>
-<p>Url до расположения jquery.pep библиотеки</p>
+<p>URL to the location of library jquery.pep</p>
 </div>
 <div class="section" id="buttonanimationtimeafterfancybox">
 <h2>buttonAnimationTimeAfterFancybox<a class="headerlink" href="#buttonanimationtimeafterfancybox" title="Permalink to this headline">¶</a></h2>
-<p>Длительность анимации кнопки после закрытия fancybox, в мс</p>
+<p>Animation duration after fancybox is closed, in ms</p>
 </div>
 <div class="section" id="hideafterfirstshow">
 <h2>HideAfterFirstShow<a class="headerlink" href="#hideafterfirstshow" title="Permalink to this headline">¶</a></h2>
-<p>Показывать или нет кнопку после ее первого показа пользователю
-* true - после первого показа кнопка скрывается (до тех пор, пока HideAfterFirstShow не будет установлен в true, либо не истечет срок действия cookie)
-* false - кнопка показывается каждый раз (естественно в зависимости от настроек сервера и таргетинга на стороне сервера)
-Применимо при ButtonType = button</p>
+<p>Show or not the button after its first display to a user.</p>
+<ul class="simple">
+<li>true - button hides after the first display (until HideAfterFirstShow is set to true or the cookie expires)</li>
+<li>false -  button is displayed every time (defined by server settings and server targeting)</li>
+</ul>
+<p>Applied when ButtonType = button</p>
 </div>
 <div class="section" id="loadfancyboxcss">
 <h2>LoadFancyboxCSS<a class="headerlink" href="#loadfancyboxcss" title="Permalink to this headline">¶</a></h2>
-<p>Загружать или нет css по-умолчанию для fancybox
-* true - загружать
-* false - не загружать (к примеру в случае если на сайте уже используется fancybox)</p>
+<p>Download or not css for fancybox by default.</p>
+<ul class="simple">
+<li>true - download</li>
+<li>false - don&#8217;t download (e.g., fancybox is already in use on the site)</li>
+</ul>
 </div>
 <div class="section" id="contenturl">
 <h2>ContentURL<a class="headerlink" href="#contenturl" title="Permalink to this headline">¶</a></h2>
-<p>Url на контент, показываемый кнопкой.
-Для разных ButtonContentType
-* iframe - любая ссылка на сайт или иной контент, показываемый в iframe
-* video - ссылка на видео (формата, поддерживаемого HTML5 video)</p>
+<p>URL to the content displayed by the button.</p>
+<p>For different ButtonContentType:</p>
+<ul class="simple">
+<li>iframe - any link to the site or another content displayed in the iframe</li>
+<li>video - сlink to the video (supported by HTML5 video)</li>
+</ul>
 </div>
 <div class="section" id="buttonenabled">
 <h2>ButtonEnabled<a class="headerlink" href="#buttonenabled" title="Permalink to this headline">¶</a></h2>
-<p>Включена / выключена</p>
+<p>Enabled/disabled</p>
 </div>
 <div class="section" id="buttonvisible">
 <h2>ButtonVisible<a class="headerlink" href="#buttonvisible" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div>видна / не видна</div></blockquote>
+<p>Visible/invisible</p>
 </div>
 <div class="section" id="buttonposition">
 <h2>ButtonPosition<a class="headerlink" href="#buttonposition" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div>Позиция кнопки. Задается как объект {X:0.5, Y:.5}
-Где X и Y указывается от 0 до 1 (от 0 до 1, где 1 - ширина или высота window соответственно)
-Применимо при ButtonType = button</div></blockquote>
+<p>Button position. Set as an object <code class="docutils literal"><span class="pre">{X:0.5,</span> <span class="pre">Y:.5}</span></code>
+where X and Y vary between 0 and 1 (1 stands for width or height respectively).
+Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="buttonsize">
 <h2>ButtonSize<a class="headerlink" href="#buttonsize" title="Permalink to this headline">¶</a></h2>
-<p>Размер кнопки. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px
-Применимо при ButtonType = button</p>
+<p>Button size. Set as an object <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">64.0,</span> <span class="pre">H:</span> <span class="pre">64.0</span> <span class="pre">}</span></code>
+where W and H stand for width and height in px respectively.</p>
+<blockquote>
+<div>Applied when  <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></div></blockquote>
 </div>
 <div class="section" id="buttondragsize">
 <h2>ButtonDragSize<a class="headerlink" href="#buttondragsize" title="Permalink to this headline">¶</a></h2>
-<p>Размер кнопки во время перетаскивания. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px
-Применимо при ButtonType = button</p>
+<p>Size of the button when dragged. Set as an object. <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">64.0,</span> <span class="pre">H:</span> <span class="pre">64.0</span> <span class="pre">}</span></code>
+where W and H stand for width and height in px respectively</p>
+<p>Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="buttonopacity">
 <h2>ButtonOpacity<a class="headerlink" href="#buttonopacity" title="Permalink to this headline">¶</a></h2>
-<p>Прозрачность кнопки. Задается от 0 до 1 (0 - полностью прозрачна, 1 - не прозрачна)
-Применимо при ButtonType = button</p>
+<p>Button opacity. Varies between 0 and 1 (0 - transparent, 1 – opaque)
+Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="buttondragopacity">
 <h2>ButtonDragOpacity<a class="headerlink" href="#buttondragopacity" title="Permalink to this headline">¶</a></h2>
-<p>Прозрачность при перетаскивании кнопки
-Применимо при ButtonType = button</p>
+<p>Opacity of the button when dragged
+Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="buttonimage">
 <h2>ButtonImage<a class="headerlink" href="#buttonimage" title="Permalink to this headline">¶</a></h2>
-<p>Ссылка на картинку кнопки
-Применимо при ButtonType = button</p>
+<p>Link to the button image
+Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="buttondragimage">
 <h2>ButtonDragImage<a class="headerlink" href="#buttondragimage" title="Permalink to this headline">¶</a></h2>
-<p>Ссылка на картинку кнопки во время перетаскивания кнопки
-Применимо при ButtonType = button</p>
+<p>Link to the image of the button when dragged
+Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="closeposition">
 <h2>ClosePosition<a class="headerlink" href="#closeposition" title="Permalink to this headline">¶</a></h2>
-<p>Позиция области закрытия кнопки.
-Задается как объект {X:0.5, Y:.5}
-Где X и Y указывается от 0 до 1 (от 0 до 1, где 1 - ширина или высота window соответственно)
-Применимо при ButtonType = button</p>
+<p>Position of the button closing area</p>
+<p>Set as an object <code class="docutils literal"><span class="pre">{X:0.5,</span> <span class="pre">Y:0.5}</span></code>
+where X and Y vary between 0 and 1 (1 stands for window width or height respectively)</p>
+<p>Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="closesize">
 <h2>CloseSize<a class="headerlink" href="#closesize" title="Permalink to this headline">¶</a></h2>
-<p>Размер области закрытия. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px
-Применимо при ButtonType = button</p>
+<p>Size of the closing area. Set as an object <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">64.0,</span> <span class="pre">H:</span> <span class="pre">64.0</span> <span class="pre">}</span></code>
+where W and H stand for width and height in px respectively</p>
+<p>Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="closeactivesize">
 <h2>CloseActiveSize<a class="headerlink" href="#closeactivesize" title="Permalink to this headline">¶</a></h2>
-<p>Размер области закрытия в активном состоянии (когда кнопка наведена на область закрытия).
-Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px
-Применимо при ButtonType = button</p>
+<p>Size of the closing area in active mode (when the button is rolled over the closing area).
+Set as an object <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">64.0,</span> <span class="pre">H:</span> <span class="pre">64.0</span> <span class="pre">}</span></code>
+where W and H stand for width and height in px respectively</p>
+<p>Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="closeopacity">
 <h2>CloseOpacity<a class="headerlink" href="#closeopacity" title="Permalink to this headline">¶</a></h2>
-<p>Прозрачность области закрытия
-Применимо при ButtonType = button</p>
+<p>Opacity of the closing area.
+Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="closeactiveopacity">
 <h2>CloseActiveOpacity<a class="headerlink" href="#closeactiveopacity" title="Permalink to this headline">¶</a></h2>
-<p>Прозрачность области закрытия в активном состоянии (при наведении кнопки)
-Применимо при ButtonType = button</p>
+<p>Opacity of the closing area in active mode (when the button is rolled over it).</p>
+<p>Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="closeimage">
 <h2>CloseImage<a class="headerlink" href="#closeimage" title="Permalink to this headline">¶</a></h2>
-<p>Ссылка на изображение для области закрытия.
-Применимо при ButtonType = button</p>
+<p>Link to the image for the closing area.</p>
+<p>Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="hintlabelinsets">
 <h2>HintLabelInsets<a class="headerlink" href="#hintlabelinsets" title="Permalink to this headline">¶</a></h2>
-<p>Отступы для текста (текст под кнопкой).
-Задается в формате { T: 4.0, B: 4.0, L: 4.0, R: 4.0 }
-Применимо при ButtonType = button</p>
+<p>Text insets (below the button line)</p>
+<p>Set in the following format <code class="docutils literal"><span class="pre">{</span> <span class="pre">T:</span> <span class="pre">4.0,</span> <span class="pre">B:</span> <span class="pre">4.0,</span> <span class="pre">L:</span> <span class="pre">4.0,</span> <span class="pre">R:</span> <span class="pre">4.0</span> <span class="pre">}</span></code></p>
+<p>Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="hinttext">
 <h2>HintText<a class="headerlink" href="#hinttext" title="Permalink to this headline">¶</a></h2>
-<p>Текст для &#8220;подсказки&#8221; кнопки
-Применимо при ButtonType = button</p>
+<p>Button hint text
+Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="hintfont">
 <h2>HintFont<a class="headerlink" href="#hintfont" title="Permalink to this headline">¶</a></h2>
-<p>Параметры шрифта для &#8220;подсказки&#8221; кнопки.
-Задается как объект { Family: &#8220;Arial&#8221;, Size: 18 }
-Family - шрифт для надписи. Указывается для font-family
-Size - размер текста
-Применимо при ButtonType = button</p>
+<p>Font parameters for the buttonhint text
+Set as an object <code class="docutils literal"><span class="pre">{</span> <span class="pre">Family:</span> <span class="pre">&quot;Arial&quot;,</span> <span class="pre">Size:</span> <span class="pre">18</span> <span class="pre">}</span></code></p>
+<ul class="simple">
+<li>Family - шрифт для надписи. Указывается для font-family</li>
+<li>Size - размер текста</li>
+</ul>
+<p>Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="hintfontcolor">
 <h2>HintFontColor<a class="headerlink" href="#hintfontcolor" title="Permalink to this headline">¶</a></h2>
-<p>Цвет надписи. Задается как объект { R: 1.0, G: 1.0, B: 1.0, A: 1.0  }
-Применимо при ButtonType = button</p>
+<p>Text color. Set as an object <code class="docutils literal"><span class="pre">{</span> <span class="pre">R:</span> <span class="pre">1.0,</span> <span class="pre">G:</span> <span class="pre">1.0,</span> <span class="pre">B:</span> <span class="pre">1.0,</span> <span class="pre">A:</span> <span class="pre">1.0</span> <span class="pre">}</span></code>
+Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="vendortext">
 <h2>VendorText<a class="headerlink" href="#vendortext" title="Permalink to this headline">¶</a></h2>
-<p>Текст вендора (показывается внизу fancybox)</p>
+<p>Vendor text (displayed at the bottom of fancybox)</p>
 </div>
 <div class="section" id="vendorsite">
 <h2>VendorSite<a class="headerlink" href="#vendorsite" title="Permalink to this headline">¶</a></h2>
-<p>Ссылка на сайт вендора</p>
+<p>Link to the vendor&#8217;s site</p>
 </div>
 <div class="section" id="vendortextfont">
 <h2>VendorTextFont<a class="headerlink" href="#vendortextfont" title="Permalink to this headline">¶</a></h2>
-<p>Формат соответствует параметру HintFont</p>
+<p>Format corresponds to the HintFont parameter</p>
 </div>
 <div class="section" id="vendortextcolor">
 <h2>VendorTextColor<a class="headerlink" href="#vendortextcolor" title="Permalink to this headline">¶</a></h2>
-<p>Цвет для VendorText. Формат соответствует HintFontColor</p>
+<p>VendorText color. Format corresponds to HintFontColor</p>
 </div>
 <div class="section" id="vendorcolor">
 <h2>VendorColor<a class="headerlink" href="#vendorcolor" title="Permalink to this headline">¶</a></h2>
-<p>Цвет фона для VendorText</p>
+<p>VendorText background color</p>
 </div>
 <div class="section" id="iframescaleminwidth">
 <h2>iframeScaleMinWidth<a class="headerlink" href="#iframescaleminwidth" title="Permalink to this headline">¶</a></h2>
-<p>Минимальная ширина для сайта внутри iframe. Если текущая ширина fancybox меньше искомой iframeScaleMinWidth, то iframe при помощи transform масштабируется, чтобы поместится в текущую ширину
-Данный способ подходит для сайтов, которые сами не могут адаптироваться к таковой ширине.
-По умолчанию 0 - в этом случае масштабирования не производим.</p>
+<p>Minimal width for the site displayed inside the iframe. If the current fancybox width is smaller than the required iframeScaleMinWidth, the iframe is to be scaled using the tranform parameter to fit in the current width.</p>
+<p>Suitable for the sites that do not adjust autmatically to the given width.</p>
+<p>Be default 0, no need to scale.</p>
 </div>
 <div class="section" id="id1">
 <h2>iframeScale<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>По умолчанию 1. Параметр scale для transform iframe&#8217;а.
-Вычисляется автоматически на основе iframeScaleMinWidth и ширины fancybox</p>
+<p>By default 1. Scaling attribute for the transform parameter of the iframe.</p>
+<p>Calculated automatially based on iframeScaleMinWidth and fancybox width.</p>
 </div>
 <div class="section" id="hintopacity">
 <h2>HintOpacity<a class="headerlink" href="#hintopacity" title="Permalink to this headline">¶</a></h2>
-<p>Прозрачность надписи. (от 0 до 1).
-Применимо при ButtonType = button</p>
+<p>Text opacity. (from 0 to 1)
+Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="hintimage">
 <h2>HintImage<a class="headerlink" href="#hintimage" title="Permalink to this headline">¶</a></h2>
-<p>Фоновое изображение для подписи кнопки.
-Применимо при ButtonType = button</p>
+<p>Background image for the button signing.
+Applied when <code class="docutils literal"><span class="pre">ButtonType</span> <span class="pre">=</span> <span class="pre">button</span></code></p>
 </div>
 <div class="section" id="contentsize">
 <h2>ContentSize<a class="headerlink" href="#contentsize" title="Permalink to this headline">¶</a></h2>
-<p>Размер для fancybox
-Представляет собой объект { W: 100, H: 100, X: &#8220;90%&#8221;, Y: &#8220;90%&#8221; }
-В случае, если параметр IsManualSize = true, то присутствуют X и Y, представляющие собой размер в процентах.
-В ином случае используются W и H (ширина и высота соответственно) в px.</p>
+<p>Fancybox size</p>
+<p>Set as an object <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">100,</span> <span class="pre">H:</span> <span class="pre">100,</span> <span class="pre">X:</span> <span class="pre">&quot;90%&quot;,</span> <span class="pre">Y:</span> <span class="pre">&quot;90%&quot;</span> <span class="pre">}</span></code></p>
+<p>If IsManualSize = true, X and Y show up for the size in %.
+Otherwise, W and H are used (width and height respectively)</p>
 </div>
 <div class="section" id="ismanualsize">
 <h2>IsManualSize<a class="headerlink" href="#ismanualsize" title="Permalink to this headline">¶</a></h2>
-<p>В случае, если параметр IsManualSize = true, тo в ContentSize присутствуют X и Y, представляющие собой размер в процентах.
-В ином случае используются W и H (ширина и высота соответственно) в px.</p>
+<p>If IsManualSize = true, ContentSize shows X and Y for the size in %.</p>
+<p>Otherwise, W and H are used (width and height in px respectively)</p>
 </div>
 <div class="section" id="contentinsets">
 <h2>ContentInsets<a class="headerlink" href="#contentinsets" title="Permalink to this headline">¶</a></h2>
-<p>Отступы для fancybox (и всего что используется вместо него)
-Представляет собой объект { T: -2.0, B: -2.0, L: -2.0, R: -2.0 }
-с соответственно отступами для top, bottom, left и right.
-Если ContentInsets меньше 0, то отступы рассчитываются автоматически на основе размеров кнопки.</p>
+<p>Insets for fancybox (and its substitutes)</p>
+<p>Set as an object <code class="docutils literal"><span class="pre">{</span> <span class="pre">T:</span> <span class="pre">-2.0,</span> <span class="pre">B:</span> <span class="pre">-2.0,</span> <span class="pre">L:</span> <span class="pre">-2.0,</span> <span class="pre">R:</span> <span class="pre">-2.0</span> <span class="pre">}</span></code></p>
+<p>With given top, bottom, left and right insets.
+If ContentInsets is below 0, insets are calculated automatically based on the button size.</p>
 </div>
 <div class="section" id="hideinframe">
 <h2>HideInFrame<a class="headerlink" href="#hideinframe" title="Permalink to this headline">¶</a></h2>
-<p>Параметр, отвечающий за то, показывать кнопка на странице, показываемой внутри iframe или нет.
-* true - скрывать кнопку, когда страница показывается в iframe
-* false - не скрывать кнопку, когда страница показывается в iframe</p>
+<p>Parameter defining whether to display the button when the page opens in the iframe.</p>
+<ul class="simple">
+<li>true -  hide the button when the page opens in the iframe</li>
+<li>false - display the button when the page opens in the iframe</li>
+</ul>
 </div>
 <div class="section" id="zcustomcss">
 <h2>ZCustomCss<a class="headerlink" href="#zcustomcss" title="Permalink to this headline">¶</a></h2>
-<p>По умолчанию &#8220;&#8221;.
-В случае, если в данном параметре присутствует текст, он будет добавлен как css в страницу.
-Параметр нужен, если необходимо модифицировать css страницы без вмешательства в код.</p>
+<p>By default &#8220;&#8221;.</p>
+<p>If this parameter includes a text, the latter is added to the page as css.</p>
+<p>The parameter helps to modify css of the page without interfering with the code</p>
 </div>
 <div class="section" id="showinparent">
 <h2>showInParent<a class="headerlink" href="#showinparent" title="Permalink to this headline">¶</a></h2>
-<p>По умолчанию false
-Если кнопка находится в iframe и родительское окно как и старница в iframe размещены на одном и том же домене, то при true кнопка добавить в родителя код //cdn.probtn.com/includepb.min.js для запуска кнопки в родителе.</p>
+<p>By default false</p>
+<p>If the button is in the iframe and the parent window as well as the page in the iframe are located on the same domain, if set to true, the button adds to the parent the following code <code class="docutils literal"><span class="pre">//cdn.probtn.com/includepb.min.js</span></code> or <code class="docutils literal"><span class="pre">//cdn.probtn.com/probtn_concat.js</span></code> in order to play the button in the parent.</p>
 </div>
 <div class="section" id="ishpmd">
 <h2>isHPMD<a class="headerlink" href="#ishpmd" title="Permalink to this headline">¶</a></h2>
-<p>По умолчанию false
-В случае, если установлено в true, то будут вызываться события HPMD</p>
+<p>By default: false</p>
+<p>if set to true, HPMD events are called</p>
 </div>
 <div class="section" id="dfp">
 <h2>dfp<a class="headerlink" href="#dfp" title="Permalink to this headline">¶</a></h2>
 <p>Объект для настроек при использовании DFP Google
-dfp: { isDFP: false,  clickUrlEsc: &#8220;&#8221;, cacheBuster: &#8220;&#8221;}
+<code class="docutils literal"><span class="pre">dfp:</span> <span class="pre">{</span> <span class="pre">isDFP:</span> <span class="pre">false,</span>&nbsp; <span class="pre">clickUrlEsc:</span> <span class="pre">&quot;&quot;,</span> <span class="pre">cacheBuster:</span> <span class="pre">&quot;&quot;}</span></code>
 isDFP - используется ли DFP
 clickUrlEsc - ссылка из макроса DFP для отслеживания кликов</p>
+<p>Object for settings in DFP Google</p>
+<ul class="simple">
+<li>dfp: <code class="docutils literal"><span class="pre">{</span> <span class="pre">isDFP:</span> <span class="pre">false,</span>&nbsp; <span class="pre">clickUrlEsc:</span> <span class="pre">&quot;&quot;,</span> <span class="pre">cacheBuster:</span> <span class="pre">&quot;&quot;}</span></code></li>
+<li>isDFP - use or not DFP</li>
+<li>clickUrlEsc -  link from the DFP macro to track the clicks</li>
+</ul>
 </div>
 <div class="section" id="clickcounterlink">
 <h2>ClickCounterLink<a class="headerlink" href="#clickcounterlink" title="Permalink to this headline">¶</a></h2>
-<p>Ссылка вызываемая при нажатии на кнопку. Необходима для случаев, когда требуется сторонний подсчет статистики (в частности кликов по кнопке) - для данной ссылки производится ajax запрос</p>
+<p>Link called when the button is pressed. Helps to additionally collect statictics (including, number of clicks on the button). For this link, an ajax request is sent.</p>
 </div>
 <div class="section" id="isservercommunicationenabled">
 <h2>isServerCommunicationEnabled<a class="headerlink" href="#isservercommunicationenabled" title="Permalink to this headline">¶</a></h2>
-<p>По умолчанию true
-Параметр отвечает за то, включено ли взаимодействие с сервером (в частности получение настроек и отправку статистики).</p>
+<p>By default: true</p>
+<p>Parameter that defines communication with the server (including, getting settings and sending statistics)</p>
 </div>
 <div class="section" id="uselocalfilesettings">
 <h2>useLocalFileSettings<a class="headerlink" href="#uselocalfilesettings" title="Permalink to this headline">¶</a></h2>
-<p>По умолчанию false
-Использовать ли json файл с настройками кнопки</p>
+<p>By default: false</p>
+<p>Use or not the json file containing the button settings</p>
 </div>
 <div class="section" id="localsettingspath">
 <h2>localSettingsPath<a class="headerlink" href="#localsettingspath" title="Permalink to this headline">¶</a></h2>
-<p>Url (абсолютный или относительный) до json файла
-По умолчанию &#8220;settings.json&#8221;</p>
+<p>URL (absolute or relative) to the json file</p>
+<p>By default <code class="docutils literal"><span class="pre">&quot;settings.json&quot;</span></code></p>
 </div>
 <div class="section" id="issmartbanner">
 <h2>isSmartBanner<a class="headerlink" href="#issmartbanner" title="Permalink to this headline">¶</a></h2>
-<p>По умолчанию false
-Если true, то вместо кнопки будет показываться смартбаннер (на основе <a class="reference external" href="https://github.com/jasny/jquery.smartbanner">https://github.com/jasny/jquery.smartbanner</a> )</p>
+<p>By default: false</p>
+<p>If set to true, a smartbanner is displayed instead of the button (based on  <a class="reference external" href="https://github.com/jasny/jquery.smartbanner">https://github.com/jasny/jquery.smartbanner</a> )</p>
 </div>
 <div class="section" id="smartbannerjspath">
 <h2>smartbannerJsPath<a class="headerlink" href="#smartbannerjspath" title="Permalink to this headline">¶</a></h2>
 <p>Путь по умолчанию до jquery.smartbanner.js
-&#8216;//cdn.probtn.com/libs/jquery.smartbanner.js&#8217;,</p>
+<code class="docutils literal"><span class="pre">//cdn.probtn.com/libs/jquery.smartbanner.js</span></code></p>
 </div>
 <div class="section" id="smartbannercsspath">
 <h2>smartbannerCssPath<a class="headerlink" href="#smartbannercsspath" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>Путь по умолчанию до jquery.smartbanner.css</dt>
-<dd>&#8216;//cdn.probtn.com/libs/jquery.smartbanner.css&#8217;,</dd>
-</dl>
+<p>URL by default to jquery.smartbanner.js <code class="docutils literal"><span class="pre">//cdn.probtn.com/libs/jquery.smartbanner.js</span></code></p>
 </div>
 <div class="section" id="smartbanner">
 <h2>smartbanner<a class="headerlink" href="#smartbanner" title="Permalink to this headline">¶</a></h2>
-<p>Объект с настройками для smartbanner&#8217;a</p>
-<p>Настройки по умолчанию</p>
+<p>Object with settings for the smartbanner</p>
+<p>Settings by default</p>
 <div class="highlight-python"><div class="highlight"><pre>{
   iosAppId: null,
   androidAppId: null,
@@ -813,127 +862,135 @@ clickUrlEsc - ссылка из макроса DFP для отслеживани
 </div>
 <div class="section" id="mainbuttonclickable">
 <h2>MainButtonClickable<a class="headerlink" href="#mainbuttonclickable" title="Permalink to this headline">¶</a></h2>
-<p>Можно ли нажать на основную кнопку, по умолчанию true</p>
+<p>Clickability of the main button. By default true</p>
 </div>
 <div class="section" id="menu">
 <h2>Menu параметры<a class="headerlink" href="#menu" title="Permalink to this headline">¶</a></h2>
-<p>Использование scroll-зон возможно в случае если ButtonType==&#8221;menu&#8221;</p>
+<p>Scroll areas are used if <code class="docutils literal"><span class="pre">ButtonType==&quot;menu&quot;</span></code></p>
 <div class="section" id="menuitems">
 <h3>MenuItems<a class="headerlink" href="#menuitems" title="Permalink to this headline">¶</a></h3>
-<p>Массив с объектами, описывающими scroll зоны</p>
-<p>Описание объекта из MenuItems</p>
+<p>Array of objects for scroll areas</p>
+<p>Description of an object from MenuItems</p>
 </div>
 <div class="section" id="text">
 <h3>Text<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h3>
-<p>Текст пункта меню</p>
+<p>Text of the menu item</p>
 </div>
 <div class="section" id="actionurl">
 <h3>ActionURL<a class="headerlink" href="#actionurl" title="Permalink to this headline">¶</a></h3>
-<p>Ссылка для перехода по нажатию на пункт меню</p>
+<p>Link if pressed, switching to the menu item</p>
 </div>
 <div class="section" id="image">
 <h3>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h3>
-<p>Картинка пункта меню</p>
+<p>Image of the menu item</p>
 </div>
 <div class="section" id="name">
 <h3>Name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
-<p>Уникальное название пункта меню (для статистики)</p>
+<p>Unique name of the menu item (for statistics)</p>
 </div>
 <div class="section" id="type">
 <h3>Type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
-<p>Тип пункта меню. По умолчанию external
-Варианты:
-* external
-* video
-* iframe</p>
+<p>Type of the menu item. By default external</p>
+<p>Options:</p>
+<ul class="simple">
+<li>external</li>
+<li>video</li>
+<li>iframe</li>
+</ul>
 </div>
 <div class="section" id="menuoptions">
 <h3>MenuOptions<a class="headerlink" href="#menuoptions" title="Permalink to this headline">¶</a></h3>
-<p>Объект с описанием основных свойств меню</p>
+<p>Object that describes the main settings of the menu</p>
 </div>
 <div class="section" id="fontsize">
 <h3>FontSize<a class="headerlink" href="#fontsize" title="Permalink to this headline">¶</a></h3>
-<p>Размер шрифта пункта меню</p>
+<p>Font size of the menu item</p>
 </div>
 <div class="section" id="fontfamily">
 <h3>FontFamily<a class="headerlink" href="#fontfamily" title="Permalink to this headline">¶</a></h3>
-<p>Шрифт для пункта меню</p>
+<p>Font of the menu item</p>
 </div>
 <div class="section" id="backgroundcolor">
 <h3>BackgroundColor<a class="headerlink" href="#backgroundcolor" title="Permalink to this headline">¶</a></h3>
-<p>Цвет фона пункта меню</p>
+<p>Background color of the menu item</p>
 </div>
 <div class="section" id="foregroundcolor">
 <h3>ForegroundColor<a class="headerlink" href="#foregroundcolor" title="Permalink to this headline">¶</a></h3>
-<p>Цвет текста пункта меню</p>
+<p>Text color of the menu item</p>
 </div>
 <div class="section" id="menuheight">
 <h3>MenuHeight<a class="headerlink" href="#menuheight" title="Permalink to this headline">¶</a></h3>
-<p>Высота пункта меню</p>
-<p>Пример объекта:</p>
-<div class="highlight-python"><div class="highlight"><pre> MenuOptions: {
-     FontSize: &quot;1.4em&quot;,
-     FontFamily: &#39;&quot;Helvetica Neue&quot;,Helvetica,Arial,&quot;Lucida Grande&quot;,sans-serif&#39;,
-     BackgroundColor: &#39;rgba(49,55,61,.95)&#39;,
-     ForegroundColor: &#39;#fff&#39;,
-     MenuHeight: &quot;3.4em&quot;
-}
-</pre></div>
+<p>Height of the menu item</p>
+<p>Example of an object:</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div><dl class="docutils">
+<dt>MenuOptions: {</dt>
+<dd>FontSize: &#8220;1.4em&#8221;,
+FontFamily: &#8216;&#8220;Helvetica Neue&#8221;,Helvetica,Arial,&#8221;Lucida Grande&#8221;,sans-serif&#8217;,
+BackgroundColor: &#8216;rgba(49,55,61,.95)&#8217;,
+ForegroundColor: &#8216;#fff&#8217;,
+MenuHeight: &#8220;3.4em&#8221;</dd>
+</dl>
+</div></blockquote>
+<p class="last">}</p>
+</dd>
+</dl>
 </div>
 </div>
-</div>
-<div class="section" id="scroll">
-<h2>Scroll параметры<a class="headerlink" href="#scroll" title="Permalink to this headline">¶</a></h2>
-<p>Использование scroll-зон возможно в случае если ButtonType==&#8221;button_and_scroll_zones&#8221;</p>
+<div class="section" id="scroll-params">
+<h2>Scroll params<a class="headerlink" href="#scroll-params" title="Permalink to this headline">¶</a></h2>
+<p>Scroll zones could be used if <code class="docutils literal"><span class="pre">ButtonType==&quot;button_and_scroll_zones&quot;</span></code></p>
 <div class="section" id="scrollzones">
 <h3>ScrollZones<a class="headerlink" href="#scrollzones" title="Permalink to this headline">¶</a></h3>
-<p>Массив с объектами, описывающими scroll зоны</p>
-<p>Описание объекта из ScrollZones</p>
+<p>Array of objects that decribe scroll zones</p>
+<p>Description of an object from ScrollZones</p>
 </div>
 <div class="section" id="zoneheight">
 <h3>ZoneHeight<a class="headerlink" href="#zoneheight" title="Permalink to this headline">¶</a></h3>
-<p>Высота зоны (полная высота страницы = 1)</p>
+<p>Zone height (full height of the page=1)</p>
 </div>
 <div class="section" id="id2">
 <h3>ButtonImage<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>Url картинки кнопки</p>
+<p>URL of the button image</p>
 </div>
 <div class="section" id="id3">
 <h3>ButtonDragImage<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>Url картинки кнопки при перетаскивании</p>
+<p>URL of the image of the button when dragged</p>
 </div>
 <div class="section" id="id4">
 <h3>HintText<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<p>Текст для картинки</p>
+<p>Text of the image</p>
 </div>
 <div class="section" id="id5">
 <h3>TrackingLink<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<p>Url для сбора статистики (при клике на кнопку)</p>
+<p>URL for statistics (by a click on the button)</p>
 </div>
 <div class="section" id="custombuttonparams">
 <h3>CustomButtonParams<a class="headerlink" href="#custombuttonparams" title="Permalink to this headline">¶</a></h3>
-<p>Использовать ли дополнительные параметры для кнопки (размеры, прозрачность, etc.)
-По умолчанию false</p>
+<p>Use additional parameters for the button (size, opacity, etc.)</p>
+<p>By default: false</p>
 </div>
 <div class="section" id="id6">
 <h3>ButtonSize<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<p>Размер кнопки. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px</p>
+<p>Button size. Set as an object <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">64.0,</span> <span class="pre">H:</span> <span class="pre">64.0</span> <span class="pre">}</span></code></p>
+<p>where W and H stand for width ad height in px respectively</p>
 </div>
 <div class="section" id="id7">
 <h3>ButtonDragSize<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<p>Размер кнопки во время перетаскивания. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px</p>
+<p>Size of the button when dragged. Set as an object <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">64.0,</span> <span class="pre">H:</span> <span class="pre">64.0</span> <span class="pre">}</span></code></p>
+<p>where W and H stand for width ad height in px respectively</p>
 </div>
 <div class="section" id="id8">
 <h3>ButtonOpacity<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-<p>Прозрачность кнопки. Задается от 0 до 1 (0 - полностью прозрачна, 1 - не прозрачна)</p>
+<p>Button opacity. Varies between 0 and 1 (0 – transpaternt, 1 – opaque)</p>
 </div>
 <div class="section" id="id9">
 <h3>ButtonDragOpacity<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
-<p>Прозрачность при перетаскивании кнопки</p>
-<p>Пример
-::
+<p>Opacity of the button when dragged</p>
+<p>Example</p>
+<p>::
 ScrollZones: [</p>
 <blockquote>
 <div><blockquote>
@@ -985,270 +1042,291 @@ ButtonDragOpacity: 1.0 // Прозрачность при перемещении
 </div></blockquote>
 </div>
 </div>
+<div class="section" id="activezones-params">
+<h2>ActiveZones params<a class="headerlink" href="#activezones-params" title="Permalink to this headline">¶</a></h2>
+<p>Active zones could be used if <code class="docutils literal"><span class="pre">ButtonType==&quot;button_and_active_zones&quot;</span></code></p>
 <div class="section" id="activezones">
-<h2>ActiveZones параметры<a class="headerlink" href="#activezones" title="Permalink to this headline">¶</a></h2>
-<p>Использование активных зон возможно в случае если ButtonType==&#8221;button_and_active_zones&#8221;</p>
+<h3>ActiveZones<a class="headerlink" href="#activezones" title="Permalink to this headline">¶</a></h3>
+<p>Array of objects that describe active zones</p>
+<p>Description of an object from ActiveZone</p>
+</div>
 <div class="section" id="id10">
-<h3>ActiveZones<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
-<p>Массив с объектами, описывающими активные зоны</p>
-<p>Описание объекта из ActiveZone</p>
+<h3>Name<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>Unique name of a zone(A-Za-z0-9)</p>
 </div>
 <div class="section" id="id11">
-<h3>Name<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
-<p>Уникальное название зоны (A-Za-z0-9)</p>
+<h3>ButtonImageType<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>Type of the button content. By default image</p>
+<p>Options:</p>
+<ul class="simple">
+<li>image</li>
+<li>iframe</li>
+</ul>
 </div>
 <div class="section" id="id12">
-<h3>ButtonImageType<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
-<p>Тип содержимого кнопки. По умолчанию image
-Варианты:
-* image
-* iframe</p>
-</div>
-<div class="section" id="id13">
-<h3>ButtonIframeInitialSize<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
-<p>Размер кнопки. Задается как объект { W: 0, H: 0 }
-Где W и H соответственно ширина и высота в px
-В случае, когда значения равны нулю, для iframe кнопки не применяется &#8220;масштабирование&#8221;.
-Если указаны размеры, то iframe от этих размеров будет погонятся под размеры, указанные в ButtonSize параметре соответственно.</p>
+<h3>ButtonIframeInitialSize<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>Button size. Set as an object <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">0,</span> <span class="pre">H:</span> <span class="pre">0</span> <span class="pre">}</span></code>
+where W and H stand for width and height in px respectively</p>
+<p>If the values are set to 0, no scaling needed for the button iframe.</p>
+<p>If positive values are set, the iframe is adjusted to the size indicated in ButtonSize respectively.</p>
 </div>
 <div class="section" id="position">
 <h3>Position<a class="headerlink" href="#position" title="Permalink to this headline">¶</a></h3>
-<p>Объект, описывающий местоположение зоны.
-Пример:
-Position: { X: 0.1, Y: 0.1 }
-Позиция указывается как число от 0 до 1</p>
+<p>Object that describes zone position</p>
+<p>Example:</p>
+<ul class="simple">
+<li>Position: <code class="docutils literal"><span class="pre">{</span> <span class="pre">X:</span> <span class="pre">0.1,</span> <span class="pre">Y:</span> <span class="pre">0.1</span> <span class="pre">}</span></code></li>
+</ul>
+<p>Position value is set between 0 and 1</p>
 </div>
 <div class="section" id="activeimage">
 <h3>ActiveImage<a class="headerlink" href="#activeimage" title="Permalink to this headline">¶</a></h3>
-<p>Ссылка на изображение для активной зоны (при наведении кнопки)</p>
+<p>Link to the image for the active zone (when the button is rolled over there)</p>
 </div>
 <div class="section" id="inactiveimage">
 <h3>InactiveImage<a class="headerlink" href="#inactiveimage" title="Permalink to this headline">¶</a></h3>
-<p>Ссылка на изображение для неактивной зоны (по умолчанию, при отсутствии наведения на зону)</p>
+<p>Link to the image for the inactive zone (by default, when the button is not rolled over the zone)</p>
 </div>
-<div class="section" id="id14">
-<h3>ActionURL<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
-<p>Ссылка, которая будет открыта при &#8220;сбрасывании&#8221; кнопки на зону. В случае, если ActionURL==&#8221;&#8221; (пустая строка), то откроется ссылка указанная в ContentURL (показываемая при нажатии на кнопку)</p>
+<div class="section" id="id13">
+<h3>ActionURL<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>Link that opens when the button is &#8220;dropped” to the zone. If <code class="docutils literal"><span class="pre">ActionURL==&quot;&quot;</span></code> (left blank), the link indicated in ContentURL opens (displayed by a click on the button)</p>
 </div>
 <div class="section" id="visibleonlyinteraction">
 <h3>VisibleOnlyInteraction<a class="headerlink" href="#visibleonlyinteraction" title="Permalink to this headline">¶</a></h3>
 <p>true/false
-По умолчанию true
-* В случае true активная зона показывается только во время взаимодействия с кнопкой (ее перемещения)
-* В случае false активная зона видна всегда</p>
+By default -  true</p>
+<ul class="simple">
+<li>В случае true активная зона показывается только во время взаимодействия с кнопкой (ее перемещения)</li>
+<li>В случае false активная зона видна всегда</li>
+</ul>
 </div>
-<div class="section" id="id15">
-<h3>ClickCounterLink<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
-<p>По умолчанию - false
-Ссылка вызываемая при сбрасывании  кнопки на активную зону. Необходима для случаев, когда требуется сторонний подсчет статистики (в частности кликов по кнопке) - для данной ссылки производится ajax запрос</p>
+<div class="section" id="id14">
+<h3>ClickCounterLink<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>By default - false</p>
+<p>Link called when the button is dropped to the active zone. Helps to additionally collect statistics (including, the number of clicks on the button). An ajax request is sent for this link.</p>
 </div>
 <div class="section" id="activesize">
 <h3>ActiveSize<a class="headerlink" href="#activesize" title="Permalink to this headline">¶</a></h3>
-<p>Размер зоны в активном состоянии
-Представляет собой
-ActiveSize: { W: 64, H: 64 }
-Где W - ширина, H - высота</p>
+<p>Size of the zone in active mode</p>
+<p>Looks like this</p>
+<p>ActiveSize: <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">64,</span> <span class="pre">H:</span> <span class="pre">64</span> <span class="pre">}</span></code></p>
+<p>where W and H stand for width and height respectively</p>
 </div>
 <div class="section" id="inactivesize">
 <h3>InactiveSize<a class="headerlink" href="#inactivesize" title="Permalink to this headline">¶</a></h3>
-<p>Размер зоны в активном состоянии
-Представляет собой
-InactiveSize: { W: 64, H: 64 }
-Где W - ширина, H - высота</p>
+<p>Size of the zone in active mode</p>
+<p>Looks like this</p>
+<p>InactiveSize: <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">64,</span> <span class="pre">H:</span> <span class="pre">64</span> <span class="pre">}</span></code></p>
+<p>where W and H stand for width and height respectively</p>
 </div>
 <div class="section" id="inactiveopacity">
 <h3>InactiveOpacity<a class="headerlink" href="#inactiveopacity" title="Permalink to this headline">¶</a></h3>
-<p>Прозрачность зоны в неактивном состоянии</p>
+<p>Opacity of the zone in inactive mode</p>
 </div>
 <div class="section" id="activeopacity">
 <h3>ActiveOpacity<a class="headerlink" href="#activeopacity" title="Permalink to this headline">¶</a></h3>
-<p>Прозрачность зоны в активном состоянии</p>
-<p>Пример</p>
-<div class="highlight-python"><div class="highlight"><pre>IsActiveZones: false,
-ActiveZones: [
-    {
-        Name: &quot;Area1&quot;,
-        Position: {
-            X: 0.1,
-            Y: 0.1
-        },
-        ActiveImage: &quot;//probtnexample1.azurewebsites.net/img/logo.png&quot;,
-        InactiveImage: &quot;//admin.probtn.com/eqwid_btn_nonpress.png&quot;,
-        ActiveSize: {
-            W: 64,
-            H: 64
-        },
-        InactiveSize: {
-            W: 64,
-            H: 64
-        },
-        ActionURL: &quot;http://m0rg0t.ru&quot;,
-        ClickCounterLink: &quot;&quot;,
-        VisibleOnlyInteraction: true,
-    },
-    {
-        Name: &quot;Area2&quot;,
-        Position: {
-            X: 0.6,
-            Y: 0.1
-        },
-        ActiveImage: &quot;//probtnexample1.azurewebsites.net/img/logo.png&quot;,
-        InactiveImage: &quot;//admin.probtn.com/eqwid_btn_nonpress.png&quot;,
-        ActiveSize: {
-            W: 64,
-            H: 64
-        },
-        InactiveSize: {
-            W: 64,
-            H: 64
-        },
-        ActionURL: &quot;&quot;,
-        ClickCounterLink: &quot;&quot;,
-        VisibleOnlyInteraction: false,
-        InactiveOpacity: 0.8,
-        ActiveOpacity: 1
-    }
-]
-</pre></div>
+<p>Opacity of the zone in active mode</p>
+<p>Example</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><p class="first">IsActiveZones: false,
+ActiveZones: [</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>{</dt>
+<dd><p class="first">Name: &#8220;Area1&#8221;,
+Position: {</p>
+<blockquote>
+<div>X: 0.1,
+Y: 0.1</div></blockquote>
+<p>},
+ActiveImage: &#8220;//probtnexample1.azurewebsites.net/img/logo.png&#8221;,
+InactiveImage: &#8220;//admin.probtn.com/eqwid_btn_nonpress.png&#8221;,
+ActiveSize: {</p>
+<blockquote>
+<div>W: 64,
+H: 64</div></blockquote>
+<p>},
+InactiveSize: {</p>
+<blockquote>
+<div>W: 64,
+H: 64</div></blockquote>
+<p class="last">},
+ActionURL: &#8220;<a class="reference external" href="http://m0rg0t.ru">http://m0rg0t.ru</a>&#8221;,
+ClickCounterLink: &#8220;&#8221;,
+VisibleOnlyInteraction: true,</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><p>Name: &#8220;Area2&#8221;,
+Position: {</p>
+<blockquote>
+<div>X: 0.6,
+Y: 0.1</div></blockquote>
+<p>},
+ActiveImage: &#8220;//probtnexample1.azurewebsites.net/img/logo.png&#8221;,
+InactiveImage: &#8220;//admin.probtn.com/eqwid_btn_nonpress.png&#8221;,
+ActiveSize: {</p>
+<blockquote>
+<div>W: 64,
+H: 64</div></blockquote>
+<p>},
+InactiveSize: {</p>
+<blockquote>
+<div>W: 64,
+H: 64</div></blockquote>
+<p>},
+ActionURL: &#8220;&#8221;,
+ClickCounterLink: &#8220;&#8221;,
+VisibleOnlyInteraction: false,
+InactiveOpacity: 0.8,
+ActiveOpacity: 1</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p class="last">]</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id16">
-<h1>Неиспользуемые параметры<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="not-used-params">
+<h1>Not used params<a class="headerlink" href="#not-used-params" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="contentwebviewinsets">
 <h2>ContentWebViewInsets<a class="headerlink" href="#contentwebviewinsets" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="baseinsets">
 <h2>BaseInsets<a class="headerlink" href="#baseinsets" title="Permalink to this headline">¶</a></h2>
-<p>не используется в текущей версии кнопки</p>
+<p>Not used</p>
 </div>
 <div class="section" id="buttonopenimage">
 <h2>ButtonOpenImage<a class="headerlink" href="#buttonopenimage" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="buttoninactiveimage">
 <h2>ButtonInactiveImage<a class="headerlink" href="#buttoninactiveimage" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="closeactiveimage">
 <h2>CloseActiveImage<a class="headerlink" href="#closeactiveimage" title="Permalink to this headline">¶</a></h2>
-<p>Не используется.
-Ссылка на изображение для области закрытия в активном состоянии.</p>
+<p>Not used.
+Link to the image in the closing area in active mode</p>
 </div>
 <div class="section" id="buttonopensize">
 <h2>ButtonOpenSize<a class="headerlink" href="#buttonopensize" title="Permalink to this headline">¶</a></h2>
-<p>Не используется.
-Размер кнопки когда открыт fancybox. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px</p>
+<p>Not used.</p>
+<p>Button size when fancybox is open. Set as an object <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">64.0,</span> <span class="pre">H:</span> <span class="pre">64.0</span> <span class="pre">}</span></code></p>
+<p>where W and H stand for width and height in px respectively</p>
 </div>
 <div class="section" id="buttoninactivesize">
 <h2>ButtonInactiveSize<a class="headerlink" href="#buttoninactivesize" title="Permalink to this headline">¶</a></h2>
-<p>Не используется.
-Размер кнопки в неактивном состоянии. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px</p>
+<p>Not used.</p>
+<p>Button size in inactive mode. Set as an object <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">64.0,</span> <span class="pre">H:</span> <span class="pre">64.0</span> <span class="pre">}</span></code></p>
+<p>where W and H stand for width and height in px respectively</p>
 </div>
 <div class="section" id="hintinsets">
 <h2>HintInsets<a class="headerlink" href="#hintinsets" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="buttonopenopacity">
 <h2>ButtonOpenOpacity<a class="headerlink" href="#buttonopenopacity" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="buttoninactiveopacity">
 <h2>ButtonInactiveOpacity<a class="headerlink" href="#buttoninactiveopacity" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="hintimageinsets">
 <h2>HintImageInsets<a class="headerlink" href="#hintimageinsets" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="vendoropacity">
 <h2>VendorOpacity<a class="headerlink" href="#vendoropacity" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="contentimageinsets">
 <h2>ContentImageInsets<a class="headerlink" href="#contentimageinsets" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="contentopacity">
 <h2>ContentOpacity<a class="headerlink" href="#contentopacity" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="contentbackopacity">
 <h2>ContentBackOpacity<a class="headerlink" href="#contentbackopacity" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="contentbackcolor">
 <h2>ContentBackColor<a class="headerlink" href="#contentbackcolor" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="contentactivitycolor">
 <h2>ContentActivityColor<a class="headerlink" href="#contentactivitycolor" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="contentimage">
 <h2>ContentImage<a class="headerlink" href="#contentimage" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="contentarrowsize">
 <h2>ContentArrowSize<a class="headerlink" href="#contentarrowsize" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="contentarrowoffset">
 <h2>ContentArrowOffset<a class="headerlink" href="#contentarrowoffset" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="contentarrowimaget">
 <h2>ContentArrowImageT<a class="headerlink" href="#contentarrowimaget" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="contentarrowimageb">
 <h2>ContentArrowImageB<a class="headerlink" href="#contentarrowimageb" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="contentarrowimagel">
 <h2>ContentArrowImageL<a class="headerlink" href="#contentarrowimagel" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="contentarrowimager">
 <h2>ContentArrowImageR<a class="headerlink" href="#contentarrowimager" title="Permalink to this headline">¶</a></h2>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 <div class="section" id="hintarrowsize">
 <h2>HintArrowSize<a class="headerlink" href="#hintarrowsize" title="Permalink to this headline">¶</a></h2>
-<p>Не используется.</p>
+<p>Not used.</p>
 </div>
 <div class="section" id="hintarrowoffset">
 <h2>HintArrowOffset<a class="headerlink" href="#hintarrowoffset" title="Permalink to this headline">¶</a></h2>
-<p>Не используется.</p>
+<p>Not used.</p>
 </div>
 <div class="section" id="hintarrowimaget">
 <h2>HintArrowImageT<a class="headerlink" href="#hintarrowimaget" title="Permalink to this headline">¶</a></h2>
-<p>Не используется.</p>
+<p>Not used.</p>
 </div>
 <div class="section" id="hintarrowimageb">
 <h2>HintArrowImageB<a class="headerlink" href="#hintarrowimageb" title="Permalink to this headline">¶</a></h2>
-<p>Не используется.</p>
+<p>Not used.</p>
 </div>
 <div class="section" id="hintarrowimagel">
 <h2>HintArrowImageL<a class="headerlink" href="#hintarrowimagel" title="Permalink to this headline">¶</a></h2>
-<p>Не используется.</p>
+<p>Not used.</p>
 </div>
 <div class="section" id="hintarrowimager">
 <h2>HintArrowImageR<a class="headerlink" href="#hintarrowimager" title="Permalink to this headline">¶</a></h2>
-<p>Не используется.</p>
+<p>Not used.</p>
 </div>
-<div class="section" id="id17">
-<h2>Остальные параметры<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h2>Остальные параметры<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
 <p>DefaultDuration, DefaultDelay, OpenDuration, OpenDelay, CloseDuration, CloseDelay, ButtonShowDuration, ButtonShowDelay, ButtonHideDuration, ButtonHideDelay, ButtonDragDuration, ButtonDragDelay, ButtonUndragDuration: 0.2, ButtonUndragDelay, ButtonInactiveDuration, ButtonInactiveDelay, ButtonInertiaSpeed, ButtonInertiaSpeedMin, ButtonInertiaSpeedMax, ButtonInertiaFactor, CloseShowDuration, CloseShowDelay, CloseHideDuration, CloseHideDelay, CloseActiveDuration, CloseActiveDelay, CloseUnactiveDuration, CloseUnactiveDelay, HintLaunchDuration, HintLaunchDelay, HintShowDuration, HintShowDelay, HintHideDuration, HintHideDelay, ContentShowDuration, ContentShowDelay, ContentHideDuration, ContentHideDelay</p>
-<p>Не используется</p>
+<p>Not used</p>
 </div>
 </div>
-<div class="section" id="id18">
-<h1>Параметры по умолчания для кнопки<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="button-default-params">
+<h1>Button default params<a class="headerlink" href="#button-default-params" title="Permalink to this headline">¶</a></h1>
 </div>
 
 

@@ -5,7 +5,7 @@
 
 .. _webparams:
   
-Params descriptionOptions: 
+Params description 
 ==================================
 
 Description of the parameters used by the button (by application)

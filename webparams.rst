@@ -5,7 +5,7 @@
 
 .. _webparams:
   
-Params description
+Params descriptionOptions: 
 ==================================
 
 Description of the parameters used by the button (by application)
@@ -20,6 +20,7 @@ This param is used to select nessesary variant of menu apperiance
 (used then ButtonType==menu)
 
 Possible options:
+
 * list - default template, list
 * radialcorner - partical radial menu (button is in the corner, and menu items aore located in one between 0 and 90 degrees)
 
@@ -28,6 +29,7 @@ VideoType
 Video type used in button
 
 Options:
+
 * mp4 - by default
 * youtube - video from youtube
 
@@ -36,6 +38,7 @@ Debug
 The debug mode of the button displays the version of the button enabled by an open fancybox.
 
 By default:
+
 * false
 
 UseGeoLocation
@@ -43,6 +46,7 @@ UseGeoLocation
 Use or not the data on the geographical position of a user
 
 By default:
+
 * false
 
 WaitForGeoLocation
@@ -50,6 +54,7 @@ WaitForGeoLocation
 With geolocation on, wait for the positioning data to be received (and user's permission in case of the first use) before the display of the button.
 
 By default:
+
 * false
 
 loadJqueryPepJS
@@ -58,6 +63,7 @@ loadJqueryPepJS
 Download jquery.pep.js if the script does not find the appropriate library function
 
 By default:
+
 * true
 
 loadFancyboxJS
@@ -65,6 +71,7 @@ loadFancyboxJS
 Download fancybox if the script does not find the appropriate library function
 
 By default:
+
 * true
 
 DisableButtonMove
@@ -72,6 +79,7 @@ DisableButtonMove
 Disable button move
 
 By default:
+
 * false
 
 waitForIframeButtonLoaded
@@ -79,6 +87,7 @@ waitForIframeButtonLoaded
 Wait for the content of the button iframe to be uploaded.
 
 By default: 
+
 * true
 
 ButtonIframeInitialSize
@@ -95,6 +104,7 @@ ButtonImageType
 Type of the button content. By default: image
 
 Options:
+
 * image
 * iframe
 
@@ -176,7 +186,7 @@ Event called by a click on the button (added in an onclick, necessary to play a 
  
 By default:
 
-```function start1() { var video = $("#video").get(0); video.play(); }; start1(); setTimeout(start1 , 1500);```
+``function start1() { var video = $("#video").get(0); video.play(); }; start1(); setTimeout(start1 , 1500);``
 
 ButtonType 
 ----------------------------------
@@ -186,7 +196,8 @@ By default
 button - button behaviour by default
  
 Current options for ButtonType
-* •	button - button with an iframe in fancybox
+
+* button - button with an iframe in fancybox
 * menu - floating menu mode
 * smartbanner - smartbanner display
 * fullscreen -  autoplay of the content after script initialization
@@ -216,7 +227,7 @@ The parameter itself is an object that consists of X and Y attributes (width and
 
 Example (value by default):
 
-``VideoSize: { X: 1920, Y: 1080 }````
+``VideoSize: { X: 1920, Y: 1080 }``
 
 VideoPoster
 ----------------------------------
@@ -234,8 +245,8 @@ Period of time before the size of the button wrapper gets smaller. Introduced to
 
 OpenExternal
 ----------------------------------
-Параметр, отвечающий за то, как именно должна открываться ссылка (соответственно для ```ButtonType = button``` )
-Parameter that defines how link would be opened (for ```ButtonType = button``` )
+Параметр, отвечающий за то, как именно должна открываться ссылка (соответственно для ``ButtonType = button`` )
+Parameter that defines how link would be opened (for ``ButtonType = button`` )
 
 * false - содержимое открывается в fancybox
 * true - контент открывается в новой вкладке (применяется в случае, если сайт не может быть показан в iframe по тем или иным причинам)
@@ -248,7 +259,7 @@ NeverClose
 ----------------------------------
 If set to true, removes the closing area for the button
  
-Aplied when ```ButtonType = button```
+Aplied when ``ButtonType = button``
 
 domain
 ----------------------------------
@@ -275,14 +286,16 @@ Animation duration after fancybox is closed, in ms
 HideAfterFirstShow
 ----------------------------------
 Show or not the button after its first display to a user.
+
 * true - button hides after the first display (until HideAfterFirstShow is set to true or the cookie expires)
-* •	false -  button is displayed every time (defined by server settings and server targeting)
+* false -  button is displayed every time (defined by server settings and server targeting)
  
 Applied when ButtonType = button
 
 LoadFancyboxCSS
 ----------------------------------
 Download or not css for fancybox by default.
+
 * true - download
 * false - don't download (e.g., fancybox is already in use on the site)
 
@@ -291,6 +304,7 @@ ContentURL
 URL to the content displayed by the button.
 
 For different ButtonContentType:
+
 * iframe - any link to the site or another content displayed in the iframe
 * video - сlink to the video (supported by HTML5 video)
 
@@ -304,112 +318,112 @@ Visible/invisible
  
 ButtonPosition
 ----------------------------------
-Button position. Set as an object ```{X:0.5, Y:.5}```
+Button position. Set as an object ``{X:0.5, Y:.5}``
 where X and Y vary between 0 and 1 (1 stands for width or height respectively).
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 ButtonSize
 ----------------------------------
-Button size. Set as an object ```{ W: 64.0, H: 64.0 }```
+Button size. Set as an object ``{ W: 64.0, H: 64.0 }``
 where W and H stand for width and height in px respectively.
- Applied when  ```ButtonType = button```
+ Applied when  ``ButtonType = button``
 
 
 ButtonDragSize
 ----------------------------------
-Size of the button when dragged. Set as an object. ```{ W: 64.0, H: 64.0 }```
+Size of the button when dragged. Set as an object. ``{ W: 64.0, H: 64.0 }``
 where W and H stand for width and height in px respectively
  
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 ButtonOpacity
 ----------------------------------
 Button opacity. Varies between 0 and 1 (0 - transparent, 1 – opaque)
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 ButtonDragOpacity
 ----------------------------------
 Opacity of the button when dragged
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 ButtonImage
 ----------------------------------
 Link to the button image
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 ButtonDragImage
 ----------------------------------
 Link to the image of the button when dragged
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 ClosePosition
 ----------------------------------
 Position of the button closing area
  
-Set as an object ```{X:0.5, Y:0.5}```
+Set as an object ``{X:0.5, Y:0.5}``
 where X and Y vary between 0 and 1 (1 stands for window width or height respectively)
  
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
  
 CloseSize
 ----------------------------------
-Size of the closing area. Set as an object ```{ W: 64.0, H: 64.0 }```
+Size of the closing area. Set as an object ``{ W: 64.0, H: 64.0 }``
 where W and H stand for width and height in px respectively
  
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 CloseActiveSize
 ----------------------------------
 Size of the closing area in active mode (when the button is rolled over the closing area).
-Set as an object ```{ W: 64.0, H: 64.0 }```
+Set as an object ``{ W: 64.0, H: 64.0 }``
 where W and H stand for width and height in px respectively
 
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 CloseOpacity
 ----------------------------------
 Opacity of the closing area.
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 CloseActiveOpacity
 ----------------------------------
 Opacity of the closing area in active mode (when the button is rolled over it).
  
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 CloseImage
 ----------------------------------
 Link to the image for the closing area.
  
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 HintLabelInsets
 ----------------------------------
 Text insets (below the button line)
  
-Set in the following format ```{ T: 4.0, B: 4.0, L: 4.0, R: 4.0 }```
+Set in the following format ``{ T: 4.0, B: 4.0, L: 4.0, R: 4.0 }``
  
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 HintText
 ----------------------------------
 Button hint text
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 HintFont
 ----------------------------------
 Font parameters for the buttonhint text
-Set as an object ```{ Family: "Arial", Size: 18 }```
+Set as an object ``{ Family: "Arial", Size: 18 }``
 
 * Family - шрифт для надписи. Указывается для font-family
 * Size - размер текста
 
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 HintFontColor
 ----------------------------------
-Text color. Set as an object ```{ R: 1.0, G: 1.0, B: 1.0, A: 1.0 }```
-Applied when ```ButtonType = button```
+Text color. Set as an object ``{ R: 1.0, G: 1.0, B: 1.0, A: 1.0 }``
+Applied when ``ButtonType = button``
 
 VendorText
 ----------------------------------
@@ -448,18 +462,18 @@ Calculated automatially based on iframeScaleMinWidth and fancybox width.
 HintOpacity
 ----------------------------------
 Text opacity. (from 0 to 1)
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 HintImage
 ----------------------------------
 Background image for the button signing.
-Applied when ```ButtonType = button```
+Applied when ``ButtonType = button``
 
 ContentSize
 ----------------------------------
 Fancybox size
 
-Set as an object ```{ W: 100, H: 100, X: "90%", Y: "90%" }```
+Set as an object ``{ W: 100, H: 100, X: "90%", Y: "90%" }``
  
 If IsManualSize = true, X and Y show up for the size in %.
 Otherwise, W and H are used (width and height respectively)
@@ -475,7 +489,7 @@ ContentInsets
 ----------------------------------
 Insets for fancybox (and its substitutes)
  
-Set as an object ```{ T: -2.0, B: -2.0, L: -2.0, R: -2.0 }```
+Set as an object ``{ T: -2.0, B: -2.0, L: -2.0, R: -2.0 }``
  
 With given top, bottom, left and right insets.
 If ContentInsets is below 0, insets are calculated automatically based on the button size.
@@ -489,66 +503,80 @@ Parameter defining whether to display the button when the page opens in the ifra
 
 ZCustomCss
 ----------------------------------
-По умолчанию "".
-В случае, если в данном параметре присутствует текст, он будет добавлен как css в страницу.
-Параметр нужен, если необходимо модифицировать css страницы без вмешательства в код.
+By default "".
+
+If this parameter includes a text, the latter is added to the page as css.
+
+The parameter helps to modify css of the page without interfering with the code
 
 showInParent
 ----------------------------------
-По умолчанию false
-Если кнопка находится в iframe и родительское окно как и старница в iframe размещены на одном и том же домене, то при true кнопка добавить в родителя код //cdn.probtn.com/includepb.min.js для запуска кнопки в родителе.
+By default false
+ 
+If the button is in the iframe and the parent window as well as the page in the iframe are located on the same domain, if set to true, the button adds to the parent the following code ``//cdn.probtn.com/includepb.min.js`` or ``//cdn.probtn.com/probtn_concat.js`` in order to play the button in the parent.
 
 isHPMD
 ----------------------------------
-По умолчанию false
-В случае, если установлено в true, то будут вызываться события HPMD 
+By default: false
+
+if set to true, HPMD events are called
 
 dfp
 ----------------------------------
 Объект для настроек при использовании DFP Google
-dfp: { isDFP: false,  clickUrlEsc: "", cacheBuster: ""}
+``dfp: { isDFP: false,  clickUrlEsc: "", cacheBuster: ""}``
 isDFP - используется ли DFP
 clickUrlEsc - ссылка из макроса DFP для отслеживания кликов
 
+Object for settings in DFP Google
+ 
+* dfp: ``{ isDFP: false,  clickUrlEsc: "", cacheBuster: ""}``
+* isDFP - use or not DFP
+* clickUrlEsc -  link from the DFP macro to track the clicks
+
+
 ClickCounterLink
 ----------------------------------
-Ссылка вызываемая при нажатии на кнопку. Необходима для случаев, когда требуется сторонний подсчет статистики (в частности кликов по кнопке) - для данной ссылки производится ajax запрос
+Link called when the button is pressed. Helps to additionally collect statictics (including, number of clicks on the button). For this link, an ajax request is sent.
 
 isServerCommunicationEnabled
 ----------------------------------
-По умолчанию true
-Параметр отвечает за то, включено ли взаимодействие с сервером (в частности получение настроек и отправку статистики).
+By default: true
+ 
+Parameter that defines communication with the server (including, getting settings and sending statistics)
 
 useLocalFileSettings
 ----------------------------------
-По умолчанию false
-Использовать ли json файл с настройками кнопки
+By default: false
+ 
+Use or not the json file containing the button settings
 
 localSettingsPath
 ----------------------------------
-Url (абсолютный или относительный) до json файла 
-По умолчанию "settings.json"
+URL (absolute or relative) to the json file
+ 
+By default ``"settings.json"``
 
 isSmartBanner
 ----------------------------------
-По умолчанию false
-Если true, то вместо кнопки будет показываться смартбаннер (на основе https://github.com/jasny/jquery.smartbanner )
+By default: false
+ 
+If set to true, a smartbanner is displayed instead of the button (based on  https://github.com/jasny/jquery.smartbanner )
 
 smartbannerJsPath
 ----------------------------------
 Путь по умолчанию до jquery.smartbanner.js
-'//cdn.probtn.com/libs/jquery.smartbanner.js',
+``//cdn.probtn.com/libs/jquery.smartbanner.js``
 
 smartbannerCssPath
 ----------------------------------
-Путь по умолчанию до jquery.smartbanner.css
-      '//cdn.probtn.com/libs/jquery.smartbanner.css',
+URL by default to jquery.smartbanner.js ``//cdn.probtn.com/libs/jquery.smartbanner.js``
 
 smartbanner
 ----------------------------------
-Объект с настройками для smartbanner'a
+Object with settings for the smartbanner
 
-Настройки по умолчанию
+Settings by default
 :: 
 	{
 	  iosAppId: null,
@@ -584,67 +612,70 @@ smartbanner
 
 MainButtonClickable
 ----------------------------------
-Можно ли нажать на основную кнопку, по умолчанию true
+Clickability of the main button. By default true
 
 Menu параметры
 ----------------------------------
-Использование scroll-зон возможно в случае если ButtonType=="menu"
+Scroll areas are used if ``ButtonType=="menu"``
 
 MenuItems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Массив с объектами, описывающими scroll зоны
+Array of objects for scroll areas
 
-Описание объекта из MenuItems
+Description of an object from MenuItems
 
 Text
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Текст пункта меню
+Text of the menu item
 
 ActionURL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Ссылка для перехода по нажатию на пункт меню
+Link if pressed, switching to the menu item
 
 Image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Картинка пункта меню
+Image of the menu item
 
 Name
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Уникальное название пункта меню (для статистики)
+Unique name of the menu item (for statistics)
 
 Type
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Тип пункта меню. По умолчанию external
-Варианты:
+Type of the menu item. By default external
+
+Options:
+
 * external
 * video
 * iframe
 
 MenuOptions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Объект с описанием основных свойств меню
+Object that describes the main settings of the menu
 
 FontSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Размер шрифта пункта меню
+Font size of the menu item
 
 FontFamily
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Шрифт для пункта меню
+Font of the menu item
 
 BackgroundColor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Цвет фона пункта меню
+Background color of the menu item
 
 ForegroundColor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Цвет текста пункта меню
+Text color of the menu item
 
 MenuHeight
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Высота пункта меню
+Height of the menu item
 
-Пример объекта:
+Example of an object:
+
 ::
         MenuOptions: {
             FontSize: "1.4em",
@@ -654,60 +685,64 @@ MenuHeight
             MenuHeight: "3.4em"
        }
 
-Scroll параметры
+Scroll params
 ----------------------------------
-Использование scroll-зон возможно в случае если ButtonType=="button_and_scroll_zones"
+Scroll zones could be used if ``ButtonType=="button_and_scroll_zones"``
 
 ScrollZones
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Массив с объектами, описывающими scroll зоны
+Array of objects that decribe scroll zones
 
-Описание объекта из ScrollZones
+Description of an object from ScrollZones
 
 ZoneHeight
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Высота зоны (полная высота страницы = 1)
+Zone height (full height of the page=1)
 
 ButtonImage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Url картинки кнопки
+URL of the button image
 
 ButtonDragImage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Url картинки кнопки при перетаскивании
+URL of the image of the button when dragged
 
 HintText
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Текст для картинки
+Text of the image
 
 TrackingLink
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Url для сбора статистики (при клике на кнопку)
+URL for statistics (by a click on the button)
 
 CustomButtonParams
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Использовать ли дополнительные параметры для кнопки (размеры, прозрачность, etc.)
-По умолчанию false
+Use additional parameters for the button (size, opacity, etc.)
+ 
+By default: false
 
 ButtonSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Размер кнопки. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px
+Button size. Set as an object ``{ W: 64.0, H: 64.0 }``
+ 
+where W and H stand for width ad height in px respectively
 
 ButtonDragSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Размер кнопки во время перетаскивания. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px
+Size of the button when dragged. Set as an object ``{ W: 64.0, H: 64.0 }``
+ 
+where W and H stand for width ad height in px respectively
 
 ButtonOpacity
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Прозрачность кнопки. Задается от 0 до 1 (0 - полностью прозрачна, 1 - не прозрачна)
+Button opacity. Varies between 0 and 1 (0 – transpaternt, 1 – opaque)
 
 ButtonDragOpacity
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Прозрачность при перетаскивании кнопки
+Opacity of the button when dragged
 
-Пример
+Example
+
 ::
 ScrollZones: [
                         {
@@ -748,88 +783,104 @@ ScrollZones: [
                         }
                     ]
 
-ActiveZones параметры
+ActiveZones params
 ----------------------------------
-Использование активных зон возможно в случае если ButtonType=="button_and_active_zones"
+Active zones could be used if ``ButtonType=="button_and_active_zones"``
 
 ActiveZones
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Массив с объектами, описывающими активные зоны
+Array of objects that describe active zones
 
-Описание объекта из ActiveZone
+Description of an object from ActiveZone
 
 Name
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Уникальное название зоны (A-Za-z0-9)
+Unique name of a zone(A-Za-z0-9)
 
 ButtonImageType
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Тип содержимого кнопки. По умолчанию image
-Варианты:
+Type of the button content. By default image
+
+Options:
+
 * image
 * iframe
 
 ButtonIframeInitialSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Размер кнопки. Задается как объект { W: 0, H: 0 }
-Где W и H соответственно ширина и высота в px
-В случае, когда значения равны нулю, для iframe кнопки не применяется "масштабирование".
-Если указаны размеры, то iframe от этих размеров будет погонятся под размеры, указанные в ButtonSize параметре соответственно.
+Button size. Set as an object ``{ W: 0, H: 0 }``
+where W and H stand for width and height in px respectively
+
+If the values are set to 0, no scaling needed for the button iframe.
+
+If positive values are set, the iframe is adjusted to the size indicated in ButtonSize respectively.
 
 Position
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Объект, описывающий местоположение зоны.
-Пример:
-Position: { X: 0.1, Y: 0.1 }
-Позиция указывается как число от 0 до 1 
+Object that describes zone position
+
+Example:
+ 
+* Position: ``{ X: 0.1, Y: 0.1 }``
+ 
+Position value is set between 0 and 1
 
 ActiveImage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Ссылка на изображение для активной зоны (при наведении кнопки)
+Link to the image for the active zone (when the button is rolled over there)
 
 InactiveImage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Ссылка на изображение для неактивной зоны (по умолчанию, при отсутствии наведения на зону)
+Link to the image for the inactive zone (by default, when the button is not rolled over the zone)
 
 ActionURL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Ссылка, которая будет открыта при "сбрасывании" кнопки на зону. В случае, если ActionURL=="" (пустая строка), то откроется ссылка указанная в ContentURL (показываемая при нажатии на кнопку)
+Link that opens when the button is "dropped” to the zone. If ``ActionURL==""`` (left blank), the link indicated in ContentURL opens (displayed by a click on the button)
 
 VisibleOnlyInteraction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 true/false
-По умолчанию true
+By default -  true
+
 * В случае true активная зона показывается только во время взаимодействия с кнопкой (ее перемещения)
 * В случае false активная зона видна всегда
 
 ClickCounterLink
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-По умолчанию - false
-Ссылка вызываемая при сбрасывании  кнопки на активную зону. Необходима для случаев, когда требуется сторонний подсчет статистики (в частности кликов по кнопке) - для данной ссылки производится ajax запрос
+By default - false
+
+Link called when the button is dropped to the active zone. Helps to additionally collect statistics (including, the number of clicks on the button). An ajax request is sent for this link.
 
 ActiveSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Размер зоны в активном состоянии
-Представляет собой 
-ActiveSize: { W: 64, H: 64 }
-Где W - ширина, H - высота
+Size of the zone in active mode
+ 
+Looks like this
+ 
+ActiveSize: ``{ W: 64, H: 64 }``
+ 
+where W and H stand for width and height respectively
 
 InactiveSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Размер зоны в активном состоянии
-Представляет собой 
-InactiveSize: { W: 64, H: 64 }
-Где W - ширина, H - высота
+Size of the zone in active mode
+ 
+Looks like this
+ 
+InactiveSize: ``{ W: 64, H: 64 }``
+ 
+where W and H stand for width and height respectively
 
 InactiveOpacity
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Прозрачность зоны в неактивном состоянии
+Opacity of the zone in inactive mode
 
 ActiveOpacity
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Прозрачность зоны в активном состоянии
+Opacity of the zone in active mode
 
-Пример
+Example
+
 ::
                     IsActiveZones: false,
                     ActiveZones: [
@@ -877,141 +928,146 @@ ActiveOpacity
                         }
                     ]
 
-Неиспользуемые параметры
+Not used params
 ==============================
  
 ContentWebViewInsets
 -----------------------------
-Не используется
+Not used
 
 BaseInsets
 -----------------------------
-не используется в текущей версии кнопки
+Not used
 
 ButtonOpenImage
 -----------------------------
-Не используется
+Not used
 
 ButtonInactiveImage
 -----------------------------
-Не используется
+Not used
 
 CloseActiveImage
 -----------------------------
-Не используется.
-Ссылка на изображение для области закрытия в активном состоянии.
+Not used.
+Link to the image in the closing area in active mode
 
 ButtonOpenSize
 -----------------------------
-Не используется.
-Размер кнопки когда открыт fancybox. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px
+Not used.
+
+Button size when fancybox is open. Set as an object ``{ W: 64.0, H: 64.0 }``
+ 
+where W and H stand for width and height in px respectively
+
 
 ButtonInactiveSize
 -----------------------------
-Не используется.
-Размер кнопки в неактивном состоянии. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px
+Not used.
+
+Button size in inactive mode. Set as an object ``{ W: 64.0, H: 64.0 }``
+ 
+where W and H stand for width and height in px respectively
 
 HintInsets
 -----------------------------
-Не используется
+Not used
 
 ButtonOpenOpacity
 -----------------------------
-Не используется
+Not used
 
 ButtonInactiveOpacity
 -----------------------------
-Не используется
+Not used
 
 HintImageInsets
 -----------------------------
-Не используется
+Not used
 
 VendorOpacity
 -----------------------------
-Не используется
+Not used
 
 ContentImageInsets
 -----------------------------
-Не используется
+Not used
 
 ContentOpacity
 -----------------------------
-Не используется
+Not used
 
 ContentBackOpacity
 -----------------------------
-Не используется
+Not used
 
 ContentBackColor
 -----------------------------
-Не используется
+Not used
 
 ContentActivityColor
 -----------------------------
-Не используется
+Not used
 
 ContentImage
 -----------------------------
-Не используется
+Not used
 
 ContentArrowSize
 -----------------------------
-Не используется
+Not used
 
 ContentArrowOffset
 -----------------------------
-Не используется
+Not used
 
 ContentArrowImageT
 -----------------------------
-Не используется
+Not used
 
 ContentArrowImageB
 -----------------------------
-Не используется
+Not used
 
 ContentArrowImageL
 -----------------------------
-Не используется
+Not used
 
 ContentArrowImageR
 -----------------------------
-Не используется
+Not used
 
 HintArrowSize
 -----------------------------
-Не используется.
+Not used.
 
 HintArrowOffset
 -----------------------------
-Не используется.
+Not used.
 
 HintArrowImageT
 -----------------------------
-Не используется.
+Not used.
 
 HintArrowImageB
 -----------------------------
-Не используется.
+Not used.
 
 HintArrowImageL
 -----------------------------
-Не используется.
+Not used.
 
 HintArrowImageR
 -----------------------------
-Не используется.
+Not used.
 
 Остальные параметры
 -----------------------------
 DefaultDuration, DefaultDelay, OpenDuration, OpenDelay, CloseDuration, CloseDelay, ButtonShowDuration, ButtonShowDelay, ButtonHideDuration, ButtonHideDelay, ButtonDragDuration, ButtonDragDelay, ButtonUndragDuration: 0.2, ButtonUndragDelay, ButtonInactiveDuration, ButtonInactiveDelay, ButtonInertiaSpeed, ButtonInertiaSpeedMin, ButtonInertiaSpeedMax, ButtonInertiaFactor, CloseShowDuration, CloseShowDelay, CloseHideDuration, CloseHideDelay, CloseActiveDuration, CloseActiveDelay, CloseUnactiveDuration, CloseUnactiveDelay, HintLaunchDuration, HintLaunchDelay, HintShowDuration, HintShowDelay, HintHideDuration, HintHideDelay, ContentShowDuration, ContentShowDelay, ContentHideDuration, ContentHideDelay
 
-Не используется
+Not used
  
-Параметры по умолчания для кнопки
+Button default params
 =================================
 
 

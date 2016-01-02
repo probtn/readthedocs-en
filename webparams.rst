@@ -226,238 +226,266 @@ Value is URL (to the image).
 
 TrackingLink
 ----------------------------------
-Ссылка на изображение, которое будет применено как bacground для wrapper'а кнопки. Введен в связи с необходимостью предоставить возможность указывать свое изображение-"пиксель" для сбора статистики о пользователе.
+Link to the image to be used as background for the button wrapper. Introduced in order to set one's image (pixel) to collect statistical data about a user.
 
 MinimizeWrapperTime
 ----------------------------------
-Время (в мс), спустя которое уменьшается размер wrapper'а кнопки. Применен в связи с проблемами некорректной анимации в ряде случаев на мобильных устройствах
+Period of time before the size of the button wrapper gets smaller. Introduced to fix the bugs in animation that sometimes appear on mobile devices.
 
 OpenExternal
 ----------------------------------
-Параметр, отвечающий за то, как именно должна открываться ссылка (соответственно для ButtonType = button )
-false - содержимое открывается в fancybox
-true - контент открывается в новой вкладке (применяется в случае, если сайт не может быть показан в iframe по тем или иным причинам)
+Параметр, отвечающий за то, как именно должна открываться ссылка (соответственно для ```ButtonType = button``` )
+Parameter that defines how link would be opened (for ```ButtonType = button``` )
+
+* false - содержимое открывается в fancybox
+* true - контент открывается в новой вкладке (применяется в случае, если сайт не может быть показан в iframe по тем или иным причинам)
 
 CampaignID
 ----------------------------------
-Идентификатор кампании
+Campaign identifier
 
 NeverClose
 ----------------------------------
-При true убирает область закрытия для кнопки
-Применимо при ButtonType = button
+If set to true, removes the closing area for the button
+ 
+Aplied when ```ButtonType = button```
 
 domain
 ----------------------------------
-Домен, для которого запрашиваются настройки для кнопки. Если не указан, то домен будет получен автоматически и будет соответствовать тому, на котором в настоящий момент собственно и запущена кнопка.
-В случае, если домен указан, то актуальный домен не будет использоваться и будут получены настройки для указанного домена.
+Domain that requests button settings. If left blank, the domain is received automatically and corresponds to the domain where the button is activated.
+ 
+If a certain domain is indicated, the actual domain is not used and the settings for the indicated domain are received.
 
 fancyboxJsPath
 ----------------------------------
-Url до расположения fancybox js библиотеки.
+URL to the location of the fancybox library.  
 
 fancyboxCssPath
 ----------------------------------
-Url до расположения fancybox css
+URL to the location of fancybox css.
 
 jqueryPepPath
 ----------------------------------
-Url до расположения jquery.pep библиотеки
+URL to the location of library jquery.pep
 
 buttonAnimationTimeAfterFancybox
 ----------------------------------
-Длительность анимации кнопки после закрытия fancybox, в мс
+Animation duration after fancybox is closed, in ms
 
 HideAfterFirstShow
 ----------------------------------
-Показывать или нет кнопку после ее первого показа пользователю
-* true - после первого показа кнопка скрывается (до тех пор, пока HideAfterFirstShow не будет установлен в true, либо не истечет срок действия cookie)
-* false - кнопка показывается каждый раз (естественно в зависимости от настроек сервера и таргетинга на стороне сервера)
-Применимо при ButtonType = button
+Show or not the button after its first display to a user.
+* true - button hides after the first display (until HideAfterFirstShow is set to true or the cookie expires)
+* •	false -  button is displayed every time (defined by server settings and server targeting)
+ 
+Applied when ButtonType = button
 
 LoadFancyboxCSS
 ----------------------------------
-Загружать или нет css по-умолчанию для fancybox
-* true - загружать
-* false - не загружать (к примеру в случае если на сайте уже используется fancybox)
+Download or not css for fancybox by default.
+* true - download
+* false - don't download (e.g., fancybox is already in use on the site)
 
 ContentURL
 ----------------------------------
-Url на контент, показываемый кнопкой.
-Для разных ButtonContentType
-* iframe - любая ссылка на сайт или иной контент, показываемый в iframe
-* video - ссылка на видео (формата, поддерживаемого HTML5 video)
+URL to the content displayed by the button.
+
+For different ButtonContentType:
+* iframe - any link to the site or another content displayed in the iframe
+* video - сlink to the video (supported by HTML5 video)
 
 ButtonEnabled
 ----------------------------------
-Включена / выключена
+Enabled/disabled
 
 ButtonVisible
 ----------------------------------
- видна / не видна
+Visible/invisible
  
 ButtonPosition
 ----------------------------------
- Позиция кнопки. Задается как объект {X:0.5, Y:.5}
- Где X и Y указывается от 0 до 1 (от 0 до 1, где 1 - ширина или высота window соответственно)
- Применимо при ButtonType = button
+Button position. Set as an object ```{X:0.5, Y:.5}```
+where X and Y vary between 0 and 1 (1 stands for width or height respectively).
+Applied when ```ButtonType = button```
 
 ButtonSize
 ----------------------------------
-Размер кнопки. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px
-Применимо при ButtonType = button
+Button size. Set as an object ```{ W: 64.0, H: 64.0 }```
+where W and H stand for width and height in px respectively.
+ Applied when  ```ButtonType = button```
+
 
 ButtonDragSize
 ----------------------------------
-Размер кнопки во время перетаскивания. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px
-Применимо при ButtonType = button
+Size of the button when dragged. Set as an object. ```{ W: 64.0, H: 64.0 }```
+where W and H stand for width and height in px respectively
+ 
+Applied when ```ButtonType = button```
 
 ButtonOpacity
 ----------------------------------
-Прозрачность кнопки. Задается от 0 до 1 (0 - полностью прозрачна, 1 - не прозрачна)
-Применимо при ButtonType = button
+Button opacity. Varies between 0 and 1 (0 - transparent, 1 – opaque)
+Applied when ```ButtonType = button```
 
 ButtonDragOpacity
 ----------------------------------
-Прозрачность при перетаскивании кнопки
-Применимо при ButtonType = button
+Opacity of the button when dragged
+Applied when ```ButtonType = button```
 
 ButtonImage
 ----------------------------------
-Ссылка на картинку кнопки
-Применимо при ButtonType = button
+Link to the button image
+Applied when ```ButtonType = button```
 
 ButtonDragImage
 ----------------------------------
-Ссылка на картинку кнопки во время перетаскивания кнопки
-Применимо при ButtonType = button
+Link to the image of the button when dragged
+Applied when ```ButtonType = button```
 
 ClosePosition
 ----------------------------------
-Позиция области закрытия кнопки.
-Задается как объект {X:0.5, Y:.5}
-Где X и Y указывается от 0 до 1 (от 0 до 1, где 1 - ширина или высота window соответственно)
-Применимо при ButtonType = button
+Position of the button closing area
+ 
+Set as an object ```{X:0.5, Y:0.5}```
+where X and Y vary between 0 and 1 (1 stands for window width or height respectively)
+ 
+Applied when ```ButtonType = button```
  
 CloseSize
 ----------------------------------
-Размер области закрытия. Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px
-Применимо при ButtonType = button
+Size of the closing area. Set as an object ```{ W: 64.0, H: 64.0 }```
+where W and H stand for width and height in px respectively
+ 
+Applied when ```ButtonType = button```
 
 CloseActiveSize
 ----------------------------------
-Размер области закрытия в активном состоянии (когда кнопка наведена на область закрытия).
-Задается как объект { W: 64.0, H: 64.0 }
-Где W и H соответственно ширина и высота в px
-Применимо при ButtonType = button
+Size of the closing area in active mode (when the button is rolled over the closing area).
+Set as an object ```{ W: 64.0, H: 64.0 }```
+where W and H stand for width and height in px respectively
+
+Applied when ```ButtonType = button```
 
 CloseOpacity
 ----------------------------------
-Прозрачность области закрытия
-Применимо при ButtonType = button
+Opacity of the closing area.
+Applied when ```ButtonType = button```
 
 CloseActiveOpacity
 ----------------------------------
-Прозрачность области закрытия в активном состоянии (при наведении кнопки)
-Применимо при ButtonType = button
+Opacity of the closing area in active mode (when the button is rolled over it).
+ 
+Applied when ```ButtonType = button```
 
 CloseImage
 ----------------------------------
-Ссылка на изображение для области закрытия.
-Применимо при ButtonType = button
+Link to the image for the closing area.
+ 
+Applied when ```ButtonType = button```
 
 HintLabelInsets
 ----------------------------------
-Отступы для текста (текст под кнопкой).
-Задается в формате { T: 4.0, B: 4.0, L: 4.0, R: 4.0 }
-Применимо при ButtonType = button
+Text insets (below the button line)
+ 
+Set in the following format ```{ T: 4.0, B: 4.0, L: 4.0, R: 4.0 }```
+ 
+Applied when ```ButtonType = button```
 
 HintText
 ----------------------------------
-Текст для "подсказки" кнопки
-Применимо при ButtonType = button
+Button hint text
+Applied when ```ButtonType = button```
 
 HintFont
 ----------------------------------
-Параметры шрифта для "подсказки" кнопки.
-Задается как объект { Family: "Arial", Size: 18 }
-Family - шрифт для надписи. Указывается для font-family
-Size - размер текста
-Применимо при ButtonType = button
+Font parameters for the buttonhint text
+Set as an object ```{ Family: "Arial", Size: 18 }```
+
+* Family - шрифт для надписи. Указывается для font-family
+* Size - размер текста
+
+Applied when ```ButtonType = button```
 
 HintFontColor
 ----------------------------------
-Цвет надписи. Задается как объект { R: 1.0, G: 1.0, B: 1.0, A: 1.0  }
-Применимо при ButtonType = button
+Text color. Set as an object ```{ R: 1.0, G: 1.0, B: 1.0, A: 1.0 }```
+Applied when ```ButtonType = button```
 
 VendorText
 ----------------------------------
-Текст вендора (показывается внизу fancybox)
+Vendor text (displayed at the bottom of fancybox)
 
 VendorSite
 ----------------------------------
-Ссылка на сайт вендора
+Link to the vendor's site
 
 VendorTextFont
 ----------------------------------
-Формат соответствует параметру HintFont
+Format corresponds to the HintFont parameter
 
 VendorTextColor
 ----------------------------------
-Цвет для VendorText. Формат соответствует HintFontColor
+VendorText color. Format corresponds to HintFontColor
 
 VendorColor
 ----------------------------------
-Цвет фона для VendorText
+VendorText background color
 
 iframeScaleMinWidth
 ----------------------------------
-Минимальная ширина для сайта внутри iframe. Если текущая ширина fancybox меньше искомой iframeScaleMinWidth, то iframe при помощи transform масштабируется, чтобы поместится в текущую ширину
-Данный способ подходит для сайтов, которые сами не могут адаптироваться к таковой ширине.
-По умолчанию 0 - в этом случае масштабирования не производим.
+Minimal width for the site displayed inside the iframe. If the current fancybox width is smaller than the required iframeScaleMinWidth, the iframe is to be scaled using the tranform parameter to fit in the current width.
+ 
+Suitable for the sites that do not adjust autmatically to the given width.
+ 
+Be default 0, no need to scale.
 
 iframeScale
 ----------------------------------
-По умолчанию 1. Параметр scale для transform iframe'а. 
-Вычисляется автоматически на основе iframeScaleMinWidth и ширины fancybox
+By default 1. Scaling attribute for the transform parameter of the iframe.
+ 
+Calculated automatially based on iframeScaleMinWidth and fancybox width.
 
 HintOpacity
 ----------------------------------
-Прозрачность надписи. (от 0 до 1).
-Применимо при ButtonType = button
+Text opacity. (from 0 to 1)
+Applied when ```ButtonType = button```
 
 HintImage
 ----------------------------------
-Фоновое изображение для подписи кнопки.
-Применимо при ButtonType = button
+Background image for the button signing.
+Applied when ```ButtonType = button```
 
 ContentSize
 ----------------------------------
-Размер для fancybox
-Представляет собой объект { W: 100, H: 100, X: "90%", Y: "90%" }
-В случае, если параметр IsManualSize = true, то присутствуют X и Y, представляющие собой размер в процентах.
-В ином случае используются W и H (ширина и высота соответственно) в px.
+Fancybox size
+
+Set as an object ```{ W: 100, H: 100, X: "90%", Y: "90%" }```
+ 
+If IsManualSize = true, X and Y show up for the size in %.
+Otherwise, W and H are used (width and height respectively)
+
 
 IsManualSize
 ----------------------------------
-В случае, если параметр IsManualSize = true, тo в ContentSize присутствуют X и Y, представляющие собой размер в процентах.
-В ином случае используются W и H (ширина и высота соответственно) в px.
+If IsManualSize = true, ContentSize shows X and Y for the size in %.
+ 
+Otherwise, W and H are used (width and height in px respectively)
 
 ContentInsets
 ----------------------------------
-Отступы для fancybox (и всего что используется вместо него)
-Представляет собой объект { T: -2.0, B: -2.0, L: -2.0, R: -2.0 }
-с соответственно отступами для top, bottom, left и right.
-Если ContentInsets меньше 0, то отступы рассчитываются автоматически на основе размеров кнопки. 
+Insets for fancybox (and its substitutes)
+ 
+Set as an object ```{ T: -2.0, B: -2.0, L: -2.0, R: -2.0 }```
+ 
+With given top, bottom, left and right insets.
+If ContentInsets is below 0, insets are calculated automatically based on the button size.
 
 HideInFrame
 ----------------------------------
-Параметр, отвечающий за то, показывать кнопка на странице, показываемой внутри iframe или нет.
-* true - скрывать кнопку, когда страница показывается в iframe
-* false - не скрывать кнопку, когда страница показывается в iframe
+Parameter defining whether to display the button when the page opens in the iframe.
+
+* true -  hide the button when the page opens in the iframe
+* false - display the button when the page opens in the iframe
 
 ZCustomCss
 ----------------------------------

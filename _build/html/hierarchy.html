@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -9,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; Profit Button en 1 documentation</title>
+  <title>The hierarchy of entities of admin.probtn.com &mdash; Profit Button en 1 documentation</title>
   
 
   
@@ -31,7 +30,9 @@
   
 
   
-    <link rel="top" title="Profit Button en 1 documentation" href="index.html"/> 
+    <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
+        <link rel="next" title="Integrtion with AdRiver" href="adriver.html"/>
+        <link rel="prev" title="General description of the button" href="description.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -81,9 +82,17 @@
             
             
                 <p class="caption"><span class="caption-text">Table of content</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">The hierarchy of entities of admin.probtn.com</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">The hierarchy of entities of admin.probtn.com</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-1">Example 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-2">Example 2</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Integrtion with AdRiver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">AdFox integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dfp.html">Probtn - working with DFP Google ads</a></li>
@@ -120,9 +129,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li></li>
+    <li>The hierarchy of entities of admin.probtn.com</li>
       <li class="wy-breadcrumbs-aside">
         
+          
+            <a href="_sources/hierarchy.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -132,17 +143,86 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="the-hierarchy-of-entities-of-admin-probtn-com">
+<span id="hierarchy"></span><h1>The hierarchy of entities of admin.probtn.com<a class="headerlink" href="#the-hierarchy-of-entities-of-admin-probtn-com" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Hierarchy<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/1.png" src="_images/1.png" />
+<p>Would or wouldn&#8217;t creatives be shown depend only from creative state (ON/OFF).</p>
+<p>When some element higher in hierarchy turn off, state of child elements saved and all of them turned off too.</p>
+<p>Then this element turn on back, child element what was originaly turned on become turn on again, and other elements stay in current state (off).</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p>Creatives group - ON</p>
+<ul class="simple">
+<li>Creative-1 -  ON</li>
+<li>Creative-2 - OFF</li>
+</ul>
+<p>What creatives would be shown? Creative-1</p>
+<p>Now turn off the group, and current status become:</p>
+<ul class="simple">
+<li>Creatives group - OFF</li>
+<li>Creative-1 - OFF</li>
+<li>Creative-2 - OFF</li>
+</ul>
+<p>What creative would be shown? None.</p>
+<p>Now turn on the group, get:</p>
+<ul class="simple">
+<li>Creatives group - ON</li>
+<li>Creative-1 - ON</li>
+<li>Creative-2 -OFF</li>
+</ul>
+<p>What creative would be shown? Creative-1</p>
+</div>
+<div class="section" id="example-2">
+<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Creatives group - ON</li>
+<li>Creative-1 - ON</li>
+<li>Creative-2 - OFF</li>
+</ul>
+<p>What creative would be shown? Creative-1</p>
+<p>Now turn on the group, get:</p>
+<ul class="simple">
+<li>Creatives group - OFF</li>
+<li>Creative-1 - OFF</li>
+<li>Creative-2 - OFF</li>
+</ul>
+<p>What creative would be shown? None</p>
+<p>Now turn on one of the creatives</p>
+<ul class="simple">
+<li>Creatives group    OFF</li>
+<li>Creative-1           OFF</li>
+<li>Creative-2           ON</li>
+</ul>
+<p>What creative would be shown? Creative-2</p>
+<p>Now turn on the group,</p>
+<ul class="simple">
+<li>Creatives group - ON</li>
+<li>Creative-1 - ON</li>
+<li>Creative-2 - ON</li>
+</ul>
+<p>What creative would be shown? Creative-1, Creative-2</p>
+</div>
+</div>
 </div>
 
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="adriver.html" class="btn btn-neutral float-right" title="Integrtion with AdRiver" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="description.html" class="btn btn-neutral" title="General description of the button" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

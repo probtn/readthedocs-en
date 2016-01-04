@@ -8,7 +8,7 @@
 Campaign and creative creating
 ==================================
 
-Step 1 - создание кампании
+Step 1 - create campaign
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 At page https://admin.probtn.com/adsets using ``New Campaign`` button we start creating a new campaign
@@ -18,7 +18,7 @@ At page https://admin.probtn.com/adsets using ``New Campaign`` button we start c
 Step 2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Заполняем базовые поля формы кампании, в частности
+Fill base fields of th campaign, such as:
 
 1 - campaign name
 2 - state (on\off)

@@ -8,27 +8,29 @@
 Offline mode
 ==================================
 
-Инструкция описывает использование рекламного формата плавающей кнопки AdButton без обращений из кода кнопки к внешнему сервер, например, к панели администрирования AdButton (оффлайн режим). Этот вариант интеграции разработан для уменьшения рисков загрузки внешнего кода на сайт с установленным форматом. Для реализации этого функционала, код кнопки и данные настройки кампаний, расположены локально на веб-сервере. Креатив 
+Instruction describe using external format of floating button AdButton without requests from code to external server (for example for AdButton admin panel - ``admin.probtn.com``)
 
-Для реализации кампании необходимо:
-загрузить архив с кодом на сайт. В архив включена демонстрационная страница и все необходимые файлы
+This variant is used then you'd like to lower risks of adding code from remote server at site. So for this variant button code and nessesary settings uploaded localy.
+
+To make it, you need:
+Upload extracted from archive files at your site\server. In archive you can find demp page and all nessesary files
 https://yadi.sk/d/yJyjsW27kF322
 
-добавить теги вызова
+Add HTML tag to add script at page
 
 ``<script src="direct/probtn_concat.js"></script>``
 
-Пример работы интеграции на демо странице AdButton
+Example of this integration type at demo page:
 http://probtn-avito.azurewebsites.net/offline/
 
 Archive description:
 
-* ``settings.txt`` - настройки кнопки, выгружаемые из admin.probtn.com для целевой кампании
-* ``style.css`` - стили 
-* ``probtn_concat.js`` - код кнопки, объединенный со всеми зависимостями
-* ``libs/`` - дополнительные файлы (картинки, стили модального окна)
+* ``settings.txt`` - button settings, exported from admin.probtn.com for campaign (or created manualy)
+* ``style.css`` - styles
+* ``probtn_concat.js`` - button code, concatenated with all nessesary libs
+* ``libs/`` - additional files (images, styles)
 
-В ``probtn_concat.js`` настраиваются пути к файлам:
+In ``probtn_concat.js`` path to nessesary files could be changed:
 
 ``var mainStyleCssPath = "style.css";``
 
@@ -37,6 +39,6 @@ Archive description:
 ``var localSettingsPath = "settings.txt";``
 
 
-``mainStyleCssPath`` - URL до стилей кнопки
-``fancyboxCssPath`` - URL до стилей fancybox
-``localSettingsPath`` - URL до файла с локальными настройками кнопки
+``mainStyleCssPath`` - URL to main styles of button
+``fancyboxCssPath`` - URL to fancybox styles
+``localSettingsPath`` - URL to file with local button settings

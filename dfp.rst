@@ -40,7 +40,7 @@ E.g.:
     </head>
     <body>
         <script src="//cdn.probtn.com/showinparent_concat.js"></script>
-</body></html>
+    </body></html>
 
 
 Step 2

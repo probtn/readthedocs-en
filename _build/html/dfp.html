@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
-        <link rel="next" title="Params description" href="webparams.html"/>
+        <link rel="next" title="&lt;no title&gt;" href="hpmd.html"/>
         <link rel="prev" title="AdFox integration" href="adfox.html"/> 
 
   
@@ -84,12 +84,16 @@
                 <p class="caption"><span class="caption-text">Table of content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Button modes examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">The hierarchy of entities of admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Integrtion with AdRiver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">AdFox integration</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Probtn - working with DFP Google ads</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#intergation-with-dfp-async-code">Intergation with DFP - async code</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#step-1">Step 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#step-2">Step 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-campaign-optional">Set campaign (optional)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#intergation-with-dfp-sync-code">Intergation with DFP - sync code</a><ul>
@@ -101,6 +105,8 @@
 <li class="toctree-l1"><a class="reference internal" href="webparams.html">Params description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#not-used-params">Not used params</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
+<li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Button events</a></li>
 </ul>
 
             
@@ -167,15 +173,30 @@
 <span class="nt">&lt;/head&gt;</span>
 <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.probtn.com/showinparent_concat.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;&lt;/html&gt;</span>
 </pre></div>
 </div>
-<p>&lt;/body&gt;&lt;/html&gt;</p>
 </div>
 <div class="section" id="step-2">
 <h3>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h3>
 <p>Create an ad with content like this:</p>
 <p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">src=&quot;//example.com/example_iframe_page.html?click_url_esc=%%CLICK_URL_ESC%%&amp;cacheBuster=%%CACHEBUSTER%%&quot;</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;</span> <span class="pre">/&gt;</span></code></p>
 <p>Url <code class="docutils literal"><span class="pre">//example.com/example_iframe_page.html</span></code> is added by example, you should use your own path</p>
+<p>Also you can set domain:</p>
+<p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">src=&quot;//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&amp;click_url_esc=%%CLICK_URL_ESC%%&amp;cacheBuster=%%CACHEBUSTER%%&quot;</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;&gt;&lt;/iframe&gt;</span></code></p>
+<p>Where GET param <code class="docutils literal"><span class="pre">domain</span></code> (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced to nessesary domain, used in app in admin.probtn.com</p>
+</div>
+<div class="section" id="set-campaign-optional">
+<h3>Set campaign (optional)<a class="headerlink" href="#set-campaign-optional" title="Permalink to this headline">¶</a></h3>
+<p>It&#8217;s possible to use campaign id, so probtn would show creatives only from selected campaign fro app.
+To do so, you should:</p>
+<p>Create ad with code</p>
+<p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;</span>&nbsp; <span class="pre">src=&quot;//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&amp;SelectAdSet=565e021f99c27511100000d0&quot;&gt;&lt;/iframe&gt;</span></code></p>
+<p>Url //example.com/example_iframe_page.html добавлен для примера, is an example, use your own path (to the page created on step 1)</p>
+<p>Also value of GET param domain (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced on nessesary (id), used in nessesary app in admin.probtn.com</p>
+<p>Value of GET param SelectAdSet (for example) <code class="docutils literal"><span class="pre">565e021f99c27511100000d0</span></code> should be replaced on nessesary campaign id (don&#8217;t use placement or creative id).</p>
+<p>Campaign ID could be found  at url, if you open campaign page at admin.probtn.com.</p>
+<img alt="_images/adriver2_step3_2.png" src="_images/adriver2_step3_2.png" />
 </div>
 </div>
 <div class="section" id="intergation-with-dfp-sync-code">
@@ -195,7 +216,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="webparams.html" class="btn btn-neutral float-right" title="Params description" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="hpmd.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="adfox.html" class="btn btn-neutral" title="AdFox integration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

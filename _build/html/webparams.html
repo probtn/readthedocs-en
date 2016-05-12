@@ -31,7 +31,8 @@
 
   
     <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
-        <link rel="prev" title="AdFox integration" href="adfox.html"/> 
+        <link rel="next" title="Offline mode" href="offline.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="hpmd.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -83,9 +84,25 @@
                 <p class="caption"><span class="caption-text">Table of content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Button modes examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">The hierarchy of entities of admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Integrtion with AdRiver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">AdFox integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dfp.html">Probtn - working with DFP Google ads</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Params description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#modalwindowmode">ModalWindowMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extrusionmode">ExtrusionMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additionaltargetingparam">AdditionalTargetingParam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#isanimation">isAnimation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#animation-opacity">Animation opacity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#animation-rollout">Animation rollout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#animation-lookout">Animation lookout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#animation-forwardandback">Animation forwardAndBack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#animation-forwardstopandaway">Animation forwardStopAndAway</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#animationduration">animationDuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#menutemplatevariant">MenuTemplateVariant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#videotype">VideoType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#debug">Debug</a></li>
@@ -257,6 +274,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#button-default-params">Button default params</a></li>
+<li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Button events</a></li>
 </ul>
 
             
@@ -305,6 +324,81 @@
 <span id="webparams"></span><h1>Params description<a class="headerlink" href="#params-description" title="Permalink to this headline">¶</a></h1>
 <p>Description of the parameters used by the button (by application)</p>
 <p>If a parameter is used differently in different modes, it is specifically marked (including, the required modes)</p>
+<div class="section" id="modalwindowmode">
+<h2>ModalWindowMode<a class="headerlink" href="#modalwindowmode" title="Permalink to this headline">¶</a></h2>
+<p>Additional variants and possibilities for modal window (showed after button click).</p>
+<p>Variants:</p>
+<ul class="simple">
+<li>(empty) - nothing happens</li>
+<li>sidebarLeft</li>
+<li>sidebarRight</li>
+<li>sidebarTop</li>
+<li>sidebarBottom</li>
+</ul>
+<p>By default &#8220;&#8221;.</p>
+</div>
+<div class="section" id="extrusionmode">
+<h2>ExtrusionMode<a class="headerlink" href="#extrusionmode" title="Permalink to this headline">¶</a></h2>
+<p>Different modes with extrusion of the page.</p>
+<p>Variants:</p>
+<ul class="simple">
+<li>(empty) - nothing happens</li>
+<li>topButton - body element would have margin-top equal to button height.</li>
+</ul>
+<p>By default &#8220;&#8221;.</p>
+</div>
+<div class="section" id="additionaltargetingparam">
+<h2>AdditionalTargetingParam<a class="headerlink" href="#additionaltargetingparam" title="Permalink to this headline">¶</a></h2>
+<p>Additional custom parameter for targeting, which allows to make targeting at admin.probtn.com depending from custom tasks (for example targeting by different categories at site, etc).</p>
+<p>By default &#8220;&#8221;.</p>
+</div>
+<div class="section" id="isanimation">
+<h2>isAnimation<a class="headerlink" href="#isanimation" title="Permalink to this headline">¶</a></h2>
+<p>Different variant of button animation.</p>
+<p>Possible variants:</p>
+<ul class="simple">
+<li>rollout_left</li>
+<li>rollout_right</li>
+<li>lookout_left</li>
+<li>lookout_right</li>
+<li>forwardAndBack</li>
+<li>forwardStopAndAway</li>
+<li>anim1</li>
+<li>anim2</li>
+<li>opacity</li>
+</ul>
+<div class="section" id="animation-opacity">
+<h3>Animation opacity<a class="headerlink" href="#animation-opacity" title="Permalink to this headline">¶</a></h3>
+<p>Change button opacity from set in ButtonOpacity to 0.55 opacity by default.</p>
+<p>Also possible to send end opacity, if we use as <code class="docutils literal"><span class="pre">isAnimation</span></code> param value
+<code class="docutils literal"><span class="pre">opacity_&lt;end</span> <span class="pre">opacity&gt;</span></code>, for example <code class="docutils literal"><span class="pre">opacity_0.4</span></code></p>
+</div>
+<div class="section" id="animation-rollout">
+<h3>Animation rollout<a class="headerlink" href="#animation-rollout" title="Permalink to this headline">¶</a></h3>
+<p>Moving button from page edge while scrolling page.</p>
+<p>Possible to set side of page, from which button would move and max width of mevement (in percents):
+<code class="docutils literal"><span class="pre">rollout_&lt;side&gt;_&lt;width&gt;</span></code>, for example <code class="docutils literal"><span class="pre">rollout</span></code>, <code class="docutils literal"><span class="pre">rollout_left</span></code>, <code class="docutils literal"><span class="pre">rollout_left_60</span></code></p>
+</div>
+<div class="section" id="animation-lookout">
+<h3>Animation lookout<a class="headerlink" href="#animation-lookout" title="Permalink to this headline">¶</a></h3>
+<p>Continuous button moving out and in from the edge of the page.</p>
+<p>Possible to set side of page, from which button would move
+<code class="docutils literal"><span class="pre">lookout_&lt;ide&gt;</span></code>, for example <code class="docutils literal"><span class="pre">lookout</span></code>, <code class="docutils literal"><span class="pre">lookout_left</span></code>, <code class="docutils literal"><span class="pre">rollout_right</span></code></p>
+</div>
+<div class="section" id="animation-forwardandback">
+<h3>Animation forwardAndBack<a class="headerlink" href="#animation-forwardandback" title="Permalink to this headline">¶</a></h3>
+<p>Button moves from left side to right side of the page, and then moving back to the left side.</p>
+</div>
+<div class="section" id="animation-forwardstopandaway">
+<h3>Animation forwardStopAndAway<a class="headerlink" href="#animation-forwardstopandaway" title="Permalink to this headline">¶</a></h3>
+<p>Button moves from left side to the center of the page, stops and after moves to the right side.
+Each animation step duration set by <code class="docutils literal"><span class="pre">animationDuration</span></code> param.</p>
+</div>
+</div>
+<div class="section" id="animationduration">
+<h2>animationDuration<a class="headerlink" href="#animationduration" title="Permalink to this headline">¶</a></h2>
+<p>Animation duration, set in ms.</p>
+</div>
 <div class="section" id="menutemplatevariant">
 <h2>MenuTemplateVariant<a class="headerlink" href="#menutemplatevariant" title="Permalink to this headline">¶</a></h2>
 <p>This param is used to select nessesary variant of menu apperiance
@@ -1336,8 +1430,10 @@ Link to the image in the closing area in active mode</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="offline.html" class="btn btn-neutral float-right" title="Offline mode" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="adfox.html" class="btn btn-neutral" title="AdFox integration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="hpmd.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

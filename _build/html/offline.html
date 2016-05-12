@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -9,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; Profit Button en 1 documentation</title>
+  <title>Offline mode &mdash; Profit Button en 1 documentation</title>
   
 
   
@@ -31,7 +30,9 @@
   
 
   
-    <link rel="top" title="Profit Button en 1 documentation" href="index.html"/> 
+    <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
+        <link rel="next" title="Button events" href="probtn_events.html"/>
+        <link rel="prev" title="Params description" href="webparams.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -81,7 +82,7 @@
             
             
                 <p class="caption"><span class="caption-text">Table of content</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Button modes examples</a></li>
@@ -92,7 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="webparams.html">Params description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#not-used-params">Not used params</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
-<li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Offline mode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Button events</a></li>
 </ul>
 
@@ -124,9 +125,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li></li>
+    <li>Offline mode</li>
       <li class="wy-breadcrumbs-aside">
         
+          
+            <a href="_sources/offline.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -136,17 +139,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="offline-mode">
+<span id="offline"></span><h1>Offline mode<a class="headerlink" href="#offline-mode" title="Permalink to this headline">¶</a></h1>
+<p>Instruction describe using external format of floating button AdButton without requests from code to external server (for example for AdButton admin panel - <code class="docutils literal"><span class="pre">admin.probtn.com</span></code>)</p>
+<p>This variant is used then you&#8217;d like to lower risks of adding code from remote server at site. So for this variant button code and nessesary settings uploaded localy.</p>
+<p>To make it, you need:
+Upload extracted from archive files at your siteserver. In archive you can find demp page and all nessesary files
+<a class="reference external" href="https://yadi.sk/d/yJyjsW27kF322">https://yadi.sk/d/yJyjsW27kF322</a></p>
+<p>Add HTML tag to add script at page</p>
+<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;direct/probtn_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
+<p>Example of this integration type at demo page:
+<a class="reference external" href="http://probtn-avito.azurewebsites.net/offline/">http://probtn-avito.azurewebsites.net/offline/</a></p>
+<p>Archive description:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">settings.txt</span></code> - button settings, exported from admin.probtn.com for campaign (or created manualy)</li>
+<li><code class="docutils literal"><span class="pre">style.css</span></code> - styles</li>
+<li><code class="docutils literal"><span class="pre">probtn_concat.js</span></code> - button code, concatenated with all nessesary libs</li>
+<li><code class="docutils literal"><span class="pre">libs/</span></code> - additional files (images, styles)</li>
+</ul>
+<p>In <code class="docutils literal"><span class="pre">probtn_concat.js</span></code> path to nessesary files could be changed:</p>
+<p><code class="docutils literal"><span class="pre">var</span> <span class="pre">mainStyleCssPath</span> <span class="pre">=</span> <span class="pre">&quot;style.css&quot;;</span></code></p>
+<p><code class="docutils literal"><span class="pre">var</span> <span class="pre">fancyboxCssPath</span> <span class="pre">=</span> <span class="pre">&quot;libs/jquery.fancybox.min.css&quot;;</span></code></p>
+<p><code class="docutils literal"><span class="pre">var</span> <span class="pre">localSettingsPath</span> <span class="pre">=</span> <span class="pre">&quot;settings.txt&quot;;</span></code></p>
+<p><code class="docutils literal"><span class="pre">mainStyleCssPath</span></code> - URL to main styles of button
+<code class="docutils literal"><span class="pre">fancyboxCssPath</span></code> - URL to fancybox styles
+<code class="docutils literal"><span class="pre">localSettingsPath</span></code> - URL to file with local button settings</p>
 </div>
 
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="probtn_events.html" class="btn btn-neutral float-right" title="Button events" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="webparams.html" class="btn btn-neutral" title="Params description" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

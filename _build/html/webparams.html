@@ -91,6 +91,13 @@
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">AdFox integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dfp.html">Probtn - working with DFP Google ads</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Params description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#soundurl">SoundURL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soundmode">SoundMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useexternaldataaboutuser">UseExternalDataAboutUser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fancyboxclosemethod">FancyboxcloseMethod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fancyboxclosespeed">FancyboxCloseSpeed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creativeid">CreativeId</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#passbackcustomcode">PassbackCustomCode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#modalwindowmode">ModalWindowMode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#extrusionmode">ExtrusionMode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#additionaltargetingparam">AdditionalTargetingParam</a></li>
@@ -324,6 +331,48 @@
 <span id="webparams"></span><h1>Params description<a class="headerlink" href="#params-description" title="Permalink to this headline">¶</a></h1>
 <p>Description of the parameters used by the button (by application)</p>
 <p>If a parameter is used differently in different modes, it is specifically marked (including, the required modes)</p>
+<div class="section" id="soundurl">
+<h2>SoundURL<a class="headerlink" href="#soundurl" title="Permalink to this headline">¶</a></h2>
+<p>URL to the sound file which would be played at page.
+If field is empty, sound wouldn&#8217;t be played.</p>
+<p>By default: &#8220;&#8221;</p>
+</div>
+<div class="section" id="soundmode">
+<h2>SoundMode<a class="headerlink" href="#soundmode" title="Permalink to this headline">¶</a></h2>
+<p>Mode for audio play.</p>
+<p>By default: &#8220;&#8221;</p>
+<p>Variants:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">autoStart</span></code> - automatic sound play at button start (except ios, where this mode works simmular to default mode)</li>
+<li>&#8220;&#8221; - start sound play when  user manipulate page at first time.</li>
+</ul>
+</div>
+<div class="section" id="useexternaldataaboutuser">
+<h2>UseExternalDataAboutUser<a class="headerlink" href="#useexternaldataaboutuser" title="Permalink to this headline">¶</a></h2>
+<p>Use or not additional data for targeting from external systems (at current moment Amber data)</p>
+<p>By default: false</p>
+</div>
+<div class="section" id="fancyboxclosemethod">
+<h2>FancyboxcloseMethod<a class="headerlink" href="#fancyboxclosemethod" title="Permalink to this headline">¶</a></h2>
+<p>Close animation of modal window (fancybox)</p>
+<p>By default: &#8220;zoomOut&#8221;</p>
+</div>
+<div class="section" id="fancyboxclosespeed">
+<h2>FancyboxCloseSpeed<a class="headerlink" href="#fancyboxclosespeed" title="Permalink to this headline">¶</a></h2>
+<p>Close animation duration of modal window (fancybox)</p>
+<p>By default: 0</p>
+</div>
+<div class="section" id="creativeid">
+<h2>CreativeId<a class="headerlink" href="#creativeid" title="Permalink to this headline">¶</a></h2>
+<p>Creative ID for force show</p>
+<p>By default: &#8220;&#8221;</p>
+</div>
+<div class="section" id="passbackcustomcode">
+<h2>PassbackCustomCode<a class="headerlink" href="#passbackcustomcode" title="Permalink to this headline">¶</a></h2>
+<p>In this param possible to add code, which would be called in case, if button disabled (when settings request from admin.probtn.com return <code class="docutils literal"><span class="pre">{&quot;ButtonVisible&quot;:false,&quot;ButtonEnabled&quot;:false}</span></code>)</p>
+<p>ATTENTION - better to test your code before using in production.</p>
+<p>By default: &#8220;&#8221;.</p>
+</div>
 <div class="section" id="modalwindowmode">
 <h2>ModalWindowMode<a class="headerlink" href="#modalwindowmode" title="Permalink to this headline">¶</a></h2>
 <p>Additional variants and possibilities for modal window (showed after button click).</p>

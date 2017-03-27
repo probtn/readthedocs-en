@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Profit Button en 1 documentation</title>
+  <title>Using passback code &mdash; Profit Button en 1 documentation</title>
   
 
   
@@ -32,7 +32,7 @@
   
     <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
         <link rel="next" title="Unobvious moments, tips and other additional data" href="hints_and_tricks.html"/>
-        <link rel="prev" title="&lt;no title&gt;" href="reports_description.html"/> 
+        <link rel="prev" title="Reports at admin.probtn.com" href="reports_description.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -82,7 +82,7 @@
             
             
                 <p class="caption"><span class="caption-text">Table of content</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Button modes examples</a></li>
@@ -95,6 +95,15 @@
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
 <li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Button events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Additional animation button params</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Reports at admin.probtn.com</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Using passback code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exmaple-of-using-dfp-passback-code">Exmaple of using DFP passback code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-of-passback-code">Example of passback code:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Unobvious moments, tips and other additional data</a></li>
 </ul>
 
@@ -126,7 +135,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>&lt;no title&gt;</li>
+    <li>Using passback code</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -140,7 +149,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <div class="section" id="using-passback-code">
+<span id="passback"></span><h1>Using passback code<a class="headerlink" href="#using-passback-code" title="Permalink to this headline">¶</a></h1>
+<p>There is opportunity in button to use passback code, which would be added at page in case button disabled (when  admin.probtn.com settings request return then button state is off).</p>
+<p>In particular at editing app we can add at field <code class="docutils literal"><span class="pre">Passback</span> <span class="pre">Code</span></code> HTML code, which would be added at page (if passback code is pure JS code, when e need to put it inside <code class="docutils literal"><span class="pre">&lt;script&gt;&lt;/script&gt;</span></code>).</p>
+<p>In field <code class="docutils literal"><span class="pre">Passback</span> <span class="pre">Code</span> <span class="pre">Selector</span></code> possible to set DOM path, where passback code would be added. By default used <code class="docutils literal"><span class="pre">#probtn_passback</span></code></p>
+<img alt="_images/12.png" src="_images/12.png" />
+<div class="section" id="exmaple-of-using-dfp-passback-code">
+<h2>Exmaple of using DFP passback code<a class="headerlink" href="#exmaple-of-using-dfp-passback-code" title="Permalink to this headline">¶</a></h2>
+<p>You can find description of how to get passback code by this link - <a class="reference external" href="https://support.google.com/dfp_sb/answer/2811375?hl=ru">https://support.google.com/dfp_sb/answer/2811375?hl=ru</a></p>
+<p>In particular, in the inventory in create tags section, we choose to create a passback tag</p>
+<img alt="_images/21.png" src="_images/21.png" />
+<p>and after it we get nessesary passback code</p>
+<img alt="_images/31.png" src="_images/31.png" />
+<div class="section" id="example-of-passback-code">
+<h3>Example of passback code:<a class="headerlink" href="#example-of-passback-code" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">data-glade</span> <span class="na">data-ad-unit-path=</span><span class="s">&quot;/55807997/probtn1&quot;</span> <span class="na">height=</span><span class="s">&quot;600&quot;</span> <span class="na">width=</span><span class="s">&quot;120&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;script </span><span class="na">async=</span><span class="s">&#39;async&#39;</span> <span class="na">src=</span><span class="s">&#39;https://securepubads.g.doubleclick.net/static/glade.js&#39;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
 
            </div>
           </div>
@@ -151,7 +182,7 @@
         <a href="hints_and_tricks.html" class="btn btn-neutral float-right" title="Unobvious moments, tips and other additional data" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="reports_description.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="reports_description.html" class="btn btn-neutral" title="Reports at admin.probtn.com" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

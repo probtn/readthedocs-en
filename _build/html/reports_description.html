@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Profit Button en 1 documentation</title>
+  <title>Reports at admin.probtn.com &mdash; Profit Button en 1 documentation</title>
   
 
   
@@ -31,8 +31,8 @@
 
   
     <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
-        <link rel="next" title="&lt;no title&gt;" href="passback.html"/>
-        <link rel="prev" title="&lt;no title&gt;" href="button_additional_animations_param.html"/> 
+        <link rel="next" title="Using passback code" href="passback.html"/>
+        <link rel="prev" title="Additional animation button params" href="button_additional_animations_param.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -82,7 +82,7 @@
             
             
                 <p class="caption"><span class="caption-text">Table of content</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Button modes examples</a></li>
@@ -95,6 +95,13 @@
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
 <li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Button events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Additional animation button params</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Reports at admin.probtn.com</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#old-reports-visible-only-for-admins">Old reports, visible only for admins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reports-available-for-all-users">Reports available for all users</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="passback.html">Using passback code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Unobvious moments, tips and other additional data</a></li>
 </ul>
 
@@ -126,7 +133,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>&lt;no title&gt;</li>
+    <li>Reports at admin.probtn.com</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -140,7 +147,71 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <div class="section" id="reports-at-admin-probtn-com">
+<span id="reports-description"></span><h1>Reports at admin.probtn.com<a class="headerlink" href="#reports-at-admin-probtn-com" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="old-reports-visible-only-for-admins">
+<h2>Old reports, visible only for admins<a class="headerlink" href="#old-reports-visible-only-for-admins" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>SQL Campaigns</strong></li>
+<li><strong>SQL Detailed</strong></li>
+</ul>
+</div>
+<div class="section" id="reports-available-for-all-users">
+<h2>Reports available for all users<a class="headerlink" href="#reports-available-for-all-users" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>C0de calls</strong></dt>
+<dd><p class="first last">Show total requests count (<code class="docutils literal"><span class="pre">getClientSettings</span></code>) grouped by days to server for app.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>SQL Duration</strong></dt>
+<dd><p class="first last">Reoprt about view duration of button content (<code class="docutils literal"><span class="pre">ContentShowedDuration</span></code>) grouped by intervals</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Detailed by App</strong></dt>
+<dd><p class="first">One othe base reports. Contain reports unloaded by app.</p>
+<p>Variants of data output:</p>
+<ol class="last arabic simple">
+<li><em>by Date</em> - total by date</li>
+<li><em>by Date and creative</em> - sum by date and grouped by creatives</li>
+<li><em>by Zones*</em> - avarage duration and clicks grouped by zones (need to select creative)</li>
+<li><em>by Performed action</em> - stats by different performed action (need to select creative)</li>
+<li><em>by Campaign</em> - grouped by campaigns (all at selected app)</li>
+<li><em>by Creative</em> - sum by creatives</li>
+<li><em>by Device</em> - grouped by devices</li>
+<li><em>by Mobile operator</em> - by mobile operators</li>
+<li><em>by Operating system</em> - by OS</li>
+<li><em>by Country</em> - by countries</li>
+<li><em>by City</em> - by cities</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Detailed by Campaign</strong></dt>
+<dd><p class="first">Second of base apps. Contain reports unloaded by campaign.</p>
+<p>Variants of data output:</p>
+<ol class="last arabic simple">
+<li><em>by Date</em> - sum by date</li>
+<li><em>by Apps</em> - grouped by apps (all in campaign)</li>
+<li><em>by Creative</em> - sum by creatives</li>
+<li><em>by Device</em> - grouped by devices</li>
+<li><em>by Mobile operator</em> - by mobile operators</li>
+<li><em>by Operating system</em> - by OS</li>
+<li><em>by Country</em> - by countries</li>
+<li><em>by City</em> - by cities</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
 
            </div>
           </div>
@@ -148,10 +219,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="passback.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="passback.html" class="btn btn-neutral float-right" title="Using passback code" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="button_additional_animations_param.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="button_additional_animations_param.html" class="btn btn-neutral" title="Additional animation button params" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

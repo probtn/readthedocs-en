@@ -5,33 +5,33 @@
  
 .. _admin_targetings:
  
-Описание вариантов таргетинга в админке
+Description of targeting variants at admin.probtn.com
 ==================================
 
 Base description
 ----------------------------------
 
-Посредством таргетингов возможно настроить необходимые ограничения для группы или конктретного креатива (с возможностью построения логических выражений, необходимых для таргетинга).
+Using targetings possible to set nessesary restrictions for group or some specific creative (with possibility of creating logical constructions, nessesary for complex targeting).
 
 Variants
 ----------------------------------
 
 Always
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по умолчанию.
+Default targeting.
 
-Показывать все время\в любом случае.
+Show all time.
 
 Country
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по стране пользователя.
+Targeting by user's country.
 
-Возможные условия:
+Possible conditions:
 
 * is
 * is not
 
-Опции:
+Options:
 
 * -Other-
 * Russia
@@ -39,14 +39,14 @@ Country
 
 Mobile Operator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по мобильному оператору.
+Targeting by mobile operator.
 
-Возможные условия:
+Possible conditions:
 
 * is
 * is not
 
-Опции:
+Options:
 
 * MTS RUS
 * Beeline
@@ -54,31 +54,31 @@ Mobile Operator
 
 City
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по городу пользователя.
+Targeting by user's city.
 
-Возможные условия:
+Possible conditions:
 
 * one of
 * except
 
 Schedule
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по расписанию.
-Предоставляется календарь для указания временных промежутков для каждого из дней недели.
+Targeting by schedule.
+Give calendar to set time periods for each day of the week.
 
-Возможные условия:
+Possible conditions:
 
 * on
 
 Once in
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по ограничению показа кнопки пользователю (показ кнопки один раз за период).
+Targeting with show limit to user (show button once in period).
 
-Возможные условия:
+Possible conditions:
 
 * in
 
-Опции:
+Options:
 
 * 1 minute
 * 6 hours
@@ -92,26 +92,26 @@ Once in
 
 Campaign shown
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по показу данного креатива пользователю (срабатывает если этому пользователю этот креатив раньше ни разу не показывался/показывался).
+Targeting by showing this creative to user (works if this user never see this creative before).
 
-Возможные условия:
+Possible conditions:
 
 * for
 
-Опции:
+Options:
 
 * first time
 * more then once
 
 Show limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Ограничение не кол-во показов кнопки пользователю.
+Limit count of shows to user.
 
-Возможные условия:
+Possible conditions:
 
 * =
 
-Опции:
+Options:
 
 * 1
 * 2
@@ -122,24 +122,24 @@ Show limit
 Target action
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Возможные условия:
+Possible conditions:
 
 * was
 
-Опции:
+Options:
 
 * performed
 * not performed
 
 Device platform
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по типам устройств.
+Targeting by device types.
 
-Возможные условия:
+Possible conditions:
 
 * is
 
-Опции:
+Options:
 
 * -- Any Mobile --
 * [mobile] iOS
@@ -159,9 +159,9 @@ Device platform
 
 Site pages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг на основе относительного пути страницы, на которой показывается кнопка.
+Targeting by relative page path where button shown.
 
-Возможные условия:
+Possible conditions:
 
 * is exactly
 * starts with
@@ -170,77 +170,64 @@ Site pages
 
 IP adress
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг на основе IP адреса пользователя.
+Targeting base on user's ID address.
 
-Возможные условия:
+Possible conditions:
 
 * one of
 * none of
 
-Опции:
+Options:
 
-* ip адрес или список ip адресов перечисленных через запятую
-
-Button closing max
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по количеству закрытий кнопки.
-
-Возможные условия:
-
-* is
-
-Опции:
-
-* once per campaign
-* once per day
+* ip address or list of IP adresses separated by comma.
 
 Button closing max
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по количеству закрытий кнопки.
+Targeting by button close count.
 
-Возможные условия:
+Possible conditions:
 
 * is
 
-Опции:
+Options:
 
 * once per campaign
 * once per day
 
 Overall shows limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по общему количеству показов.
+Targeting by total shows.
 
-Возможные условия:
+Possible conditions:
 
 * is
 
-Опции:
+Options:
 
-* количество показов
+* shows count
 
 Daily shows limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по дневному количеству показов.
+Targeting by daily show count.
 
-Возможные условия:
+Possible conditions:
 
 * is
 
-Опции:
+Options:
 
-* количество показов
+* shows count
 
 Device Model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по модели устройства.
+Targeting by device model.
 
-Возможные условия:
+Possible conditions:
 
 * is
 * is not
 
-Опции:
+Options:
 
 * iPhone 4 / 4s
 * iPhone 5 / 5s / 6 (with display zoom)
@@ -250,50 +237,50 @@ Device Model
 
 Domains
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по домену.
+Targeting by domain.
 
-Возможные условия:
+Possible conditions:
 
 * one of
 * none of
 
-Опции:
+Options:
 
-* домен или список доменов перечисленных через запятую
+* domain or list of domains separated by commas.
 
 Start at
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по времени начала показа.
+Targeting by start date and time.
 
-Опции:
+Options:
 
-* дата в формате yyyy/mm/dd HH:MM:SS
+* date and time in format yyyy/mm/dd HH:MM:SS
 
 Stop at
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по времени окончания показа.
+Targeting by end date and time.
 
-Опции:
+Options:
 
-* дата в формате yyyy/mm/dd HH:MM:SS
+* date and time in format yyyy/mm/dd HH:MM:SS
 
 Connection speed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Таргетинг по скорости соединения (возможен только вслучае, если в скрипте кнопки вручную включен режим измерения скорости соединения).
+Targeting by connection speed (possible only in case if in probtn script manualy turned on mode which mesuares connection speed).
 
-Опции:
+Options:
 
-* диапазон скорости соединения
+* connetion speed range
 
 Additional parameter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Ручной\кастомный таргетинг - позволяет производить таргетинг на основе самостоятельного переданного параметра скрипту кнопки.
+Manual\custom targeting - allow to make targeting based on manual param set in probtn script.
 
-Возможные условия:
+Possible conditions:
 
 * equals
 * contains
 
-Опции:
+Options:
 
-* любой параметр для кастомного таргетинга.
+* any param for custom targeting.

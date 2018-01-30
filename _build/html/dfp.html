@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -30,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
         <link rel="next" title="&lt;no title&gt;" href="hpmd.html"/>
         <link rel="prev" title="AdFox integration" href="adfox.html"/> 
@@ -41,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -81,7 +87,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Table of content</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
@@ -89,15 +98,15 @@
 <li class="toctree-l1"><a class="reference internal" href="hierarchy.html">The hierarchy of entities of admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Integrtion with AdRiver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">AdFox integration</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Probtn - working with DFP Google ads</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#intergation-with-dfp-async-code">Intergation with DFP - async code</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Probtn - working with DFP Google ads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#integration-without-safeframe">Integration without safeframe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-0">Step 0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#integration-with-safeframe">Integration with safeframe</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#step-1">Step 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#step-2">Step 2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#set-campaign-optional">Set campaign (optional)</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#intergation-with-dfp-sync-code">Intergation with DFP - sync code</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#step-0">Step 0</a></li>
 </ul>
 </li>
 </ul>
@@ -107,6 +116,13 @@
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
 <li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Button events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin_targetings.html">Description of targeting variants at admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postMessage_button_control.html">Control button using <code class="docutils literal"><span class="pre">postMessage</span></code> message from iframe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Send message about animation steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Additional animation button params</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Reports at admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="passback.html">Using passback code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Unobvious moments, tips and other additional data</a></li>
 </ul>
 
             
@@ -119,8 +135,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Profit Button en</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Profit Button en</a>
+        
       </nav>
 
 
@@ -133,19 +151,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Probtn - working with DFP Google ads</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Probtn - working with DFP Google ads</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/dfp.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/dfp.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -155,25 +190,44 @@
 <span id="dfp"></span><h1>Probtn - working with DFP Google ads<a class="headerlink" href="#probtn-working-with-dfp-google-ads" title="Permalink to this headline">¶</a></h1>
 <p>To use the button in the Google DFP container you need to make this steps:</p>
 <p>Create campaign <a class="reference external" href="https://admin.probtn.com">https://admin.probtn.com</a></p>
-<div class="section" id="intergation-with-dfp-async-code">
-<h2>Intergation with DFP - async code<a class="headerlink" href="#intergation-with-dfp-async-code" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="integration-without-safeframe">
+<h2>Integration without safeframe<a class="headerlink" href="#integration-without-safeframe" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="step-0">
+<h3>Step 0<a class="headerlink" href="#step-0" title="Permalink to this headline">¶</a></h3>
+<p>Add this code to DFP ad</p>
+<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/showinparent_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
+<p>and don’t select checkbox “Serve into a SafeFrame”</p>
+<img alt="_images/safeframe.png" src="_images/safeframe.png" />
+<p>To add aditional params to ad you can add block with button settings (domain and campaign are set for example):</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;probtn_additional_params&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: none;&quot;</span><span class="p">&gt;</span>{ &quot;domain&quot;: &quot;example.com&quot;, &quot;SelectAdSet&quot;: &quot;campaign_id&quot;}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Your code will look like:</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;probtn_additional_params&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: none;&quot;</span><span class="p">&gt;</span>{ &quot;domain&quot;: &quot;example.com&quot;, &quot;SelectAdSet&quot;: &quot;campaign_id&quot;}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;//cdn.probtn.com/showinparent_concat.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="integration-with-safeframe">
+<h2>Integration with safeframe<a class="headerlink" href="#integration-with-safeframe" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="step-1">
 <h3>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">¶</a></h3>
 <p>Create a page on the domain where the button will be displayed. (This page used in ad to exit dfp iframe and add button code to parent page).</p>
 <p>On this page add the script:</p>
 <p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/showinparent.js&quot;&gt;&lt;/script&gt;</span></code></p>
-<p>If you&#8217;d like to use concatenated script which do not interfere with jQuery and other plugins use</p>
+<p>If you’d like to use concatenated script which do not interfere with jQuery and other plugins use</p>
 <p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/showinparent_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
 <p>E.g.:</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.probtn.com/showinparent_concat.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;&lt;/html&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;//cdn.probtn.com/showinparent_concat.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -188,38 +242,33 @@
 </div>
 <div class="section" id="set-campaign-optional">
 <h3>Set campaign (optional)<a class="headerlink" href="#set-campaign-optional" title="Permalink to this headline">¶</a></h3>
-<p>It&#8217;s possible to use campaign id, so probtn would show creatives only from selected campaign fro app.
+<p>It’s possible to use campaign id, so probtn would show creatives only from selected campaign fro app.
 To do so, you should:</p>
 <p>Create ad with code</p>
-<p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;</span>&nbsp; <span class="pre">src=&quot;//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&amp;SelectAdSet=565e021f99c27511100000d0&quot;&gt;&lt;/iframe&gt;</span></code></p>
+<p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;</span>&#160; <span class="pre">src=&quot;//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&amp;SelectAdSet=565e021f99c27511100000d0&quot;&gt;&lt;/iframe&gt;</span></code></p>
 <p>Url //example.com/example_iframe_page.html добавлен для примера, is an example, use your own path (to the page created on step 1)</p>
 <p>Also value of GET param domain (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced on nessesary (id), used in nessesary app in admin.probtn.com</p>
-<p>Value of GET param SelectAdSet (for example) <code class="docutils literal"><span class="pre">565e021f99c27511100000d0</span></code> should be replaced on nessesary campaign id (don&#8217;t use placement or creative id).</p>
+<p>Value of GET param SelectAdSet (for example) <code class="docutils literal"><span class="pre">565e021f99c27511100000d0</span></code> should be replaced on nessesary campaign id (don’t use placement or creative id).</p>
 <p>Campaign ID could be found  at url, if you open campaign page at admin.probtn.com.</p>
 <img alt="_images/adriver2_step3_2.png" src="_images/adriver2_step3_2.png" />
-</div>
-</div>
-<div class="section" id="intergation-with-dfp-sync-code">
-<h2>Intergation with DFP - sync code<a class="headerlink" href="#intergation-with-dfp-sync-code" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="step-0">
-<h3>Step 0<a class="headerlink" href="#step-0" title="Permalink to this headline">¶</a></h3>
-<p>Add this code to your advertisement:</p>
-<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/probtn_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
 </div>
 </div>
 </div>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="hpmd.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="hpmd.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="adfox.html" class="btn btn-neutral" title="AdFox integration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="adfox.html" class="btn btn-neutral" title="AdFox integration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -253,7 +302,8 @@ To do so, you should:</p>
             VERSION:'1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

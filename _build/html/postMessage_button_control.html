@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -30,9 +32,12 @@
   
 
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
         <link rel="next" title="Send message about animation steps" href="postMessage_button_animation.html"/>
-        <link rel="prev" title="Описание вариантов таргетинга в админке" href="admin_targetings.html"/> 
+        <link rel="prev" title="Description of targeting variants at admin.probtn.com" href="admin_targetings.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -41,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -81,7 +87,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Table of content</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
@@ -95,8 +104,8 @@
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
 <li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Button events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="admin_targetings.html">Описание вариантов таргетинга в админке</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Control button using <code class="docutils literal"><span class="pre">postMessage</span></code> message from iframe</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="admin_targetings.html">Description of targeting variants at admin.probtn.com</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Control button using <code class="docutils literal"><span class="pre">postMessage</span></code> message from iframe</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#object-format-in-message">Object format in message</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#message-variants">Message variants</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#probtn-start-content-showed-timer">probtn_start_content_showed_timer</a></li>
@@ -110,6 +119,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#button-image-iframe-size">button_image_iframe_size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#probtn-change-content-url">probtn_change_content_url</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#probtn-performed-action">probtn_performed_action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#probtn-message-to-creative">probtn_message_to_creative</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#example-of-sending-message">Example of sending message</a></li>
@@ -132,8 +142,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Profit Button en</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Profit Button en</a>
+        
       </nav>
 
 
@@ -146,19 +158,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Control button using <code class="docutils literal"><span class="pre">postMessage</span></code> message from iframe</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Control button using <code class="docutils literal"><span class="pre">postMessage</span></code> message from iframe</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/postMessage_button_control.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/postMessage_button_control.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -219,10 +248,15 @@
 <div class="section" id="probtn-performed-action">
 <h3>probtn_performed_action<a class="headerlink" href="#probtn-performed-action" title="Permalink to this headline">¶</a></h3>
 <p>Send message about actions inside iframe.
-In field <code class="docutils literal"><span class="pre">value</span></code> possible to set action type. If it wouldn&#8217;t set, then by default would be used variant <code class="docutils literal"><span class="pre">buy</span></code></p>
+In field <code class="docutils literal"><span class="pre">value</span></code> possible to set action type. If it wouldn’t set, then by default would be used variant <code class="docutils literal"><span class="pre">buy</span></code></p>
 <p>Example:</p>
 <p><code class="docutils literal"><span class="pre">window.top.postMessage({</span> <span class="pre">command:</span> <span class="pre">'probtn_performed_action'</span> <span class="pre">},</span> <span class="pre">'*');</span></code></p>
 <p><code class="docutils literal"><span class="pre">window.top.postMessage({</span> <span class="pre">command:</span> <span class="pre">'probtn_performed_action',</span> <span class="pre">value:</span> <span class="pre">'booked'</span> <span class="pre">},</span> <span class="pre">'*');</span></code></p>
+</div>
+<div class="section" id="probtn-message-to-creative">
+<h3>probtn_message_to_creative<a class="headerlink" href="#probtn-message-to-creative" title="Permalink to this headline">¶</a></h3>
+<p>Sending message to creative (sending message from modal window to button, as example).
+Field <code class="docutils literal"><span class="pre">object</span></code> sending as message directly to creative <code class="docutils literal"><span class="pre">iframe</span></code>.</p>
 </div>
 </div>
 <div class="section" id="example-of-sending-message">
@@ -233,15 +267,18 @@ In field <code class="docutils literal"><span class="pre">value</span></code> po
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="postMessage_button_animation.html" class="btn btn-neutral float-right" title="Send message about animation steps" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="postMessage_button_animation.html" class="btn btn-neutral float-right" title="Send message about animation steps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="admin_targetings.html" class="btn btn-neutral" title="Описание вариантов таргетинга в админке" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="admin_targetings.html" class="btn btn-neutral" title="Description of targeting variants at admin.probtn.com" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -275,7 +312,8 @@ In field <code class="docutils literal"><span class="pre">value</span></code> po
             VERSION:'1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

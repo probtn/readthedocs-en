@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -30,9 +32,12 @@
   
 
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
         <link rel="next" title="Integrtion with AdRiver" href="adriver.html"/>
-        <link rel="prev" title="General description of the button" href="description.html"/> 
+        <link rel="prev" title="Button modes examples" href="examples.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -41,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -81,10 +87,15 @@
           
             
             
-                <p class="caption"><span class="caption-text">Table of content</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">The hierarchy of entities of admin.probtn.com</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Button modes examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The hierarchy of entities of admin.probtn.com</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">Hierarchy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#example-1">Example 1</a></li>
@@ -99,6 +110,15 @@
 <li class="toctree-l1"><a class="reference internal" href="webparams.html">Params description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#not-used-params">Not used params</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
+<li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Button events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin_targetings.html">Description of targeting variants at admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postMessage_button_control.html">Control button using <code class="docutils literal"><span class="pre">postMessage</span></code> message from iframe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Send message about animation steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Additional animation button params</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Reports at admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="passback.html">Using passback code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Unobvious moments, tips and other additional data</a></li>
 </ul>
 
             
@@ -111,8 +131,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Profit Button en</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Profit Button en</a>
+        
       </nav>
 
 
@@ -125,19 +147,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>The hierarchy of entities of admin.probtn.com</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>The hierarchy of entities of admin.probtn.com</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/hierarchy.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/hierarchy.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -147,8 +186,8 @@
 <span id="hierarchy"></span><h1>The hierarchy of entities of admin.probtn.com<a class="headerlink" href="#the-hierarchy-of-entities-of-admin-probtn-com" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
 <h2>Hierarchy<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<img alt="_images/1.png" src="_images/1.png" />
-<p>Would or wouldn&#8217;t creatives be shown depend only from creative state (ON/OFF).</p>
+<img alt="_images/12.png" src="_images/12.png" />
+<p>Would or wouldn’t creatives be shown depend only from creative state (ON/OFF).</p>
 <p>When some element higher in hierarchy turn off, state of child elements saved and all of them turned off too.</p>
 <p>Then this element turn on back, child element what was originaly turned on become turn on again, and other elements stay in current state (off).</p>
 </div>
@@ -212,15 +251,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="adriver.html" class="btn btn-neutral float-right" title="Integrtion with AdRiver" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="adriver.html" class="btn btn-neutral float-right" title="Integrtion with AdRiver" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="description.html" class="btn btn-neutral" title="General description of the button" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral" title="Button modes examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -254,7 +296,8 @@
             VERSION:'1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

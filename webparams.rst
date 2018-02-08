@@ -49,6 +49,13 @@ In dependence on the possible values, Badge could be on or off.
 - ``false`` - off
 By default is ``true``.
 
+JsImpressionCode
+----------------------------------
+
+Contain user's js-script, which will start after starting button.
+Example of using:
+``'JsImpressionCode': '<script>alert("Hello World!");</script' + '>'``.
+
 RoundButton
 ----------------------------------
 

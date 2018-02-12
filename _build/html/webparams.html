@@ -108,6 +108,17 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#jsimpressioncode">JsImpressionCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#videoitemheaderimage">VideoItemHeaderImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brandingimage">BrandingImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#correctpositionbeforemove">CorrectPositionBeforeMove</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#onnoshowpixel">OnNoShowPixel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#onshowpixel">OnShowPixel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#locationpoints">LocationPoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirelocation">RequireLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buttoninjectpath">ButtonInjectPath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#waitiframeloadedmsg">waitIframeLoadedMsg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#waitcontentloadedmsg">waitContentLoadedMsg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#animationdata">animationData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#roundbutton">RoundButton</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lockbody">LockBody</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#closebuttonshowdelay">CloseButtonShowDelay</a></li>
@@ -297,7 +308,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#hintarrowimageb">HintArrowImageB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hintarrowimagel">HintArrowImageL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hintarrowimager">HintArrowImageR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id15">Остальные параметры</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-parameters">Other parameters:</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#button-default-params">Button default params</a></li>
@@ -375,8 +386,13 @@
             
   <div class="section" id="params-description">
 <span id="webparams"></span><h1>Params description<a class="headerlink" href="#params-description" title="Permalink to this headline">¶</a></h1>
-<p>Description of the parameters used by the button (by application)</p>
-<p>If a parameter is used differently in different modes, it is specifically marked (including, the required modes)</p>
+<p>Description of the parameters used by the button (by application).
+If a parameter is used differently in different modes, it is specifically marked (including, the required modes)</p>
+<p>Related Pages:</p>
+<ul class="simple">
+<li><a class="reference internal" href="index.html#index"><span class="std std-ref">Profit Button</span></a></li>
+<li><a class="reference internal" href="description.html#description"><span class="std std-ref">General description of the button</span></a></li>
+</ul>
 <div class="section" id="badge">
 <h2>Badge<a class="headerlink" href="#badge" title="Permalink to this headline">¶</a></h2>
 <p>Badge is an object, includes different graphic elements such as logo, emblem, etc.
@@ -419,6 +435,68 @@ By default is <code class="docutils literal"><span class="pre">true</span></code
 <p>Contain user’s js-script, which will start after starting button.
 Example of using:
 <code class="docutils literal"><span class="pre">'JsImpressionCode':</span> <span class="pre">'&lt;script&gt;alert(&quot;Hello</span> <span class="pre">World!&quot;);&lt;/script'</span> <span class="pre">+</span> <span class="pre">'&gt;'</span></code>.</p>
+</div>
+<div class="section" id="videoitemheaderimage">
+<h2>VideoItemHeaderImage<a class="headerlink" href="#videoitemheaderimage" title="Permalink to this headline">¶</a></h2>
+<p>Image URL, using for branding (logo in video) for video content (<code class="docutils literal"><span class="pre">ButtonContentType:</span> <span class="pre">video</span></code>).
+If empty, table line and image won’t be created.
+By default: “”.</p>
+</div>
+<div class="section" id="brandingimage">
+<h2>BrandingImage<a class="headerlink" href="#brandingimage" title="Permalink to this headline">¶</a></h2>
+<p>Image URL, using for page branding while button is moving.
+(Image using as background-image for <code class="docutils literal"><span class="pre">#probtn_wrapper</span></code> element).
+By default: “”.</p>
+</div>
+<div class="section" id="correctpositionbeforemove">
+<h2>CorrectPositionBeforeMove<a class="headerlink" href="#correctpositionbeforemove" title="Permalink to this headline">¶</a></h2>
+<p>Parameter to determine whether to set the adjust button position before it was moved, or not.
+If true, then button position will be updated when browser window resise or device orientation change.
+By default “true”.</p>
+</div>
+<div class="section" id="onnoshowpixel">
+<h2>OnNoShowPixel<a class="headerlink" href="#onnoshowpixel" title="Permalink to this headline">¶</a></h2>
+<p>Pixel, which called, if button is NOT showed (It can be set for app in admin panel).</p>
+</div>
+<div class="section" id="onshowpixel">
+<h2>OnShowPixel<a class="headerlink" href="#onshowpixel" title="Permalink to this headline">¶</a></h2>
+<p>Pixel, which called, if button is showed (It can be set for app in admin panel).</p>
+</div>
+<div class="section" id="locationpoints">
+<h2>LocationPoints<a class="headerlink" href="#locationpoints" title="Permalink to this headline">¶</a></h2>
+<p>Array of points, for which we check to whether user’s geolocation in radius of action one of them.
+Format objects of array: <code class="docutils literal"><span class="pre">{&quot;rad&quot;:</span> <span class="pre">500,</span> <span class="pre">&quot;lat&quot;:</span> <span class="pre">33.33,</span> <span class="pre">&quot;lon&quot;:</span> <span class="pre">55.55}</span></code>.
+Where:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">rad</span></code> - radius from point in meters</li>
+<li><code class="docutils literal"><span class="pre">lat</span></code> - latitude</li>
+<li><code class="docutils literal"><span class="pre">lon</span></code> - longitude.</li>
+</ul>
+</div>
+<div class="section" id="requirelocation">
+<h2>RequireLocation<a class="headerlink" href="#requirelocation" title="Permalink to this headline">¶</a></h2>
+<p>Whether need geolocation data for button work.
+By default: <code class="docutils literal"><span class="pre">false</span></code></p>
+</div>
+<div class="section" id="buttoninjectpath">
+<h2>ButtonInjectPath<a class="headerlink" href="#buttoninjectpath" title="Permalink to this headline">¶</a></h2>
+<p>Path, which contain <code class="docutils literal"><span class="pre">#probtn_wrapper`</span> <span class="pre">button</span> <span class="pre">block</span> <span class="pre">and</span> <span class="pre">code</span> <span class="pre">of</span> <span class="pre">modal</span> <span class="pre">window.</span>
+<span class="pre">By</span> <span class="pre">default:</span>
+<span class="pre">``body</span></code></p>
+</div>
+<div class="section" id="waitiframeloadedmsg">
+<h2>waitIframeLoadedMsg<a class="headerlink" href="#waitiframeloadedmsg" title="Permalink to this headline">¶</a></h2>
+<p>If true, creative send  message (<code class="docutils literal"><span class="pre">probtn_creative_loaded_message</span></code>) about finished loading and initialization.</p>
+<p><a class="reference internal" href="postMessage_button_control.html#postmessage-button-control"><span class="std std-ref">Control button using postMessage message from iframe</span></a></p>
+<p>By default: <code class="docutils literal"><span class="pre">false</span></code></p>
+</div>
+<div class="section" id="waitcontentloadedmsg">
+<h2>waitContentLoadedMsg<a class="headerlink" href="#waitcontentloadedmsg" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="animationdata">
+<h2>animationData<a class="headerlink" href="#animationdata" title="Permalink to this headline">¶</a></h2>
+<p>Animation additional data, which is used for adding description path of button animation.
+It is created by redactor <a class="reference external" href="http://probtn-animation-service.azurewebsites.net/">http://probtn-animation-service.azurewebsites.net/</a>.</p>
 </div>
 <div class="section" id="roundbutton">
 <h2>RoundButton<a class="headerlink" href="#roundbutton" title="Permalink to this headline">¶</a></h2>
@@ -1572,8 +1650,8 @@ Link to the image in the closing area in active mode</p>
 <h2>HintArrowImageR<a class="headerlink" href="#hintarrowimager" title="Permalink to this headline">¶</a></h2>
 <p>Not used.</p>
 </div>
-<div class="section" id="id15">
-<h2>Остальные параметры<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="other-parameters">
+<h2>Other parameters:<a class="headerlink" href="#other-parameters" title="Permalink to this headline">¶</a></h2>
 <p>DefaultDuration, DefaultDelay, OpenDuration, OpenDelay, CloseDuration, CloseDelay, ButtonShowDuration, ButtonShowDelay, ButtonHideDuration, ButtonHideDelay, ButtonDragDuration, ButtonDragDelay, ButtonUndragDuration: 0.2, ButtonUndragDelay, ButtonInactiveDuration, ButtonInactiveDelay, ButtonInertiaSpeed, ButtonInertiaSpeedMin, ButtonInertiaSpeedMax, ButtonInertiaFactor, CloseShowDuration, CloseShowDelay, CloseHideDuration, CloseHideDelay, CloseActiveDuration, CloseActiveDelay, CloseUnactiveDuration, CloseUnactiveDelay, HintLaunchDuration, HintLaunchDelay, HintShowDuration, HintShowDelay, HintHideDuration, HintHideDelay, ContentShowDuration, ContentShowDelay, ContentHideDuration, ContentHideDelay</p>
 <p>Not used</p>
 </div>

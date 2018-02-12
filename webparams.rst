@@ -8,9 +8,13 @@
 Params description
 ==================================
 
-Description of the parameters used by the button (by application)
-
+Description of the parameters used by the button (by application).
 If a parameter is used differently in different modes, it is specifically marked (including, the required modes)
+
+Related Pages:
+
+* :ref:`index`
+* :ref:`description`
 
 Badge
 ----------------------------------
@@ -55,6 +59,76 @@ JsImpressionCode
 Contain user's js-script, which will start after starting button.
 Example of using:
 ``'JsImpressionCode': '<script>alert("Hello World!");</script' + '>'``.
+
+VideoItemHeaderImage
+----------------------------------
+Image URL, using for branding (logo in video) for video content (``ButtonContentType: video``).
+If empty, table line and image won't be created.
+By default: "".
+
+BrandingImage
+----------------------------------
+Image URL, using for page branding while button is moving.
+(Image using as background-image for ``#probtn_wrapper`` element).
+By default: "".
+
+CorrectPositionBeforeMove
+----------------------------------
+
+Parameter to determine whether to set the adjust button position before it was moved, or not.
+If true, then button position will be updated when browser window resise or device orientation change.
+By default "true".
+
+OnNoShowPixel
+----------------------------------
+
+Pixel, which called, if button is NOT showed (It can be set for app in admin panel).
+
+OnShowPixel
+----------------------------------
+
+Pixel, which called, if button is showed (It can be set for app in admin panel).
+
+LocationPoints
+----------------------------------
+
+Array of points, for which we check to whether user's geolocation in radius of action one of them.
+Format objects of array: ``{"rad": 500, "lat": 33.33, "lon": 55.55}``.
+Where:
+
+- ``rad`` - radius from point in meters
+- ``lat`` - latitude
+- ``lon`` - longitude.
+
+RequireLocation
+----------------------------------
+
+Whether need geolocation data for button work.
+By default: ``false``
+
+ButtonInjectPath
+----------------------------------
+
+Path, which contain ``#probtn_wrapper` button block and code of modal window.
+By default:
+``body``
+
+waitIframeLoadedMsg
+----------------------------------
+
+If true, creative send  message (``probtn_creative_loaded_message``) about finished loading and initialization.
+
+:ref:`postMessage_button_control`
+
+By default: ``false``
+
+waitContentLoadedMsg
+----------------------------------
+
+animationData
+----------------------------------
+Animation additional data, which is used for adding description path of button animation.
+It is created by redactor http://probtn-animation-service.azurewebsites.net/.
 
 RoundButton
 ----------------------------------
@@ -1264,7 +1338,7 @@ HintArrowImageR
 -----------------------------
 Not used.
 
-Остальные параметры
+Other parameters:
 -----------------------------
 DefaultDuration, DefaultDelay, OpenDuration, OpenDelay, CloseDuration, CloseDelay, ButtonShowDuration, ButtonShowDelay, ButtonHideDuration, ButtonHideDelay, ButtonDragDuration, ButtonDragDelay, ButtonUndragDuration: 0.2, ButtonUndragDelay, ButtonInactiveDuration, ButtonInactiveDelay, ButtonInertiaSpeed, ButtonInertiaSpeedMin, ButtonInertiaSpeedMax, ButtonInertiaFactor, CloseShowDuration, CloseShowDelay, CloseHideDuration, CloseHideDelay, CloseActiveDuration, CloseActiveDelay, CloseUnactiveDuration, CloseUnactiveDelay, HintLaunchDuration, HintLaunchDelay, HintShowDuration, HintShowDelay, HintHideDuration, HintHideDelay, ContentShowDuration, ContentShowDelay, ContentHideDuration, ContentHideDelay
 

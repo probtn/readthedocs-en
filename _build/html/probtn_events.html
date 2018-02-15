@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -32,9 +30,6 @@
   
 
   
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
         <link rel="next" title="Description of targeting variants at admin.probtn.com" href="admin_targetings.html"/>
         <link rel="prev" title="Offline mode" href="offline.html"/> 
@@ -46,7 +41,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -87,10 +81,7 @@
           
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Table of content</span></p>
+                <p class="caption"><span class="caption-text">Table of content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
@@ -103,7 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#not-used-params">Not used params</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
 <li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Button events</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Button events</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#object-description">Object description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#variants-of-button-events">Variants of button events</a><ul>
@@ -146,10 +137,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Profit Button en</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Profit Button en</a>
       </nav>
 
 
@@ -162,36 +151,19 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Button events</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Button events</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/probtn_events.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/probtn_events.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -202,7 +174,7 @@
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>If you need to getbutton events (for example for collecting your own stats and analytics) you could register listener for event <code class="docutils literal"><span class="pre">probtn_events</span></code>.</p>
-<p>In this event in <code class="docutils literal"><span class="pre">data</span></code> field you’ll find object with nessesary data and descriptions of event.</p>
+<p>In this event in <code class="docutils literal"><span class="pre">data</span></code> field you&#8217;ll find object with nessesary data and descriptions of event.</p>
 </div>
 <div class="section" id="object-description">
 <h2>Object description<a class="headerlink" href="#object-description" title="Permalink to this headline">¶</a></h2>
@@ -266,9 +238,9 @@
 <div class="section" id="exmaple-of-adding-listener-for-event">
 <h3>Exmaple of adding listener for event<a class="headerlink" href="#exmaple-of-adding-listener-for-event" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
-<dt><a href="#id1"><span class="problematic" id="id2">``</span></a>document.addEventListener(‘probtn_events’, function (e) {</dt>
-<dd>console.log(“probtn_events”, e.data);
-$(“#eventsOutput”).append(“&lt;p&gt;”+JSON.stringify(e.data)+”&lt;/p&gt;”);</dd>
+<dt><a href="#id1"><span class="problematic" id="id2">``</span></a>document.addEventListener(&#8216;probtn_events&#8217;, function (e) {</dt>
+<dd>console.log(&#8220;probtn_events&#8221;, e.data);
+$(&#8220;#eventsOutput&#8221;).append(&#8220;&lt;p&gt;&#8221;+JSON.stringify(e.data)+&#8221;&lt;/p&gt;&#8221;);</dd>
 </dl>
 <p>}, false);``</p>
 </div>
@@ -287,18 +259,15 @@ $(“#eventsOutput”).append(“&lt;p&gt;”+JSON.stringify(e.data)+”&lt;/p&g
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="admin_targetings.html" class="btn btn-neutral float-right" title="Description of targeting variants at admin.probtn.com" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="admin_targetings.html" class="btn btn-neutral float-right" title="Description of targeting variants at admin.probtn.com" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="offline.html" class="btn btn-neutral" title="Offline mode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="offline.html" class="btn btn-neutral" title="Offline mode" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -332,8 +301,7 @@ $(“#eventsOutput”).append(“&lt;p&gt;”+JSON.stringify(e.data)+”&lt;/p&g
             VERSION:'1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

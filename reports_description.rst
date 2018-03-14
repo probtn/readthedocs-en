@@ -2,7 +2,7 @@
    sphinx-quickstart on Mon Nov  2 12:32:08 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
- 
+
 .. _reports_description:
 
 Reports at admin.probtn.com
@@ -23,8 +23,8 @@ Reports available for all users
     Reoprt about view duration of button content (``ContentShowedDuration``) grouped by intervals
 
 * **Detailed by App**
-    One othe base reports. Contain reports unloaded by app.
-    
+    One of the base reports. Contain reports unloaded by app.
+
     Variants of data output:
 
     1. *by Date* - total by date
@@ -41,15 +41,18 @@ Reports available for all users
 
 * **Detailed by Campaign**
     Second of base apps. Contain reports unloaded by campaign.
-    
+
     Variants of data output:
 
     1. *by Date* - sum by date
     2. *by Apps* - grouped by apps (all in campaign)
     3. *by Creative* - sum by creatives
-    4. *by Device* - grouped by devices 
+    4. *by Device* - grouped by devices
     5. *by Mobile operator* - by mobile operators
     6. *by Operating system* - by OS
     7. *by Country* - by countries
     8. *by City* - by cities
 
+* **SQL Pool**
+    Report on app with `BundleID == "pool"`, which used basically in Addinapp for starting identical creatives on several placements.
+    Report shows count of shows on certain placement (It is need to enter placement name in "Domain name" field).

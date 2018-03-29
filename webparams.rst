@@ -60,6 +60,20 @@ Contain user's js-script, which will start after starting button.
 Example of using:
 ``'JsImpressionCode': '<script>alert("Hello World!");</script' + '>'``.
 
+VideoPixel
+----------------------------------
+
+Parameter, which contain calling special tracking link, when video position is between start and end of interval position.
+It's possible to multi call, when video seek. Example:
+``[{"TrackingLink": "1", "StartPosition": 0.0, "EndPosition": 0.25}, {"TrackingLink": "2", "StartPosition": 0.25, "EndPosition": 0.5},{"TrackingLink": "3", "StartPosition": 0.5, "EndPosition": 0.75},{"TrackingLink": "4", "StartPosition": 0.75, "EndPosition": 1}]``
+Where:
+
+- ``TrackingLink`` - tracking link
+- ``StartPosition`` - start of timer interval in seconds
+- ``EndPosition`` - end of timer interval in seconds
+By default: []
+
+
 VideoItemHeaderImage
 ----------------------------------
 Image URL, using for branding (logo in video) for video content (``ButtonContentType: video``).

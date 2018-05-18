@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Campaign and creative creating &mdash; Profit Button en 1 documentation</title>
+  <title>Using API to get statistics data &mdash; Profit Button en 1 documentation</title>
   
 
   
@@ -31,8 +31,7 @@
 
   
     <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
-        <link rel="next" title="Button modes examples" href="examples.html"/>
-        <link rel="prev" title="General description of the button" href="description.html"/> 
+        <link rel="prev" title="Unobvious moments, tips and other additional data" href="hints_and_tricks.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -84,14 +83,7 @@
                 <p class="caption"><span class="caption-text">Table of content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Campaign and creative creating</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#step-1-create-campaign">Step 1 - create campaign</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-2">Step 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-3">Step 3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-4">Step 4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-5">Step 5</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Button modes examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hierarchy.html">The hierarchy of entities of admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Integrtion with AdRiver</a></li>
@@ -109,7 +101,12 @@
 <li class="toctree-l1"><a class="reference internal" href="reports_description.html">Reports at admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="passback.html">Using passback code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Unobvious moments, tips and other additional data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="statistics_api.html">Using API to get statistics data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Using API to get statistics data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#get">GET-параметры запроса</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#response">Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#request-example">Request example</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -140,11 +137,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Campaign and creative creating</li>
+    <li>Using API to get statistics data</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/createbutton.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/statistics_api.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -154,48 +151,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="campaign-and-creative-creating">
-<span id="createbutton"></span><h1>Campaign and creative creating<a class="headerlink" href="#campaign-and-creative-creating" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="step-1-create-campaign">
-<h2>Step 1 - create campaign<a class="headerlink" href="#step-1-create-campaign" title="Permalink to this headline">¶</a></h2>
-<p>At page <a class="reference external" href="https://admin.probtn.com/adsets">https://admin.probtn.com/adsets</a> using <code class="docutils literal"><span class="pre">New</span> <span class="pre">Campaign</span></code> button we start creating a new campaign</p>
-<img alt="_images/1.png" src="_images/1.png" />
+  <div class="section" id="using-api-to-get-statistics-data">
+<span id="statistics-api"></span><h1>Using API to get statistics data<a class="headerlink" href="#using-api-to-get-statistics-data" title="Permalink to this headline">¶</a></h1>
+<p>Statistics API could give you opportunity to integrate you system with admin.probtn.com</p>
+<div class="section" id="get">
+<h2>GET-параметры запроса<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h2>
+<p>Params:</p>
+<blockquote>
+<div><ul class="simple">
+<li>AuthKey - authorize key, give access to campaigns. This param is required.</li>
+<li>AppName - apps names list for additional filtering.</li>
+<li>AdSet - list of campaigns IDs, possible to find in admin.probtn.com.</li>
+<li>DateStart - date in format YYYY-MM-DD</li>
+<li>DateEnd - date in format YYYY-MM-DD</li>
+</ul>
+</div></blockquote>
 </div>
-<div class="section" id="step-2">
-<h2>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h2>
-<p>Fill base fields of th campaign, such as:</p>
-<p>1 - campaign name
-2 - state (onoff)
-4 - overall show limit for campaign
-5 - date and time of campaign start ( format is YYYY/MM/DD HH:mm:ss )
-6 - date and time of campaign end ( format is YYYY/MM/DD HH:mm:ss )
-7 - apps for campaign</p>
-<img alt="_images/2.png" src="_images/2.png" />
-<img alt="_images/3.png" src="_images/3.png" />
+<div class="section" id="response">
+<h2>Response<a class="headerlink" href="#response" title="Permalink to this headline">¶</a></h2>
+<p>In response you can get requested data in JSON format.</p>
+<p>Description:</p>
+<blockquote>
+<div><ul class="simple">
+<li>adset_id - campaign</li>
+<li>bundle_id - bundle id</li>
+<li>datetime - datetime in timestamp format</li>
+<li>content_showed - number of button clicks</li>
+<li>content_showed_duration - time of the button&#8217;s visibility</li>
+<li>hided - number of button closings</li>
+<li>moved - number of button movements</li>
+<li>moved_duration - average time for moving a button</li>
+<li>opened - button impressions</li>
+</ul>
+</div></blockquote>
 </div>
-<div class="section" id="step-3">
-<h2>Step 3<a class="headerlink" href="#step-3" title="Permalink to this headline">¶</a></h2>
-<p>Now we should go at automaticly created Placement (or create new one, if we need so)</p>
-<p>and placement</p>
-<img alt="_images/5.png" src="_images/5.png" />
-</div>
-<div class="section" id="step-4">
-<h2>Step 4<a class="headerlink" href="#step-4" title="Permalink to this headline">¶</a></h2>
-<p>Create new creatives group, by pressing <code class="docutils literal"><span class="pre">New</span> <span class="pre">Targeting</span></code> button.</p>
-<p>Here we set group name and add nessesary targetings for group, if nessesary.</p>
-<img alt="_images/6.png" src="_images/6.png" />
-<img alt="_images/7.png" src="_images/7.png" />
-</div>
-<div class="section" id="step-5">
-<h2>Step 5<a class="headerlink" href="#step-5" title="Permalink to this headline">¶</a></h2>
-<p>Create creative for created on previous step group.</p>
-<img alt="_images/9.png" src="_images/9.png" />
-<p>First of all we set primary button settings, such as state (onoff), show what (what would be shown when user press the button) and open in external browser (would be  page opened at new tab when user press the button) and creative targetings if nessesary.</p>
-<img alt="_images/10.png" src="_images/10.png" />
-<p>And then we save this settings.</p>
-<p>After it lower at the page we set base button settings (and additional one if nessesary).</p>
-<p>Description of all options is available at <a class="reference internal" href="webparams.html#webparams"><span>Params description</span></a></p>
-<img alt="_images/11.png" src="_images/11.png" />
+<div class="section" id="request-example">
+<h2>Request example<a class="headerlink" href="#request-example" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://stats.probtn.com/api_reports">http://stats.probtn.com/api_reports</a>?AuthKey=&lt;SOME_KEY&gt;&amp;AppName=jgjh.ghjg&amp;AdSet=76786786876</p>
 </div>
 </div>
 
@@ -206,10 +198,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="examples.html" class="btn btn-neutral float-right" title="Button modes examples" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="description.html" class="btn btn-neutral" title="General description of the button" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="hints_and_tricks.html" class="btn btn-neutral" title="Unobvious moments, tips and other additional data" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -32,7 +32,7 @@
   
     <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
         <link rel="next" title="AdFox integration" href="adfox.html"/>
-        <link rel="prev" title="The hierarchy of entities of admin.probtn.com" href="hierarchy.html"/> 
+        <link rel="prev" title="The hierarchy of entities of admin.viewst.com" href="hierarchy.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -86,7 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Button modes examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">The hierarchy of entities of admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">The hierarchy of entities of admin.viewst.com</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Integrtion with AdRiver</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#integrtion-with-adriver-modificated-code">Integrtion with AdRiver (modificated code)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#step0">Step0</a></li>
@@ -112,11 +112,11 @@
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
 <li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Button events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="admin_targetings.html">Description of targeting variants at admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin_targetings.html">Description of targeting variants at admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_control.html">Control button using <code class="docutils literal"><span class="pre">postMessage</span></code> message from iframe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Send message about animation steps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Additional animation button params</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Reports at admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Reports at admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="passback.html">Using passback code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Unobvious moments, tips and other additional data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statistics_api.html">Using API to get statistics data</a></li>
@@ -178,7 +178,7 @@
 <h3>Step1<a class="headerlink" href="#step1" title="Permalink to this headline">¶</a></h3>
 <p>Create a page available at the address on the same domain where the button is to be displayed.</p>
 <p>On the page, add showinparent_concat.js</p>
-<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/showinparent_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
+<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.viewst.com/showinparent_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
 <p>For example:</p>
 <div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
@@ -188,7 +188,7 @@
                 <span class="nt">&lt;title&gt;</span>probtn (hackpad)<span class="nt">&lt;/title&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
 <span class="nt">&lt;body&gt;</span>
-                <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.probtn.com/showinparent_concat.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+                <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.viewst.com/showinparent_concat.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </pre></div>
@@ -212,7 +212,7 @@
 <p>Change the path from index.html to showinparent.html (example in the archive) (created in Step1)</p>
 <p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;</span> <span class="pre">src=&quot;http://example.com/showinparent.html?domain=nessasary_example_app_domain.test&quot;&gt;&lt;/iframe&gt;</span></code></p>
 <p>Url <code class="docutils literal"><span class="pre">//example.com/showinparent.html?domain=nessasary_example_app_domain.test</span></code> is an example, use your own path (to the page created on step 1)</p>
-<p>Change the value of the GET param of the domain (cited as an example) from <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> to the necessary domain (identifier) used in the appropriate app at <code class="docutils literal"><span class="pre">admin.probtn.com</span></code></p>
+<p>Change the value of the GET param of the domain (cited as an example) from <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> to the necessary domain (identifier) used in the appropriate app at <code class="docutils literal"><span class="pre">admin.viewst.com</span></code></p>
 </div>
 <div class="section" id="set-campaign-optional">
 <h3>Set campaign (optional)<a class="headerlink" href="#set-campaign-optional" title="Permalink to this headline">¶</a></h3>
@@ -221,9 +221,9 @@ To do so, you should:</p>
 <p>Create ad with code</p>
 <p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;</span>&nbsp; <span class="pre">src=&quot;//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&amp;SelectAdSet=565e021f99c27511100000d0&quot;&gt;&lt;/iframe&gt;</span></code></p>
 <p>Url //example.com/example_iframe_page.html добавлен для примера, is an example, use your own path (to the page created on step 1)</p>
-<p>Also value of GET param domain (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced on nessesary (id), used in nessesary app in admin.probtn.com</p>
+<p>Also value of GET param domain (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced on nessesary (id), used in nessesary app in admin.viewst.com</p>
 <p>Value of GET param SelectAdSet (for example) <code class="docutils literal"><span class="pre">565e021f99c27511100000d0</span></code> should be replaced on nessesary campaign id (don&#8217;t use placement or creative id).</p>
-<p>Campaign ID could be found  at url, if you open campaign page at admin.probtn.com.</p>
+<p>Campaign ID could be found  at url, if you open campaign page at admin.viewst.com.</p>
 <img alt="_images/adriver2_step3_2.png" src="_images/adriver2_step3_2.png" />
 </div>
 </div>
@@ -244,7 +244,7 @@ To do so, you should:</p>
 <h3>Step2<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>Upload banner code</p>
 <img alt="_images/adriver1_step2.png" src="_images/adriver1_step2.png" />
-<p>As code you can use concatenated probtn script, called ( <a class="reference external" href="http://cdn.probtn.com/showinparent_concat.js">http://cdn.probtn.com/showinparent_concat.js</a> ):
+<p>As code you can use concatenated probtn script, called ( <a class="reference external" href="http://cdn.viewst.com/showinparent_concat.js">http://cdn.viewst.com/showinparent_concat.js</a> ):
 ( <a class="reference internal" href="description.html#description"><span>General description of the button</span></a> )</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 <span class="kd">var</span> <span class="nx">oHead</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">top</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;HEAD&#39;</span><span class="p">).</span><span class="nx">item</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
@@ -295,7 +295,7 @@ To do so, you should:</p>
 <span class="nx">paramsDiv</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">cssText</span> <span class="o">=</span> <span class="s2">&quot;display: none;&quot;</span><span class="p">;</span>
 <span class="nb">window</span><span class="p">.</span><span class="nx">top</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">paramsDiv</span><span class="p">);</span>
 
-<span class="nx">loadJS</span><span class="p">(</span><span class="s1">&#39;//cdn.probtn.com/probtn_concat.js&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="nx">loadJS</span><span class="p">(</span><span class="s1">&#39;//cdn.viewst.com/probtn_concat.js&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 <span class="p">});</span>
 <span class="p">})();</span>
 </pre></div>
@@ -314,7 +314,7 @@ To do so, you should:</p>
         <a href="adfox.html" class="btn btn-neutral float-right" title="AdFox integration" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="hierarchy.html" class="btn btn-neutral" title="The hierarchy of entities of admin.probtn.com" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="hierarchy.html" class="btn btn-neutral" title="The hierarchy of entities of admin.viewst.com" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

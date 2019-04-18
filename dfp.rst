@@ -10,7 +10,7 @@ Probtn - working with DFP Google ads
 
 To use the button in the Google DFP container you need to make this steps:
 
-Create campaign https://admin.probtn.com
+Create campaign https://admin.viewst.com
 
 Integration without safeframe
 ----------------------------------
@@ -20,7 +20,7 @@ Step 0
 
 Add this code to DFP ad
 
-``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
+``<script src="//cdn.viewst.com/showinparent_concat.js"></script>``
 
 and don't select checkbox "Serve into a SafeFrame"
 
@@ -37,7 +37,7 @@ Your code will look like:
 .. code-block:: html
 
   <div id="probtn_additional_params" style="display: none;">{ "domain": "example.com", "SelectAdSet": "campaign_id"}</div>
-  <script src="//cdn.probtn.com/showinparent_concat.js"></script>
+  <script src="//cdn.viewst.com/showinparent_concat.js"></script>
 
 
 Integration with safeframe
@@ -50,11 +50,11 @@ Create a page on the domain where the button will be displayed. (This page used 
 
 On this page add the script:
 
-``<script src="//cdn.probtn.com/showinparent.js"></script>``
+``<script src="//cdn.viewst.com/showinparent.js"></script>``
 
 If you'd like to use concatenated script which do not interfere with jQuery and other plugins use
 
-``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
+``<script src="//cdn.viewst.com/showinparent_concat.js"></script>``
 
 E.g.:
 
@@ -67,7 +67,7 @@ E.g.:
         <title></title>
     </head>
     <body>
-        <script src="//cdn.probtn.com/showinparent_concat.js"></script>
+        <script src="//cdn.viewst.com/showinparent_concat.js"></script>
     </body></html>
 
 
@@ -84,7 +84,7 @@ Also you can set domain:
 
 ``<iframe src="//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&click_url_esc=%%CLICK_URL_ESC%%&cacheBuster=%%CACHEBUSTER%%" style="border: 0px; width: 0px; height: 0px; display: none;"></iframe>``
 
-Where GET param ``domain`` (for example) ``nessasary_example_app_domain.test`` should be replaced to nessesary domain, used in app in admin.probtn.com
+Where GET param ``domain`` (for example) ``nessasary_example_app_domain.test`` should be replaced to nessesary domain, used in app in admin.viewst.com
 
 Set campaign (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -98,11 +98,11 @@ Create ad with code
 
 Url //example.com/example_iframe_page.html добавлен для примера, is an example, use your own path (to the page created on step 1)
 
-Also value of GET param domain (for example) ``nessasary_example_app_domain.test`` should be replaced on nessesary (id), used in nessesary app in admin.probtn.com
+Also value of GET param domain (for example) ``nessasary_example_app_domain.test`` should be replaced on nessesary (id), used in nessesary app in admin.viewst.com
 
 Value of GET param SelectAdSet (for example) ``565e021f99c27511100000d0`` should be replaced on nessesary campaign id (don't use placement or creative id).
 
-Campaign ID could be found  at url, if you open campaign page at admin.probtn.com.
+Campaign ID could be found  at url, if you open campaign page at admin.viewst.com.
 
 .. image:: images/adriver/adriver2_step3_2.png
 

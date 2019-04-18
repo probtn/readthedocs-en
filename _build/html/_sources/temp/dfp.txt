@@ -9,7 +9,7 @@
 ==================================
 
 Для  такого рода интеграции, необходимо произвести следующие действия:
-Создайте кампанию на https://admin.probtn.com
+Создайте кампанию на https://admin.viewst.com
 
 Интеграция с DFP - асинхронный код
 ----------------------------------
@@ -21,11 +21,11 @@ Create a page on the domain where the button will be displayed. (This page used 
 
 On this page add the script:
 
-``<script src="//cdn.probtn.com/showinparent.js"></script>``
+``<script src="//cdn.viewst.com/showinparent.js"></script>``
 
 If you'd like to use concatenated script which do not interfere with jQuery and other plugins use
 
-``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
+``<script src="//cdn.viewst.com/showinparent_concat.js"></script>``
 
 E.g.:
 
@@ -38,7 +38,7 @@ E.g.:
         <title></title>
     </head>
     <body>
-        <script src="//cdn.probtn.com/showinparent_concat.js"></script>
+        <script src="//cdn.viewst.com/showinparent_concat.js"></script>
 </body></html>
 
 
@@ -60,5 +60,5 @@ Step 0
 
 Добавьте следующий код в ваше  объявление
 
-``<script src="//cdn.probtn.com/probtn_concat.js"></script>``
+``<script src="//cdn.viewst.com/probtn_concat.js"></script>``
 

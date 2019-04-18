@@ -129,16 +129,16 @@
   <div class="section" id="dfp">
 <span id="id1"></span><h1>Интеграция с DFP<a class="headerlink" href="#dfp" title="Permalink to this headline">¶</a></h1>
 <p>Для  такого рода интеграции, необходимо произвести следующие действия:
-Создайте кампанию на <a class="reference external" href="https://admin.probtn.com">https://admin.probtn.com</a></p>
+Создайте кампанию на <a class="reference external" href="https://admin.viewst.com">https://admin.viewst.com</a></p>
 <div class="section" id="id2">
 <h2>Интеграция с DFP - асинхронный код<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="step-1">
 <h3>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">¶</a></h3>
 <p>Create a page on the domain where the button will be displayed. (This page used in ad to exit dfp iframe and add button code to parent page).</p>
 <p>On this page add the script:</p>
-<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/showinparent.js&quot;&gt;&lt;/script&gt;</span></code></p>
+<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.viewst.com/showinparent.js&quot;&gt;&lt;/script&gt;</span></code></p>
 <p>If you&#8217;d like to use concatenated script which do not interfere with jQuery and other plugins use</p>
-<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/showinparent_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
+<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.viewst.com/showinparent_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
 <p>E.g.:</p>
 <div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
@@ -147,7 +147,7 @@
     <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
 <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.probtn.com/showinparent_concat.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.viewst.com/showinparent_concat.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 </pre></div>
 </div>
 <p>&lt;/body&gt;&lt;/html&gt;</p>
@@ -164,7 +164,7 @@
 <div class="section" id="step-0">
 <h3>Step 0<a class="headerlink" href="#step-0" title="Permalink to this headline">¶</a></h3>
 <p>Добавьте следующий код в ваше  объявление</p>
-<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/probtn_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
+<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.viewst.com/probtn_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
 </div>
 </div>
 </div>

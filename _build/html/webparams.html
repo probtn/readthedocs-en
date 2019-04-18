@@ -86,7 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Button modes examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">The hierarchy of entities of admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">The hierarchy of entities of admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Integrtion with AdRiver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">AdFox integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dfp.html">Probtn - working with DFP Google ads</a></li>
@@ -305,11 +305,11 @@
 <li class="toctree-l1"><a class="reference internal" href="#button-default-params">Button default params</a></li>
 <li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Button events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="admin_targetings.html">Description of targeting variants at admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin_targetings.html">Description of targeting variants at admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_control.html">Control button using <code class="docutils literal"><span class="pre">postMessage</span></code> message from iframe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Send message about animation steps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Additional animation button params</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Reports at admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Reports at admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="passback.html">Using passback code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Unobvious moments, tips and other additional data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statistics_api.html">Using API to get statistics data</a></li>
@@ -530,7 +530,7 @@ If field is empty, sound wouldn&#8217;t be played.</p>
 </div>
 <div class="section" id="passbackcustomcode">
 <h2>PassbackCustomCode<a class="headerlink" href="#passbackcustomcode" title="Permalink to this headline">¶</a></h2>
-<p>In this param possible to add code, which would be called in case, if button disabled (when settings request from admin.probtn.com return <code class="docutils literal"><span class="pre">{&quot;ButtonVisible&quot;:false,&quot;ButtonEnabled&quot;:false}</span></code>)</p>
+<p>In this param possible to add code, which would be called in case, if button disabled (when settings request from admin.viewst.com return <code class="docutils literal"><span class="pre">{&quot;ButtonVisible&quot;:false,&quot;ButtonEnabled&quot;:false}</span></code>)</p>
 <p>ATTENTION - better to test your code before using in production.</p>
 <p>By default: &#8220;&#8221;.</p>
 </div>
@@ -559,7 +559,7 @@ If field is empty, sound wouldn&#8217;t be played.</p>
 </div>
 <div class="section" id="additionaltargetingparam">
 <h2>AdditionalTargetingParam<a class="headerlink" href="#additionaltargetingparam" title="Permalink to this headline">¶</a></h2>
-<p>Additional custom parameter for targeting, which allows to make targeting at admin.probtn.com depending from custom tasks (for example targeting by different categories at site, etc).</p>
+<p>Additional custom parameter for targeting, which allows to make targeting at admin.viewst.com depending from custom tasks (for example targeting by different categories at site, etc).</p>
 <p>By default &#8220;&#8221;.</p>
 </div>
 <div class="section" id="isanimation">
@@ -1073,7 +1073,7 @@ If ContentInsets is below 0, insets are calculated automatically based on the bu
 <div class="section" id="showinparent">
 <h2>showInParent<a class="headerlink" href="#showinparent" title="Permalink to this headline">¶</a></h2>
 <p>By default false</p>
-<p>If the button is in the iframe and the parent window as well as the page in the iframe are located on the same domain, if set to true, the button adds to the parent the following code <code class="docutils literal"><span class="pre">//cdn.probtn.com/includepb.min.js</span></code> or <code class="docutils literal"><span class="pre">//cdn.probtn.com/probtn_concat.js</span></code> in order to play the button in the parent.</p>
+<p>If the button is in the iframe and the parent window as well as the page in the iframe are located on the same domain, if set to true, the button adds to the parent the following code <code class="docutils literal"><span class="pre">//cdn.viewst.com/includepb.min.js</span></code> or <code class="docutils literal"><span class="pre">//cdn.viewst.com/probtn_concat.js</span></code> in order to play the button in the parent.</p>
 </div>
 <div class="section" id="ishpmd">
 <h2>isHPMD<a class="headerlink" href="#ishpmd" title="Permalink to this headline">¶</a></h2>
@@ -1120,11 +1120,11 @@ clickUrlEsc - ссылка из макроса DFP для отслеживани
 <div class="section" id="smartbannerjspath">
 <h2>smartbannerJsPath<a class="headerlink" href="#smartbannerjspath" title="Permalink to this headline">¶</a></h2>
 <p>Путь по умолчанию до jquery.smartbanner.js
-<code class="docutils literal"><span class="pre">//cdn.probtn.com/libs/jquery.smartbanner.js</span></code></p>
+<code class="docutils literal"><span class="pre">//cdn.viewst.com/libs/jquery.smartbanner.js</span></code></p>
 </div>
 <div class="section" id="smartbannercsspath">
 <h2>smartbannerCssPath<a class="headerlink" href="#smartbannercsspath" title="Permalink to this headline">¶</a></h2>
-<p>URL by default to jquery.smartbanner.js <code class="docutils literal"><span class="pre">//cdn.probtn.com/libs/jquery.smartbanner.js</span></code></p>
+<p>URL by default to jquery.smartbanner.js <code class="docutils literal"><span class="pre">//cdn.viewst.com/libs/jquery.smartbanner.js</span></code></p>
 </div>
 <div class="section" id="smartbanner">
 <h2>smartbanner<a class="headerlink" href="#smartbanner" title="Permalink to this headline">¶</a></h2>
@@ -1445,7 +1445,7 @@ Position: {</p>
 Y: 0.1</div></blockquote>
 <p>},
 ActiveImage: &#8220;//probtnexample1.azurewebsites.net/img/logo.png&#8221;,
-InactiveImage: &#8220;//admin.probtn.com/eqwid_btn_nonpress.png&#8221;,
+InactiveImage: &#8220;//admin.viewst.com/eqwid_btn_nonpress.png&#8221;,
 ActiveSize: {</p>
 <blockquote>
 <div>W: 64,
@@ -1471,7 +1471,7 @@ Position: {</p>
 Y: 0.1</div></blockquote>
 <p>},
 ActiveImage: &#8220;//probtnexample1.azurewebsites.net/img/logo.png&#8221;,
-InactiveImage: &#8220;//admin.probtn.com/eqwid_btn_nonpress.png&#8221;,
+InactiveImage: &#8220;//admin.viewst.com/eqwid_btn_nonpress.png&#8221;,
 ActiveSize: {</p>
 <blockquote>
 <div>W: 64,

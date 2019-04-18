@@ -434,7 +434,7 @@ ZCustomCss
 showInParent
 ----------------------------------
 По умолчанию false
-Если кнопка находится в iframe и родительское окно как и старница в iframe размещены на одном и том же домене, то при true кнопка добавить в родителя код //cdn.probtn.com/includepb.min.js для запуска кнопки в родителе.
+Если кнопка находится в iframe и родительское окно как и старница в iframe размещены на одном и том же домене, то при true кнопка добавить в родителя код //cdn.viewst.com/includepb.min.js для запуска кнопки в родителе.
 
 isHPMD
 ----------------------------------
@@ -475,12 +475,12 @@ isSmartBanner
 smartbannerJsPath
 ----------------------------------
 Путь по умолчанию до jquery.smartbanner.js
-'//cdn.probtn.com/libs/jquery.smartbanner.js',
+'//cdn.viewst.com/libs/jquery.smartbanner.js',
 
 smartbannerCssPath
 ----------------------------------
 Путь по умолчанию до jquery.smartbanner.css
-      '//cdn.probtn.com/libs/jquery.smartbanner.css',
+      '//cdn.viewst.com/libs/jquery.smartbanner.css',
 
 smartbanner
 ----------------------------------
@@ -778,7 +778,7 @@ ActiveOpacity
                                 Y: 0.1
                             },
                             ActiveImage: "//probtnexample1.azurewebsites.net/img/logo.png",
-                            InactiveImage: "//admin.probtn.com/eqwid_btn_nonpress.png",
+                            InactiveImage: "//admin.viewst.com/eqwid_btn_nonpress.png",
                             ActiveSize: {
                                 W: 64, 
                                 H: 64
@@ -798,7 +798,7 @@ ActiveOpacity
                                 Y: 0.1
                             },
                             ActiveImage: "//probtnexample1.azurewebsites.net/img/logo.png",
-                            InactiveImage: "//admin.probtn.com/eqwid_btn_nonpress.png",
+                            InactiveImage: "//admin.viewst.com/eqwid_btn_nonpress.png",
                             ActiveSize: {
                                 W: 64,
                                 H: 64

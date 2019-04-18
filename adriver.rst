@@ -24,7 +24,7 @@ Create a page available at the address on the same domain where the button is to
 
 On the page, add showinparent_concat.js 
 
-``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
+``<script src="//cdn.viewst.com/showinparent_concat.js"></script>``
 
 For example:
  
@@ -38,7 +38,7 @@ For example:
 			<title>probtn (hackpad)</title>
 	</head>
 	<body>
-			<script src="//cdn.probtn.com/showinparent_concat.js"></script>
+			<script src="//cdn.viewst.com/showinparent_concat.js"></script>
 	</body>
 	</html>
  
@@ -68,7 +68,7 @@ Change the path from index.html to showinparent.html (example in the archive) (c
 
 Url ``//example.com/showinparent.html?domain=nessasary_example_app_domain.test`` is an example, use your own path (to the page created on step 1)
 
-Change the value of the GET param of the domain (cited as an example) from ``nessasary_example_app_domain.test`` to the necessary domain (identifier) used in the appropriate app at ``admin.probtn.com``
+Change the value of the GET param of the domain (cited as an example) from ``nessasary_example_app_domain.test`` to the necessary domain (identifier) used in the appropriate app at ``admin.viewst.com``
  
 Set campaign (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -82,11 +82,11 @@ Create ad with code
 
 Url //example.com/example_iframe_page.html добавлен для примера, is an example, use your own path (to the page created on step 1)
 
-Also value of GET param domain (for example) ``nessasary_example_app_domain.test`` should be replaced on nessesary (id), used in nessesary app in admin.probtn.com
+Also value of GET param domain (for example) ``nessasary_example_app_domain.test`` should be replaced on nessesary (id), used in nessesary app in admin.viewst.com
 
 Value of GET param SelectAdSet (for example) ``565e021f99c27511100000d0`` should be replaced on nessesary campaign id (don't use placement or creative id).
 
-Campaign ID could be found  at url, if you open campaign page at admin.probtn.com.
+Campaign ID could be found  at url, if you open campaign page at admin.viewst.com.
 
 .. image:: images/adriver/adriver2_step3_2.png
 
@@ -117,7 +117,7 @@ Upload banner code
 
 .. image:: images/adriver/adriver1_step2.png
 
-As code you can use concatenated probtn script, called ( http://cdn.probtn.com/showinparent_concat.js ):
+As code you can use concatenated probtn script, called ( http://cdn.viewst.com/showinparent_concat.js ):
 ( :ref:`description` )
 
 .. code-block:: javascript
@@ -171,7 +171,7 @@ As code you can use concatenated probtn script, called ( http://cdn.probtn.com/s
 	paramsDiv.style.cssText = "display: none;";
 	window.top.document.body.appendChild(paramsDiv);
 
-	loadJS('//cdn.probtn.com/probtn_concat.js', function () {
+	loadJS('//cdn.viewst.com/probtn_concat.js', function () {
 	});
 	})();
 

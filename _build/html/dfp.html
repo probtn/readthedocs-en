@@ -86,7 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Button modes examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">The hierarchy of entities of admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">The hierarchy of entities of admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Integrtion with AdRiver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">AdFox integration</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Probtn - working with DFP Google ads</a><ul>
@@ -107,11 +107,11 @@
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
 <li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Button events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="admin_targetings.html">Description of targeting variants at admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin_targetings.html">Description of targeting variants at admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_control.html">Control button using <code class="docutils literal"><span class="pre">postMessage</span></code> message from iframe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Send message about animation steps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Additional animation button params</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Reports at admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Reports at admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="passback.html">Using passback code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Unobvious moments, tips and other additional data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statistics_api.html">Using API to get statistics data</a></li>
@@ -162,13 +162,13 @@
   <div class="section" id="probtn-working-with-dfp-google-ads">
 <span id="dfp"></span><h1>Probtn - working with DFP Google ads<a class="headerlink" href="#probtn-working-with-dfp-google-ads" title="Permalink to this headline">¶</a></h1>
 <p>To use the button in the Google DFP container you need to make this steps:</p>
-<p>Create campaign <a class="reference external" href="https://admin.probtn.com">https://admin.probtn.com</a></p>
+<p>Create campaign <a class="reference external" href="https://admin.viewst.com">https://admin.viewst.com</a></p>
 <div class="section" id="integration-without-safeframe">
 <h2>Integration without safeframe<a class="headerlink" href="#integration-without-safeframe" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="step-0">
 <h3>Step 0<a class="headerlink" href="#step-0" title="Permalink to this headline">¶</a></h3>
 <p>Add this code to DFP ad</p>
-<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/showinparent_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
+<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.viewst.com/showinparent_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
 <p>and don&#8217;t select checkbox &#8220;Serve into a SafeFrame&#8221;</p>
 <img alt="_images/safeframe.png" src="_images/safeframe.png" />
 <p>To add aditional params to ad you can add block with button settings (domain and campaign are set for example):</p>
@@ -177,7 +177,7 @@
 </div>
 <p>Your code will look like:</p>
 <div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;probtn_additional_params&quot;</span> <span class="na">style=</span><span class="s">&quot;display: none;&quot;</span><span class="nt">&gt;</span>{ &quot;domain&quot;: &quot;example.com&quot;, &quot;SelectAdSet&quot;: &quot;campaign_id&quot;}<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.probtn.com/showinparent_concat.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.viewst.com/showinparent_concat.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -188,9 +188,9 @@
 <h3>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">¶</a></h3>
 <p>Create a page on the domain where the button will be displayed. (This page used in ad to exit dfp iframe and add button code to parent page).</p>
 <p>On this page add the script:</p>
-<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/showinparent.js&quot;&gt;&lt;/script&gt;</span></code></p>
+<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.viewst.com/showinparent.js&quot;&gt;&lt;/script&gt;</span></code></p>
 <p>If you&#8217;d like to use concatenated script which do not interfere with jQuery and other plugins use</p>
-<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/showinparent_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
+<p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.viewst.com/showinparent_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
 <p>E.g.:</p>
 <div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
@@ -199,7 +199,7 @@
     <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
 <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.probtn.com/showinparent_concat.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.viewst.com/showinparent_concat.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;/body&gt;&lt;/html&gt;</span>
 </pre></div>
 </div>
@@ -211,7 +211,7 @@
 <p>Url <code class="docutils literal"><span class="pre">//example.com/example_iframe_page.html</span></code> is added by example, you should use your own path</p>
 <p>Also you can set domain:</p>
 <p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">src=&quot;//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&amp;click_url_esc=%%CLICK_URL_ESC%%&amp;cacheBuster=%%CACHEBUSTER%%&quot;</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;&gt;&lt;/iframe&gt;</span></code></p>
-<p>Where GET param <code class="docutils literal"><span class="pre">domain</span></code> (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced to nessesary domain, used in app in admin.probtn.com</p>
+<p>Where GET param <code class="docutils literal"><span class="pre">domain</span></code> (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced to nessesary domain, used in app in admin.viewst.com</p>
 </div>
 <div class="section" id="set-campaign-optional">
 <h3>Set campaign (optional)<a class="headerlink" href="#set-campaign-optional" title="Permalink to this headline">¶</a></h3>
@@ -220,9 +220,9 @@ To do so, you should:</p>
 <p>Create ad with code</p>
 <p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;</span>&nbsp; <span class="pre">src=&quot;//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&amp;SelectAdSet=565e021f99c27511100000d0&quot;&gt;&lt;/iframe&gt;</span></code></p>
 <p>Url //example.com/example_iframe_page.html добавлен для примера, is an example, use your own path (to the page created on step 1)</p>
-<p>Also value of GET param domain (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced on nessesary (id), used in nessesary app in admin.probtn.com</p>
+<p>Also value of GET param domain (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced on nessesary (id), used in nessesary app in admin.viewst.com</p>
 <p>Value of GET param SelectAdSet (for example) <code class="docutils literal"><span class="pre">565e021f99c27511100000d0</span></code> should be replaced on nessesary campaign id (don&#8217;t use placement or creative id).</p>
-<p>Campaign ID could be found  at url, if you open campaign page at admin.probtn.com.</p>
+<p>Campaign ID could be found  at url, if you open campaign page at admin.viewst.com.</p>
 <img alt="_images/adriver2_step3_2.png" src="_images/adriver2_step3_2.png" />
 </div>
 </div>

@@ -134,14 +134,14 @@
 Настройки указанные локально при запуске кнопки
 Получение настроек (конвертация текста из блока в json) из div c <code class="docutils literal"><span class="pre">id=&quot;probtn_additional_params&quot;</span></code>
 Получение настроек из json-файла с настройками кнопки (в этом случае обращение к серверу за настройками не происходит)
-Получение настроек от сервера (<code class="docutils literal"><span class="pre">admin.probtn.com</span></code>) - основной и наиболее широко используемый и удобный способ</p>
+Получение настроек от сервера (<code class="docutils literal"><span class="pre">admin.viewst.com</span></code>) - основной и наиболее широко используемый и удобный способ</p>
 <p>Список используемых параметров, их описаний и иже с ним доступен в документе Probtn web params</p>
 </div>
 <div class="section" id="admin-probtn-com">
-<h2>Краткое описание взаимодействия с сервером настроек (<code class="docutils literal"><span class="pre">admin.probtn.com</span></code>)<a class="headerlink" href="#admin-probtn-com" title="Permalink to this headline">¶</a></h2>
+<h2>Краткое описание взаимодействия с сервером настроек (<code class="docutils literal"><span class="pre">admin.viewst.com</span></code>)<a class="headerlink" href="#admin-probtn-com" title="Permalink to this headline">¶</a></h2>
 <p>При запуске скрипта кнопки, происходит следующее:</p>
-<p>Производится начальная инициализация, во время которой кнопка делает запрос настроек к admin.probtn.com. Настройки идентифицируются исходя из домена сайта (в частности при запросе в числе прочих передается параметр BundleID с доменом сайта, который автоматически берется из document.domain)</p>
-<p>В случае, если указаны настройки способами 1 и 2, и одним из параметров указан параметр domain c идентификатором&#8221;доменом&#8221;, соответствующим одному из &#8220;аппов&#8221; в <code class="docutils literal"><span class="pre">admin.probtn.com</span></code>, то скрипт кнопки при обращении к серверу в <code class="docutils literal"><span class="pre">BundleID</span></code> передаст указанный параметр и получит для него настройки. Это бывает полезно в различных случаях, к примеру когда кнопка с искомыми настройками должна показываться на нескольких сайтах, или же наоборот, когда на одном сайте нужно показать различные рекламные кампании (данный вариант возможен и с использованием campaign в &#8220;аппе&#8221;, но не всегда подходит).</p>
+<p>Производится начальная инициализация, во время которой кнопка делает запрос настроек к admin.viewst.com. Настройки идентифицируются исходя из домена сайта (в частности при запросе в числе прочих передается параметр BundleID с доменом сайта, который автоматически берется из document.domain)</p>
+<p>В случае, если указаны настройки способами 1 и 2, и одним из параметров указан параметр domain c идентификатором&#8221;доменом&#8221;, соответствующим одному из &#8220;аппов&#8221; в <code class="docutils literal"><span class="pre">admin.viewst.com</span></code>, то скрипт кнопки при обращении к серверу в <code class="docutils literal"><span class="pre">BundleID</span></code> передаст указанный параметр и получит для него настройки. Это бывает полезно в различных случаях, к примеру когда кнопка с искомыми настройками должна показываться на нескольких сайтах, или же наоборот, когда на одном сайте нужно показать различные рекламные кампании (данный вариант возможен и с использованием campaign в &#8220;аппе&#8221;, но не всегда подходит).</p>
 <p>В случае, если апп (и его кампании) выключены, от сервера придет ответ о том что кнопка выключена, и соответственно кнопка показана не будет, и не будет производить дальнейшую инициализацию.</p>
 <p>В случае, если аппа с указанным bundleId&#8221;доменом&#8221; не существует, будет возвращена ошибка, и кнопка опять таки не будет производить дальнейшую инициализацию.</p>
 </div>
@@ -160,10 +160,10 @@
 <div class="section" id="id4">
 <h2>Описание используемых вариантов<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Как видно из приведенных выше вариантов интеграции, зачастую используется
-* <a class="reference external" href="http://cdn.probtn.com/includepb.min.js">http://cdn.probtn.com/includepb.min.js</a>
-* <a class="reference external" href="http://cdn.probtn.com/showinparent.js">http://cdn.probtn.com/showinparent.js</a>
-* <a class="reference external" href="http://cdn.probtn.com/probtn_concat.js">http://cdn.probtn.com/probtn_concat.js</a>
-* <a class="reference external" href="http://cdn.probtn.com/showinparent_concat.js">http://cdn.probtn.com/showinparent_concat.js</a></p>
+* <a class="reference external" href="http://cdn.viewst.com/includepb.min.js">http://cdn.viewst.com/includepb.min.js</a>
+* <a class="reference external" href="http://cdn.viewst.com/showinparent.js">http://cdn.viewst.com/showinparent.js</a>
+* <a class="reference external" href="http://cdn.viewst.com/probtn_concat.js">http://cdn.viewst.com/probtn_concat.js</a>
+* <a class="reference external" href="http://cdn.viewst.com/showinparent_concat.js">http://cdn.viewst.com/showinparent_concat.js</a></p>
 <div class="section" id="includepb-min-js">
 <h3>includepb.min.js<a class="headerlink" href="#includepb-min-js" title="Permalink to this headline">¶</a></h3>
 <p>Данный скрипт добавляет необходимые дополнительные библиотеки на страницу, если необходимо, и инициализирует запуск кнопки.</p>
@@ -190,11 +190,11 @@
 <div class="section" id="id5">
 <h2>Общее описание<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>На cdn доступен
-<code class="docutils literal"><span class="pre">cdn.probtn.com/probtn_concat.js</span></code>
+<code class="docutils literal"><span class="pre">cdn.viewst.com/probtn_concat.js</span></code>
 объединенный из всех необходимы библиотек (fancybox, jquery.pep, uaparser), jquery, probtn и includepb.
 Кроме собственно объединения кода всех нужных библиотек в файле, также делается следующее - запускается свой jquery (с <code class="docutils literal"><span class="pre">jQuery.noConflict(true)</span></code> для восстановления предыдущего состояния), для которого и добавляются наши библиотеки и собственно probtn, и таким образом не влияющие на какие-либо плагины присутствующие на сайте (к примеру используемый на сайте свой fancybox).</p>
 <p>Также создан
-<code class="docutils literal"><span class="pre">cdn.probtn.com/showinparent_concat.js</span></code></p>
+<code class="docutils literal"><span class="pre">cdn.viewst.com/showinparent_concat.js</span></code></p>
 </div>
 <div class="section" id="id6">
 <h2>Описание сборки<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
